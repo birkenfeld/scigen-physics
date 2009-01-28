@@ -542,6 +542,7 @@ MODEL_MID_X+2   the basic interaction gives rise to this EQUATION: EQ_DISPLAY
 MODEL_MID_X+2   SCI_IN_REGION, one gets EQ_DISPLAY
 MODEL_MID_X+2   to elucidate the nature of the SCI_THING_P, we compute SCI_THING_S given by CITATION: EQ_DISPLAY
 MODEL_MID_X+2   SCI_IN_REGION, we estimate SCI_THING to be negligible, which justifies the use of Eq. NONZ
+MODEL_MID_X     by choosing appropriate units, we can eliminate unnecessary parameters and get EQ_DISPLAY
 
 SCI_DIAGRAM_ABOUT a SCI_DIAGRAM_TYPE SCI_DIAGRAM_VERBING the relationship between SCI_OUR_SYSTEM and SCI_GENERIC_NOUN
 SCI_DIAGRAM_ABOUT SCI_OUR_SYSTEM's SCI_BUZZWORD_ADJ SCI_SYS_VERBION
@@ -1341,9 +1342,10 @@ EVAL_MOD_AMOUNT	some
 
 ## OK
 HARDWARE_PROP		order along the $\langle ORIENTATION\rangle$ axis
-HARDWARE_PROP		intensity at the reciprocal point $[ ORIENTATION ]$
+HARDWARE_PROP		intensity at the reciprocal lattice point $[ ORIENTATION ]$
 HARDWARE_PROP           scattering along the $\langle ORIENTATION\rangle$ direction
 HARDWARE_PROP           order with a propagation vector $q = DIGIT.DIGITDIGIT\,\mathrm{\AA}^{-1}$
+HARDWARE_PROP           PARTON dispersion at the zone center
 HARDWARE_PROP		magnetization
 HARDWARE_PROP		magnetic order
 HARDWARE_PROP		lattice constants
@@ -1351,18 +1353,34 @@ HARDWARE_PROP		lattice distortion
 HARDWARE_PROP           low defect density
 
 ## OK
-ORIENTATION	ORDIGIT ORDIGIT ORDIGIT
+PARTON          phonon
+PARTON          magnon
+PARTON          polariton
+PARTON          skyrmion
+PARTON          exciton
+PARTON          electron
+PARTON          tau-muon
 
 ## OK
-ORDIGIT+3       ORSDIGIT
-ORDIGIT         \overline{ORSDIGIT}
+ORIENTATION	HKLINDEX HKLINDEX HKLINDEX
 
 ## OK
-ORSDIGIT+5      0
-ORSDIGIT+4      1
-ORSDIGIT+2      2
-ORSDIGIT        3
-ORSDIGIT        4
+HKLINDEX+3       HKLDIGIT
+HKLINDEX         \overline{HKLDIGITNZ}
+
+## OK
+HKLDIGIT+5      0
+HKLDIGIT+4      1
+HKLDIGIT+2      2
+HKLDIGIT        3
+HKLDIGIT        4
+
+## OK
+HKLDIGITNZ+4    1
+HKLDIGITNZ+2    2
+HKLDIGITNZ      3
+HKLDIGITNZ      4
+HKLDIGITNZ      5
 
 ## OK
 HARDWARE		a cryostat
@@ -1370,10 +1388,13 @@ HARDWARE		a pressure cell
 HARDWARE 		a spin-flipper coil
 HARDWARE		the monochromator
 
-## OK
+## OK, cbb
 HARDWARE_ITEMS		polarizers
 HARDWARE_ITEMS		polarization analysis devices
 HARDWARE_ITEMS		detectors
+HARDWARE_ITEMS          image plates
+HARDWARE_ITEMS          Eulerian cradles
+HARDWARE_ITEMS          pressure cells
 
 ## OK
 HARDWARE_PROP_OR_MEASUREMENT		HARDWARE_PROP
@@ -1781,7 +1802,7 @@ SCI_THING_P	broken symmetries
 SCI_THING_P	phase diagrams
 SCI_THING_P	Green's functions
 SCI_THING_P	magnetic excitations
-SCI_THING_P	magnons
+SCI_THING_P	PARTONs
 SCI_THING_P	phasons
 SCI_THING_P	spin waves
 SCI_THING_P	particle-hole excitations
@@ -1793,7 +1814,7 @@ SCI_THING_P	skyrmions
 SCI_THING_P	Goldstone bosons
 SCI_THING_P	overdamped modes
 SCI_THING_P	Bragg reflections
-#SCI_THING_P	
+SCI_THING_P	PARTON dispersion relations
 #SCI_THING_P	
 #SCI_THING_P	
 #SCI_THING_P	
@@ -2686,7 +2707,7 @@ EQ_INTS+8       \int
 EQ_DOTS         + \dots
 EQ_DOTS+5
 
-EQ_EXPR_FUNC+2  \log \left[ EQ_EXPR \right]
+EQ_EXPR_FUNC+2  \ln \left[ EQ_EXPR \right]
 EQ_EXPR_FUNC+2  \sin \left( EQ_EXPR \right)
 EQ_EXPR_FUNC+2  \cos \left( EQ_EXPR \right)
 EQ_EXPR_FUNC+10 \exp \left( EQ_EXPR \right)
@@ -2702,10 +2723,12 @@ EQ_EXPR	        \sqrt{EQ_EXPR}
 EQ_EXPR+5       \left| EQ_EXPR_EXP \right|
 EQ_EXPR+5       EQ_EXPR_POWEXP
 
-EQ_OPERATOR+3   +
-EQ_OPERATOR+3   -
-EQ_OPERATOR     \times
-EQ_OPERATOR     \cdot
+EQ_OPERATOR+10   +
+EQ_OPERATOR+10   -
+EQ_OPERATOR+3    \times
+EQ_OPERATOR+3    \cdot
+EQ_OPERATOR      \otimes
+EQ_OPERATOR      \pm
 
 EQ_EXPR_MULEXP    EQ_EXPR_POWEXP
 EQ_EXPR_MULEXP    EQ_EXPR_POWEXP EQ_EXPR_MULEXP
@@ -2714,6 +2737,7 @@ EQ_EXPR_POWEXP+2 EQ_EXPR_EXP
 EQ_EXPR_POWEXP   {EQ_EXPR_EXP} ^ EXPDIGIT
 
 EQ_EXPR_EXP     \nabla EQ_EXPR_EXP
+EQ_EXPR_EXP     \triangle EQ_EXPR_EXP
 EQ_EXPR_EXP     DIGIT
 EQ_EXPR_EXP+3   \pi
 EQ_EXPR_EXP+2   \hbar
@@ -2729,10 +2753,12 @@ EQ_QUANTITY     EQ_DECO LCASE
 EQ_QUANTITY+2   EQ_DECO GREEK
 EQ_QUANTITY     {EQ_NVQUANTITY} _ {EQ_NVQUANTITY}
 
-EQ_DECO+15       
-EQ_DECO+10      \vec
+EQ_DECO+30       
+EQ_DECO+20      \vec
+EQ_DECO+3       \mathbf
 EQ_DECO         \dot
-EQ_DECO         \mathbf
+EQ_DECO         \tilde
+EQ_DECO         \hat
 
 GREEK           \alpha
 GREEK           \beta
