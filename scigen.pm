@@ -217,6 +217,7 @@ sub pretty_print {
 					       ignore => qr/^\\/ } );
 	}
 ##	$newline =~ s/\\\]\s*\./\\]/g;
+        $newline =~ s/\\\]\s*\.\s+([a-z])/"\\]. ". uc $1/eg;
         $newline =~ s/\\\[/\\begin{dmath}/g;
         $newline =~ s/\\\]/\\end{dmath}/g;
 
