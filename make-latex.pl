@@ -31,7 +31,7 @@ my $dvi_file = "$tmp_pre$$.dvi";
 my $ps_file = "$tmp_pre$$.ps";
 my $pdf_file = "$tmp_pre$$.pdf";
 my $bib_file = "$tmp_dir/scigenbibfile.bib";
-my $class_files = "IEEEtran.cls IEEE.bst";
+my $class_files = "IEEEtran.cls phjcp.bst breqn.sty flexisym.sty cmbase.sym mathstyle.sty";
 my @authors;
 my $seed;
 my $remote = 0;
@@ -122,9 +122,9 @@ my $s = "";
 for( my $i = 0; $i <= $#authors; $i++ ) {
     $s .= "AUTHOR_NAME";
     if( $i < $#authors-1 ) {
-	$s .= ", ";
+	$s .= " \\and ";
     } elsif( $i == $#authors-1 ) {
-	$s .= " and ";
+	$s .= " \\and ";
     }
 }
 my @b = ($s);
@@ -153,7 +153,7 @@ while( <TEX> ) {
 	my $done = 0;
 	while( !$done ) {
 	    my $newseed = int rand 0xffffffff;
-	    my $color = "";
+	    my $color = "--color";
 	    if( defined $options{"talk"} ) {
 		$color = "--color"
 	    }
@@ -168,15 +168,15 @@ while( <TEX> ) {
 	my $done = 0;
 	while( !$done ) {
 	    my $newseed = int rand 0xffffffff;
-	    if( `which neato` ) {
-		(system( "./make-diagram.pl --sys \"$sysname\" " . 
-			 "--file $figfile --seed $newseed" ) or 
-		 !(-f $figfile)) 
+#	    if( `which neato` ) {
+#		(system( "./make-diagram.pl --sys \"$sysname\" " . 
+#			 "--file $figfile --seed $newseed" ) or 
+#		 !(-f $figfile)) 
+#		    or $done=1;
+#	    } else {
+		system( "./make-graph.pl --color --file $figfile --seed $newseed" ) 
 		    or $done=1;
-	    } else {
-		system( "./make-graph.pl --file $figfile --seed $newseed" ) 
-		    or $done=1;
-	    }
+#	    }
 	}
 	push @figures, $figfile;
     }
@@ -208,6 +208,7 @@ close( TEX );
 
 # generate bibtex 
 foreach my $author (@authors) {
+    $author =~ s/\\\\.*//g;
     for( my $i = 0; $i < 10; $i++ ) {
 	push @{$tex_dat->{"SCI_SOURCE"}}, $author;
     }
@@ -284,10 +285,10 @@ if( defined $options{"tar"} or defined $options{"savedir"} ) {
 }
 
 
-system( "rm $tmp_pre*" ) and die( "Couldn't rm" );
-unlink( @figures );
-unlink( "$bib_file" );
-system( "rm -f $tmp_dir/dia*.tmp; rmdir $tmp_dir" );
+#system( "rm $tmp_pre*" ) and die( "Couldn't rm" );
+#unlink( @figures );
+#unlink( "$bib_file" );
+#system( "rm -f $tmp_dir/dia*.tmp; rmdir $tmp_dir" );
 
 sub get_system_name {
 

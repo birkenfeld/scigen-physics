@@ -216,8 +216,12 @@ sub pretty_print {
 					       break => break_latex(),
 					       ignore => qr/^\\/ } );
 	}
+##	$newline =~ s/\\\]\s*\./\\]/g;
+        $newline =~ s/\\\[/\\begin{dmath}/g;
+        $newline =~ s/\\\]/\\end{dmath}/g;
 
 	$newline =~ s/\\Em/\\em/g;
+	$newline =~ s/\\Cite/\\cite/g;
 
 	if( $newline !~ /\n$/ ) {
 	    $newline .= "\n";
