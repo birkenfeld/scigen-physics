@@ -1,0 +1,4 @@
+Generating a paper
+==================
+
+Run ``perl make-latex.pl`` (use --help to see some options).
