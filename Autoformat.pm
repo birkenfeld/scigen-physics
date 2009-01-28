@@ -522,7 +522,6 @@ sub entitle {
 }
 
 my $abbrev = join '|', qw{
-        # modified by JS: add al. and Jr.
 	etc[.]	pp[.]	ph[.]?d[.]	U[.]S[.]  al. Jr.
 };
 

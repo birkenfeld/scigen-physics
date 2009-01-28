@@ -1,3 +1,4 @@
+# to insert: first-principles approach
 
 #
 # $Id: scirules.in,v 1.138 2005/08/09 20:38:01 strib Exp $
@@ -30,8 +31,6 @@ SCIPAPER_LATEX {
 
  SCI_MODEL
 
- SCI_IMPL
-
  SCI_EVAL
 
  SCI_RELWORK
@@ -53,8 +52,6 @@ SCIPAPER_LATEX {
  SCI_RELWORK
 
  SCI_MODEL
-
- SCI_IMPL
 
  SCI_EVAL
 
@@ -83,6 +80,7 @@ SCI_TITLE deconstructing SCI_THING SCI_TITLE_POSTFIX
 SCI_TITLE decoupling SCI_THING from SCI_THING in SCI_THING
 SCI_TITLE SCI_TITLE_PREFIX a methodology for the SCI_ACT
 SCI_TITLE a case for SCI_THING
+SCI_TITLE SCI_BUZZWORD_ADJ SCI_THING in SCI_THING
 SCI_TITLE SCI_VERBING SCI_THING using SCI_BUZZWORD_ADJ SCI_BUZZWORD_NOUN
 SCI_TITLE SCI_VERBING SCI_THING and SCI_THING SCI_TITLE_POSTFIX
 SCI_TITLE SCI_TITLE_PREFIX SCI_BUZZWORD_ADJ_MULTI SCI_BUZZWORD_NOUN
@@ -334,7 +332,9 @@ SCI_INTRO_THESIS our focus SCI_IN_THIS_PAPER is not on whether SCI_OVERALL_THESI
 SCI_GENERIC_THESIS we SCI_PROVE_VERB that SCI_OVERALL_THESIS_PROVE
 SCI_GENERIC_THESIS we use SCI_BUZZWORD_ADJ SCI_BUZZWORD_NOUN to SCI_PROVE_VERB that SCI_OVERALL_THESIS_PROVE
 SCI_GENERIC_THESIS we SCI_PRESENT_VERB SCI_OVERALL_THESIS_THING ({SYSNAME}), SCI_PROVE_VERBING that SCI_OVERALL_THESIS_PROVE
-SCI_GENERIC_THESIS we SCI_PROVE_VERB not only that SCI_OVERALL_THESIS_PROVE, but that the same is true for SCI_THING_MOD 
+SCI_GENERIC_THESIS we SCI_PROVE_VERB not only that SCI_OVERALL_THESIS_PROVE, but that the same is true for SCI_THING_MOD
+SCI_GENERIC_THESIS we SCI_PROVE_VERB not only that SCI_OVERALL_THESIS_PROVE, but that the same is true for SCI_THING_MOD, especially for the case EQ_SMALL
+SCI_GENERIC_THESIS we SCI_PROVE_VERB not only that SCI_OVERALL_THESIS_PROVE, but that the same is true for SCI_THING_MOD, especially SCI_IN_REGION
 SCI_GENERIC_THESIS we PROBE_VERB how SCI_THING_MOD can be applied to the SCI_ACT
 SCI_GENERIC_THESIS we SCI_PROVE_VERB that LIT_ALTHOUGH SCI_OVERALL_THESIS_PROVE, SCI_OVERALL_THESIS_PROVE
 SCI_GENERIC_THESIS we concentrate our efforts on SCI_PROVE_VERBING that SCI_OVERALL_THESIS_PROVE
@@ -343,7 +343,6 @@ SCI_GENERIC_THESIS we SCI_PRESENT_VERB SCI_OVERALL_THESIS_THING ({SYSNAME}), whi
 SCI_OVERALL_THESIS_PROVE SCI_THING_MOD and SCI_THING_MOD are LIT_OFTEN incompatible 
 SCI_OVERALL_THESIS_PROVE SCI_THING_MOD and SCI_THING_MOD can SCI_VERB_PL to SCI_SOLVE_CLAUSE
 SCI_OVERALL_THESIS_PROVE SCI_THING_MOD can be made SCI_BUZZWORD_ADJ, SCI_BUZZWORD_ADJ, and SCI_BUZZWORD_ADJ
-SCI_OVERALL_THESIS_PROVE the SCI_STATUS_ADJ SCI_BUZZWORD_ADJ algorithm for the SCI_ACT SCI_BY_WHO_SOMETIMES SCI_PROOF_PROP
 
 SCI_BY_WHO_SOMETIMES
 SCI_BY_WHO_SOMETIMES CITATION
@@ -356,6 +355,7 @@ SCI_BY_WHO SCI_SOURCE et al.
 SCI_BY_WHO GENERIC_LASTNAME and GENERIC_LASTNAME
 
 SCI_OVERALL_THESIS_THING new SCI_BUZZWORD_ADJ SCI_BUZZWORD_NOUN
+SCI_OVERALL_THESIS_THING new SCI_BUZZWORD_ADJ SCI_BUZZWORD_NOUN with EQ_SMALL
 SCI_OVERALL_THESIS_THING a novel SCI_SYSTEM for the SCI_ACT
 SCI_OVERALL_THESIS_THING an analysis of SCI_THING_MOD
 SCI_OVERALL_THESIS_THING a SCI_BUZZWORD_ADJ tool for SCI_VERBING SCI_THING_MOD
@@ -444,23 +444,25 @@ SCI_MODEL {
 
 }
 
+## OK
 LATEX_DIAGRAM_MAYBE LATEX_DIAGRAM
 LATEX_DIAGRAM_MAYBE
 
+## OK
 SCI_MODEL_TYPE	model
-SCI_MODEL_TYPE	design
 SCI_MODEL_TYPE	framework
-SCI_MODEL_TYPE	architecture
-SCI_MODEL_TYPE	methodology
+SCI_MODEL_TYPE	theory
+SCI_MODEL_TYPE	method
 SCI_MODEL_TYPE_P	models
-SCI_MODEL_TYPE_P	designs
 SCI_MODEL_TYPE_P	frameworks
-SCI_MODEL_TYPE_P	architectures
-SCI_MODEL_TYPE_P	methodologies
+SCI_MODEL_TYPE_P	theories
+SCI_MODEL_TYPE_P	methods
 
+## OK
 MODEL_XXX+2	XXX
 MODEL_XXX	. MODEL_FILLER.
 
+## OK
 MODEL_INTRO_P	MODEL_INTRO_1 MODEL_BODY_INSIDE MODEL_CONCL
 MODEL_BODY_P	MODEL_INTRO MODEL_BODY_INSIDE MODEL_CONCL
 
@@ -489,11 +491,13 @@ MODEL_BODY_P_3 {
 
 }
 
+## OK
 MODEL_BODY_INSIDE 	MODEL_MID MODEL_MID MODEL_MID MODEL_MID
 MODEL_BODY_INSIDE+2 	MODEL_MID MODEL_MID MODEL_MID
 MODEL_BODY_INSIDE+3 	MODEL_MID MODEL_MID
 MODEL_BODY_INSIDE 	MODEL_MID
 
+## OK
 MODEL_INTRO_1 in this section, we SCI_PRESENT_VERB a SCI_MODEL_TYPE for SCI_VERBING SCI_GENERIC_NOUN MODEL_XXX
 MODEL_INTRO_1 next, we SCI_PRESENT_VERB our SCI_MODEL_TYPE for SCI_PROVE_VERBING that SCI_OUR_SYSTEM SCI_PROOF_PROP MODEL_XXX
 MODEL_INTRO_1 The properties of SCI_OUR_SYSTEM depend greatly on the assumptions inherent in our SCI_MODEL_TYPE; in this section, we outline those assumptions MODEL_XXX
@@ -501,12 +505,18 @@ MODEL_INTRO_1 motivated by the need for SCI_GENERIC_NOUN, we now SCI_PRESENT_VER
 MODEL_INTRO_1 our research is principled.
 MODEL_INTRO_1+3 MODEL_INTRO
 
-
-MODEL_INTRO Reality aside, we would like to SCI_VERB a SCI_MODEL_TYPE for how SCI_OUR_SYSTEM might behave in theory MODEL_XXX
+## OK
+MODEL_INTRO Reality aside, we would like to SCI_VERB a SCI_MODEL_TYPE for how SCI_OUR_SYSTEM might behave in theory with EQ_SMALL MODEL_XXX
+MODEL_INTRO Suppose that there exists SCI_GENERIC_NOUN SCI_MAYBE_IN_REGION such that we can easily SCI_VERB SCI_GENERIC_NOUN MODEL_XXX
 MODEL_INTRO Suppose that there exists SCI_GENERIC_NOUN such that we can easily SCI_VERB SCI_GENERIC_NOUN MODEL_XXX
+MODEL_INTRO Employing the same rationale given in CITATION, we assume EQ_SMALL SCI_MAYBE_IN_REGION for our treatment MODEL_XXX
 MODEL_INTRO SCI_OUR_SYSTEM relies on the SCI_ADJ SCI_MODEL_TYPE outlined in the recent SCI_STATUS_ADJ work by SCI_BY_WHO in the field of SCI_FIELD MODEL_XXX
+MODEL_INTRO+2 SCI_OUR_SYSTEM is best described by the following EQUATION: EQ_DISPLAY
+MODEL_INTRO The basic EQUATION on which the theory is formulated is EQ_DISPLAY
+MODEL_INTRO Expanding the EVAL_MEASUREMENT_UM for our case, we get EQ_DISPLAY
 MODEL_INTRO+2 MODEL_MID
 
+## OK
 SCI_ASSUME+3	assume
 SCI_ASSUME	hypothesize
 SCI_ASSUME	postulate
@@ -517,132 +527,82 @@ MODEL_MID	LIT_MIDDLE_MAYBE MODEL_MID_X MODEL_XXX
 MODEL_MID_X	SCI_OUR_SYSTEM does not require such a SCI_ADJ SCI_SYS_VERBION to run correctly, but it doesn't hurt
 MODEL_MID_X	we SCI_ASSUME that SCI_OVERALL_THESIS_PROVE
 MODEL_MID_X	consider the early SCI_MODEL_TYPE by SCI_BY_WHO; our SCI_MODEL_TYPE is similar, but will actually SCI_SOLVE_CLAUSE
-MODEL_MID_X	any SCI_ADJ SCI_VERBION of SCI_GENERIC_NOUN will clearly require that SCI_OVERALL_THESIS_PROVE; SCI_OUR_SYSTEM is no different
+MODEL_MID_X	any SCI_ADJ SCI_VERBION of SCI_GENERIC_NOUN SCI_MAYBE_IN_REGION will clearly require that SCI_OVERALL_THESIS_PROVE; SCI_OUR_SYSTEM is no different
 MODEL_MID_X	we SCI_ASSUME that SCI_GENERIC_NOUN can SCI_SYS_VERB SCI_GENERIC_NOUN without needing to SCI_SYS_VERB SCI_GENERIC_NOUN
 MODEL_MID_X	despite the results by SCI_BY_WHO, we can SCI_PROVE_VERB that SCI_OVERALL_THESIS_PROVE
 MODEL_MID_X	we consider a SCI_SYSTEM consisting of $n$ SCI_THING_P
-MODEL_MID_X	we SCI_ASSUME that each component of SCI_OUR_SYSTEM SCI_SYSTEM_ACTION, independent of all other components
+MODEL_MID_X	we SCI_ASSUME that each component of SCI_OUR_SYSTEM SCI_SYSTEM_ACTION SCI_MAYBE_IN_REGION, independent of all other components
 MODEL_MID_X	the SCI_MODEL_TYPE for SCI_OUR_SYSTEM consists of four independent components: SCI_GENERIC_NOUN, SCI_GENERIC_NOUN, SCI_GENERIC_NOUN, and SCI_GENERIC_NOUN
 MODEL_MID_X	rather than SCI_SYS_VERBING SCI_GENERIC_NOUN, SCI_OUR_SYSTEM chooses to SCI_SYS_VERB SCI_GENERIC_NOUN
 MODEL_MID_X	we EVAL_VERBED a SCI_TRACE SCI_PROVE_VERBING that our SCI_MODEL_TYPE MODEL_GROUNDING
 MODEL_MID_X	Figure~\ref{LATEX_DIA_LABEL_REF} SCI_DIAGRAM_VERBS SCI_DIAGRAM_ABOUT
 MODEL_MID_X	we show SCI_DIAGRAM_ABOUT in Figure~\ref{LATEX_DIA_LABEL_REF}
+MODEL_MID_X+2   we calculate SCI_THING_S SCI_MAYBE_IN_REGION with the following EQUATION: EQ_DISPLAY
+MODEL_MID_X+2   the basic interaction gives rise to this EQUATION: EQ_DISPLAY
+MODEL_MID_X+2   SCI_IN_REGION, one gets EQ_DISPLAY
+MODEL_MID_X+2   to elucidate the nature of the SCI_THING_P, we compute SCI_THING_S given by CITATION: EQ_DISPLAY
+MODEL_MID_X+2   SCI_IN_REGION, we estimate SCI_THING to be negligible, which justifies the use of Eq. NONZ
 
 SCI_DIAGRAM_ABOUT a SCI_DIAGRAM_TYPE SCI_DIAGRAM_VERBING the relationship between SCI_OUR_SYSTEM and SCI_GENERIC_NOUN
 SCI_DIAGRAM_ABOUT SCI_OUR_SYSTEM's SCI_BUZZWORD_ADJ SCI_SYS_VERBION
 SCI_DIAGRAM_ABOUT the SCI_DIAGRAM_TYPE used by SCI_OUR_SYSTEM
 SCI_DIAGRAM_ABOUT the relationship between SCI_OUR_SYSTEM and SCI_GENERIC_NOUN
 SCI_DIAGRAM_ABOUT SCI_OVERALL_THESIS_THING
+SCI_DIAGRAM_ABOUT the main characteristics of SCI_THING
 
-
+## OK
 MODEL_GROUNDING is solidly grounded in reality
 MODEL_GROUNDING is unfounded
 MODEL_GROUNDING holds for most cases
 MODEL_GROUNDING is not feasible
 MODEL_GROUNDING is feasible
+MODEL_GROUNDING is supported by experimental fact
+MODEL_GROUNDING holds at least for EQ_SMALL
 
+## OK
 TRACE_UNIT	week
 TRACE_UNIT	day
 TRACE_UNIT	month
 TRACE_UNIT	year
 TRACE_UNIT	minute
 
-SCI_TRACE	TRACE_UNIT-long trace
-SCI_TRACE	NONZ-TRACE_UNIT-long trace
-SCI_TRACE	trace, over the course of several TRACE_UNITs,
+## OK
+SCI_TRACE	TRACE_UNIT-long experiment
+SCI_TRACE	NONZ-TRACE_UNIT-long measurement
+SCI_TRACE	experiment, over the course of several TRACE_UNITs,
 
+## OK
 MODEL_CONCL	the question is, will SYSNAME satisfy all of these assumptions?  SCI_RESPONSE XXX
-MODEL_CONCL	see our RELATED technical report CITATION for details XXX
+MODEL_CONCL	see our RELATED paper CITATION for details XXX
 MODEL_CONCL	we use our previously SCI_VERBED results as a basis for all of these assumptions MODEL_XXX
 MODEL_CONCL	LIT_CONCLUSION, the SCI_MODEL_TYPE that SCI_OUR_SYSTEM uses MODEL_GROUNDING XXX
 MODEL_CONCL	MODEL_MID
 
+## OK
 MODEL_FILLER	this may or may not actually hold in reality
 MODEL_FILLER	this seems to hold in most cases
+MODEL_FILLER    this SCI_ADJ approximation proves WORTHLESS
 MODEL_FILLER	this is a SCI_ADJ property of SCI_OUR_SYSTEM
 MODEL_FILLER	LIT_ALTHOUGH SCI_PEOPLE LIT_OFTEN SCI_ASSUME the exact opposite, SCI_OUR_SYSTEM depends on this property for correct behavior
 
-#############################################################################
-####### Implementation #######
-#############################################################################
+## OK
+WORTHLESS       worthless
+WORTHLESS       justified
+WORTHLESS       completely justified
 
-IMPL_SEC_LATEX_HEADER+10	\section{Implementation}
-IMPL_SEC_LATEX_HEADER		\section{SCI_BUZZWORD_ADJ SCI_BUZZWORD_NOUN}
+## OK
+REGION_WHERE        near
+REGION_WHERE        far below
+REGION_WHERE        above
+REGION_WHERE        in the region of
+REGION_WHERE        for large values of
+REGION_WHERE        very close to
+REGION_WHERE        except at
 
-SCI_IMPL {
+SCI_IN_REGION   REGION_WHERE ${EQ_NVQUANTITY}_{EQ_NVQUANTITY}$
 
-IMPL_SEC_LATEX_HEADER
-
-IMPL_INTRO_P
-
-}
-
-IMPL_INTRO_P	IMPL_INTRO IMPL_BODY_INSIDE IMPL_CONCL
-
-IMPL_BODY_INSIDE+3 	IMPL_MID IMPL_MID IMPL_MID IMPL_MID
-IMPL_BODY_INSIDE+3 	IMPL_MID IMPL_MID IMPL_MID
-IMPL_BODY_INSIDE+2 	IMPL_MID IMPL_MID
-IMPL_BODY_INSIDE 	IMPL_MID
-
-PROGRAMMING_VERBING	hacking
-PROGRAMMING_VERBING	programming
-PROGRAMMING_VERBING	coding
-PROGRAMMING_VERBING	designing
-PROGRAMMING_VERBING	architecting
-PROGRAMMING_VERBING	implementing
-PROGRAMMING_VERBING	optimizing
-
-IMPL_INTRO after several TRACE_UNITs of DIFFICULT_X PROGRAMMING_VERBING, we finally have a working implementation of SCI_OUR_SYSTEM XXX
-IMPL_INTRO our implementation of SCI_OUR_SYSTEM is SCI_BUZZWORD_ADJ, SCI_BUZZWORD_ADJ, and SCI_BUZZWORD_ADJ XXX
-IMPL_INTRO though many skeptics said it couldn't be done (most notably SCI_BY_WHO), we SCI_PRESENT_VERB a fully-working version of SCI_OUR_SYSTEM XXX
-IMPL_INTRO in this section, we SCI_PRESENT_VERB version VERSION of SYSNAME, the culmination of TRACE_UNITs of PROGRAMMING_VERBING XXX 
-IMPL_INTRO SCI_OUR_SYSTEM is elegant; so, too, must be our implementation XXX
-IMPL_INTRO IMPL_MID_X XXX
-
-IMPL_MID LIT_MIDDLE_MAYBE IMPL_MID_X XXX
-IMPL_MID_X SCI_OUR_SYSTEM is composed of a IMPL_COMPONENT, a IMPL_COMPONENT, and a IMPL_COMPONENT
-IMPL_MID_X the IMPL_COMPONENT contains about MED_NUM CODE_LINES of LANGUAGE_UM
-IMPL_MID_X we have not yet implemented the IMPL_COMPONENT, as this is the least SCI_ADJ component of SCI_OUR_SYSTEM
-IMPL_MID_X since SCI_SYSTEM_PROP, PROGRAMMING_VERBING the IMPL_COMPONENT was relatively straightforward
-IMPL_MID_X SCI_OUR_SYSTEM requires root access in order to SCI_SYS_VERB SCI_GENERIC_NOUN
-IMPL_MID_X LIT_ALTHOUGH we have not yet optimized for CONSTRAINT_TYPE, this should be simple once we finish PROGRAMMING_VERBING the IMPL_COMPONENT
-IMPL_MID_X SCI_PEOPLE have complete control over the IMPL_COMPONENT, which of course is necessary so that SCI_OVERALL_THESIS_PROVE
-IMPL_MID_X it was necessary to cap the EVAL_MEASUREMENT_UM used by SCI_OUR_SYSTEM to MED_NUM EVAL_UNIT_UM
-IMPL_MID_X the IMPL_COMPONENT and the IMPL_COMPONENT must run IMPL_RUN_TYPE
-# IMPL_MID_X our IMPL_COMPONENT REQUIRED 
-
-IMPL_CONCL we plan to release all of this code under LICENSE_TYPE XXX
-IMPL_CONCL overall, SCI_OUR_SYSTEM adds only modest overhead and complexity to RELATED SCI_BUZZWORD_ADJ SCI_SYSTEM_PL XXX
-IMPL_CONCL one SCI_CAN imagine other SCI_APPROACH_PL to the implementation that would have made PROGRAMMING_VERBING it much simpler XXX
-IMPL_CONCL+3 IMPL_MID_X XXX
-
-
-LICENSE_TYPE the Gnu Public License
-LICENSE_TYPE public domain
-LICENSE_TYPE X11 license
-LICENSE_TYPE BSD license
-LICENSE_TYPE Microsoft's Shared Source License
-LICENSE_TYPE Old Plan 9 License
-LICENSE_TYPE Sun Public License
-
-IMPL_RUN_TYPE on the same node
-IMPL_RUN_TYPE in the same JVM
-IMPL_RUN_TYPE with the same permissions
-
-
-IMPL_COMPONENT client-side library
-IMPL_COMPONENT server daemon
-IMPL_COMPONENT centralized logging facility
-IMPL_COMPONENT collection of shell scripts
-IMPL_COMPONENT homegrown database
-IMPL_COMPONENT hand-optimized compiler
-IMPL_COMPONENT virtual machine monitor
-IMPL_COMPONENT hacked operating system
-IMPL_COMPONENT codebase of NONZDIGIT LANGUAGE_UM files
-
-CODE_LINES	lines
-CODE_LINES	semi-colons
-CODE_LINES	instructions
+SCI_MAYBE_IN_REGION+4
+SCI_MAYBE_IN_REGION   SCI_IN_REGION
 
 #############################################################################
 ####### Discussion #######
@@ -745,19 +705,23 @@ RELWORK_BODY_P_3 {
 
 }
 
+## OK
 RELWORK_BODY_P RELWORK_INTRO RELWORK_BODY_INSIDE RELWORK_CONCL
 
+## OK
 RELWORK_BODY_INSIDE 	RELWORK_MID RELWORK_MID RELWORK_MID RELWORK_MID
 RELWORK_BODY_INSIDE+2 	RELWORK_MID RELWORK_MID RELWORK_MID
 RELWORK_BODY_INSIDE+3 	RELWORK_MID RELWORK_MID
 RELWORK_BODY_INSIDE 	RELWORK_MID
 
+## OK
 RELWORK_INTRO_1 in this section, we discuss RELATED research into SCI_GENERIC_NOUN, SCI_GENERIC_NOUN, and SCI_GENERIC_NOUN RELWORK_XXX
 RELWORK_INTRO_1 in this section, we consider alternative SCI_SYSTEM_PL as well as RELATED work.
 RELWORK_INTRO_1 we now consider RELATED work.
 RELWORK_INTRO_1 in designing SCI_OUR_SYSTEM, we drew on RELATED work from a number of distinct areas.
 RELWORK_INTRO_1+10 RELWORK_INTRO
 
+## OK
 RELWORK_INTRO while we know of no other studies on SCI_GENERIC_NOUN, several efforts have been made to SCI_VERB SCI_THING_MOD RELWORK_XXX
 RELWORK_INTRO we now compare our SCI_APPROACH to RELATED SCI_BUZZWORD_ADJ SCI_BUZZWORD_NOUN SCI_APPROACH_PL RELWORK_XXX
 RELWORK_INTRO our SCI_APPROACH is related to research into SCI_GENERIC_NOUN, SCI_GENERIC_NOUN, and SCI_GENERIC_NOUN RELWORK_XXX
@@ -770,6 +734,7 @@ RELWORK_INTRO a number of RELATED SCI_SYSTEM_PL have SCI_VERBED SCI_GENERIC_NOUN
 RELWORK_INTRO Several SCI_BUZZWORD_ADJ and SCI_BUZZWORD_ADJ SCI_SYSTEM_PL have been proposed in the literature RELWORK_XXX
 RELWORK_INTRO RELWORK_MID_X RELWORK_XXX
 
+## OK
 RELWORK_MID LIT_MIDDLE_MAYBE RELWORK_MID_X RELWORK_XXX
 RELWORK_MID_X LIT_ALTHOUGH SCI_BY_WHO also SCI_PRESENT_VERBED this SCI_APPROACH, we SCI_VERBED it independently and simultaneously
 RELWORK_MID_X SCI_BY_WHO RELWORK_CITATION and SCI_BY_WHO RELWORK_CITATION SCI_PRESENT_VERBED the first known instance of SCI_GENERIC_NOUN
@@ -789,6 +754,7 @@ RELWORK_MID_X SCI_OUR_SYSTEM is broadly related to work in the field of SCI_FIEL
 RELWORK_MID_X SCI_BY_WHO RELWORK_CITATION developed a similar SCI_SYSTEM, LIT_REVERSAL we SCI_PROVE_VERBED that SCI_OUR_SYSTEM SCI_PROOF_PROP 
 RELWORK_MID_X a litany of RELATED work supports our use of SCI_GENERIC_NOUN
 
+## OK
 SCI_FAIR+3	ill-conceived
 SCI_FAIR	astute
 SCI_FAIR+3	fair
@@ -796,19 +762,14 @@ SCI_FAIR	unfair
 SCI_FAIR	idiotic
 SCI_FAIR	unreasonable
 
+## OK
 SCI_EXPENSIVE	expensive
 SCI_EXPENSIVE	costly
 SCI_EXPENSIVE	cheap
 SCI_EXPENSIVE	flimsy
 SCI_EXPENSIVE	fragile
 
-SCI_GROWTH_ADV	linearly
-SCI_GROWTH_ADV	quadratically
-SCI_GROWTH_ADV	sublinearly
-SCI_GROWTH_ADV	inversely
-SCI_GROWTH_ADV	logarithmically
-SCI_GROWTH_ADV	exponentially
-
+## OK
 RELWORK_FILLER LIT_CONCLUSION, comparisons to this work are SCI_FAIR.
 RELWORK_FILLER LIT_REVERSAL, without concrete evidence, there is no reason to believe these claims.
 RELWORK_FILLER SCI_OUR_SYSTEM represents a significant advance above this work.
@@ -825,9 +786,9 @@ RELWORK_FILLER CONSTRAINT_TYPE aside, SCI_OUR_SYSTEM SCI_VERBS MORE accurately.
 RELWORK_FILLER we believe there is room for both schools of thought within the field of SCI_FIELD.
 RELWORK_FILLER LIT_ALTHOUGH this work was published before ours, we came up with the SCI_APPROACH first but could not publish it until now due to red tape. 
 RELWORK_FILLER SCI_IN_THIS_PAPER, we SCI_PROBLEM_SOLVED all of the SCI_PROBLEM_PL inherent in the RELATED work.
-RELWORK_FILLER LIT_REVERSAL, the complexity of their SCI_APPROACH grows SCI_GROWTH_ADV as SCI_GENERIC_NOUN grows.
 RELWORK_FILLER LIT_CONCLUSION, if PERFORMANCE is a concern, SCI_OUR_SYSTEM has a clear advantage.
 
+## OK
 RELWORK_CONCL in general, SCI_OUR_SYSTEM outperformed all RELATED SCI_SYSTEM_PL in this area RELWORK_XXX
 RELWORK_CONCL LIT_CONCLUSION, the class of SCI_SYSTEM_PL enabled by SCI_OUR_SYSTEM is fundamentally different from RELATED SCI_APPROACH_PL RELWORK_XXX
 RELWORK_CONCL LIT_LAST note that SCI_SYSTEM_PROP; LIT_CONCLUSION, SCI_OUR_SYSTEM SCI_PROOF_PROP RELWORK_XXX
@@ -858,14 +819,9 @@ RELWORK_CONCL RELWORK_MID_X RELWORK_XXX
 #
 #}
 
+## OK
 EVAL_SEC_LATEX_HEADER		\section{EVAL_SEC_HEADER_T}
-EVAL_SEC_HEADER_T		Evaluation and Performance Results
-EVAL_SEC_HEADER_T		Performance Results
-EVAL_SEC_HEADER_T+5		Evaluation
-EVAL_SEC_HEADER_T		Experimental Evaluation
-EVAL_SEC_HEADER_T		Experimental Evaluation and Analysis
-EVAL_SEC_HEADER_T		Results and Analysis
-EVAL_SEC_HEADER_T+5		Results
+EVAL_SEC_HEADER_T		Experimental Work
 
 LATEX_FIGURE_MAYBE LATEX_FIGURE
 LATEX_FIGURE_MAYBE
@@ -884,8 +840,6 @@ SCI_EVAL {
 
  LATEX_FIGURE
 
- EVAL_SEC_SOFTWARE_P
-
  LATEX_FIGURE_MAYBE
 
  EVAL_SEC_SUBHEAD_2_LTX
@@ -896,160 +850,175 @@ SCI_EVAL {
 
  EVAL_GUTS
 
-
-
 }
 
-EVAL_SEC_SUBHEAD_1	Hardware and Software Configuration
-EVAL_SEC_SUBEHAD_1	System Setup
-EVAL_SEC_SUBEHAD_1	Experimental Setup
+## OK
+EVAL_SEC_SUBHEAD_1	Experimental Setup
 
+## OK
 EVAL_SEC_SUBHEAD_1_LTX	\subsection{EVAL_SEC_SUBHEAD_1}
 EVAL_SEC_SUBHEAD_2_LTX	\subsection{EVAL_SEC_SUBHEAD_2}
 
-EVAL_SEC_SUBHEAD_2	Experimental Results
-EVAL_SEC_SUBHEAD_2	Experiments and Results
-EVAL_SEC_SUBHEAD_2	Dogfooding SCI_OUR_SYSTEM
+## OK
+EVAL_SEC_SUBHEAD_2	Results
 
+## OK
 EVAL_SEC_INTRO 		EVAL_SEC_INTRO_A EVAL_SEC_INTRO_BS EVAL_SEC_INTRO_C
 
+## OK
 EVAL_SEC_INTRO_BS	EVAL_SEC_HYP_SET
 EVAL_SEC_INTRO_BS	EVAL_SEC_HYP_SET EVAL_SEC_INTRO_B
 EVAL_SEC_INTRO_BS	EVAL_SEC_HYP_SET EVAL_SEC_INTRO_B LIT_MIDDLE_TWO EVAL_SEC_INTRO_B
 EVAL_SEC_INTRO_BS	EVAL_SEC_HYP_SET EVAL_SEC_INTRO_B LIT_MIDDLE_TWO EVAL_SEC_INTRO_B LIT_MIDDLE_3 EVAL_SEC_INTRO_B
 
-EVAL_SEC_INTRO_A2	In this light, we worked hard to arrive at a suitable evaluation METHODOLOGY.
+## OK
+EVAL_SEC_INTRO_A2	In this light, we worked hard to arrive at a suitable measurement METHODOLOGY.
 EVAL_SEC_INTRO_A2	We did not take any shortcuts here.
 EVAL_SEC_INTRO_A2	We desire to prove that our ideas have merit, despite their costs in complexity.
-EVAL_SEC_INTRO_A2	Only with precise measurements might we convince the reader that performance MATTERS.
+EVAL_SEC_INTRO_A2	Only with precise measurements might we convince the reader that this effect MATTERS.
 
+## OK
 EVAL_SEC_INTRO_A	EVAL_SEC_INTRO_A1 EVAL_SEC_INTRO_A2
 
-EVAL_SEC_INTRO_A1	EVALUATING a system as AMBITIOUS as ours proved DIFFICULT.
-EVAL_SEC_INTRO_A1	Evaluating complex systems is difficult.
-EVAL_SEC_INTRO_A1	How would our system behave in a real-world scenario?
-EVAL_SEC_INTRO_A1	Systems are only useful if they are efficient enough to achieve their goals.
-EVAL_SEC_INTRO_A1	A well designed system that has bad performance is of no use to any man, woman or animal.
-EVAL_SEC_INTRO_A1	Building a system as AMBITIOUS as our would be for naught without a generous EVALUATION.
+## OK
+EVAL_SEC_INTRO_A1	EVALUATING an effect as AMBITIOUS as ours proved DIFFICULT.
+EVAL_SEC_INTRO_A1	How would our compound behave in a real-world scenario?
+EVAL_SEC_INTRO_A1	A well designed instrument that has bad performance is of no use to any man, woman or animal.
+EVAL_SEC_INTRO_A1	Building an instrument as AMBITIOUS as ours would be for naught without a generous EVALUATION.
 
+## OK
 EVAL_SEC_INTRO_A	We now discuss our EVALUATION.
 EVAL_SEC_INTRO_A	our EVALUATION represents a valuable research contribution in and of itself.
 EVAL_SEC_INTRO_A	as we will soon see, the goals of this section are manifold.
 
+## OK
 EVAL_SEC_INTRO_B	the reason for this is that studies have shown that EVAL_MEASUREMENT is roughly PERCENTAGE higher than we might expect CITATION.
-EVAL_SEC_INTRO_B	our logic follows a new model: performance MATTERS only as long as CONSTRAINT_TAKES a back seat to CONSTRAINT_OR_MEASUREMENT XXX
+EVAL_SEC_INTRO_B	our logic follows a new model: intensity MATTERS only as long as CONSTRAINT_TAKES a back seat to CONSTRAINT_OR_MEASUREMENT XXX
 EVAL_SEC_INTRO_B	TAKE_NOTE_THAT we have intentionally neglected to SCI_VERB PROP_OR_MEASUREMENT XXX
 EVAL_SEC_INTRO_B	TAKE_NOTE_THAT we have decided not to SCI_VERB PROP_OR_MEASUREMENT XXX
 EVAL_SEC_INTRO_B	only with the benefit of our system's PROP_OR_MEASUREMENT_2 might we optimize for CONSTRAINT_TYPE at the cost of CONSTRAINT_OR_MEASUREMENT.
 EVAL_SEC_INTRO_B 	we are grateful for SCI_MATH_ADJ SCI_THING_P; without them, we could not optimize for CONSTRAINT_TYPE simultaneously with CONSTRAINT_OR_MEASUREMENT.
 
-MATTERS		is king
+## OK 
 MATTERS		is of import
 MATTERS		really matters
 MATTERS		matters
 MATTERS		might cause us to lose sleep
 
-CONSTRAINT_TYPE		performance
-CONSTRAINT_TYPE		security
-CONSTRAINT_TYPE		usability
-CONSTRAINT_TYPE		scalability
-CONSTRAINT_TYPE		complexity
-CONSTRAINT_TYPE		simplicity
+## OK
+CONSTRAINT_TYPE		intensity
+CONSTRAINT_TYPE		background
+CONSTRAINT_TYPE		signal-to-noise ratio
+CONSTRAINT_TYPE		maximum resolution
+CONSTRAINT_TYPE         good statistics
 
+## OK
 CONSTRAINT_P		CONSTRAINT_TYPE constraints
 CONSTRAINT_TAKES		CONSTRAINT_TYPE takes
 CONSTRAINT_TAKES		CONSTRAINT_P take
 
+## OK
 CONSTRAINT_OR_MEASUREMENT	EVAL_MEASUREMENT
 CONSTRAINT_OR_MEASUREMENT	CONSTRAINT_TYPE
 CONSTRAINT_OR_MEASUREMENT	CONSTRAINT_P
 
+## OK
 PERCENTAGE	DIGITDIGIT\%
 PERCENTAGE	DIGITDIGIT\%
 
-
-
+## OK
 TAKE_NOTE_THAT		note that
 TAKE_NOTE_THAT		an astute reader would now infer that for obvious reasons,
 TAKE_NOTE_THAT		unlike other authors,
 
+## OK
 NEGLECTED		neglected
 NEGLECTED		failed
 
+## OK
 EVAL_SEC_HYP_SET 	our overall EVALUATION seeks to prove three hypotheses: (1) EVAL_SEC_HYPOTHESIS; (2) EVAL_SEC_HYPOTHESIS; and finally (3) EVAL_SEC_HYPOTHESIS.
 
+## OK
 AFFECT		affect
 AFFECT		impact
 AFFECT		influence
 AFFECT		toggle
 AFFECT		adjust
 
+## OK
 LITTLE		much
 LITTLE		little
 LITTLE		a whole lot
 
+## OK
 EVAL_SEC_HYPOTHESIS 	that PROP_OR_MEASUREMENT is MORE_IMPORTANT_THAN PROP_OR_MEASUREMENT when MAXIMIZING EVAL_MEASUREMENT
-
 EVAL_SEC_HYPOTHESIS 	that SCI_THING_HAS actually shown DIFFERENT EVAL_MEASUREMENT over time
-
 EVAL_SEC_HYPOTHESIS 	that we can do LITTLE to AFFECT a SCI_SYSTEM's PROP_OR_MEASUREMENT_NO_SYSTEM
-
-EVAL_SEC_HYPOTHESIS	that the OLD_MACHINE of yesteryear actually exhibits better EVAL_MEASUREMENT than today's hardware
-
+EVAL_SEC_HYPOTHESIS	that the OLD_MACHINE of yesteryear actually exhibits better EVAL_MEASUREMENT than today's instrumentation
 EVAL_SEC_HYPOTHESIS	that EVAL_MEASUREMENT stayed constant across successive generations of OLD_MACHINEs
-
 EVAL_SEC_HYPOTHESIS	that HARDWARE_PROP behaves fundamentally differently on our EXP_WHERE
+EVAL_SEC_HYPOTHESIS     that most SCI_THING_P arise from fluctuations in SCI_THING_S
 
+## OK
 THINGS_NO_LONGER_INFLUENCE	SCI_THING_P no longer AFFECT
 THINGS_NO_LONGER_INFLUENCE	SCI_THING_S no longer AFFECTs
 
+## OK
 EVAL_SEC_HYPOTHESIS 	that THINGS_NO_LONGER_INFLUENCE PROP_OR_MEASUREMENT
 EVAL_SEC_HYPOTHESIS 	that THINGS_NO_LONGER_INFLUENCE performance
 EVAL_SEC_HYPOTHESIS 	that THINGS_NO_LONGER_INFLUENCE system design
 
+## OK
 EVAL_SEC_HYPOTHESIS 	that EVAL_MEASUREMENT is a BAD way to measure EVAL_MEASUREMENT
 BAD		bad
 BAD		good
 BAD		obsolete
 BAD		outmoded
 
+## OK
 EVAL_SEC_INTRO_C	we hope to make clear that our EVAL_MODING is the key to our EVALUATION.
 EVAL_SEC_INTRO_C	our work in this regard is a novel contribution, in and of itself.
 EVAL_SEC_INTRO_C	our EVALUATION will show that EVAL_MODING is crucial to our results.
 EVAL_SEC_INTRO_C	we hope that this section PROVES SCI_A_FACT.
-EVAL_SEC_INTRO_C	our evaluation strives to make these points clear.
+EVAL_SEC_INTRO_C	our analysis strives to make these points clear.
 EVAL_SEC_INTRO_C	our EVALUATION holds suprising results for patient reader.
 
+## OK
 EVAL_MODING		EVAL_MODING_HARDWARE
 EVAL_MODING		EVAL_MODING_SOFTWARE
 
+## OK
 PROVES		proves
 PROVES		proves to the reader
 PROVES		illuminates
 PROVES		sheds light on 
 
+## OK
 PROVE_THAT	prove that
 PROVE_THAT	show that
 PROVE_THAT	exhibit that
 PROVE_THAT	demonstrate that
 PROVE_THAT	make manifest that
 
-
-
+## OK
 MORE_IMPORTANT_THAN	MORE important than
 MORE_IMPORTANT_THAN	not as important as
 
+## OK
 MAXIMIZING		maximizing
 MAXIMIZING		minimizing
 MAXIMIZING		optimizing
 MAXIMIZING		improving
 
+## OK
 IMPROVED		improved
 
+## OK
 MORE			more
 MORE			less
 MORE			even more
 
+## OK
 AMBITIOUS		ambitious
 AMBITIOUS		novel
 AMBITIOUS		experimental
@@ -1057,314 +1026,304 @@ AMBITIOUS		unstable
 AMBITIOUS		complex
 AMBITIOUS		overengineered
 
+## OK
 DIFFICULT_X		difficult
 DIFFICULT_X		arduous
 DIFFICULT_X		onerous
 
+## OK
 DIFFICULT		DIFFICULT_X
 DIFFICULT		as DIFFICULT_X as EVAL_MODING
 DIFFICULT		more DIFFICULT_X than with previous systems
 
+## OK
 EVAL_MODING_HARDWARE	MULTIPLE_VERBING the HARDWARE_PROP_OR_MEASUREMENT of EVAL_SYSTEM
 EVAL_MODING_SOFTWARE	HACK_VERBING the SOFTWARE_PROP_OR_MEASUREMENT of our SOFTWARE_SYSTEM
 
-SOFTWARE_SYSTEM		operating system
-SOFTWARE_SYSTEM		distributed system
-SOFTWARE_SYSTEM		mesh network
+## OK
 SOFTWARE_SYSTEM		SCI_THING
 
-EVALUATING		evaluating
+## OK
 EVALUATING		measuring
 EVALUATING		analyzing
 
-HACK_VERBING		patching
-HACK_VERBING		refactoring
-HACK_VERBING		reprogramming
-HACK_VERBING		extreme programming
-HACK_VERBING		exokernelizing
-HACK_VERBING		microkernelizing
-HACK_VERBING		distributing
-HACK_VERBING		autogenerating
-HACK_VERBING		automating
-HACK_VERBING		making autonomous
-HACK_VERBING		instrumenting
-HACK_VERBING		interposing on
-HACK_VERBING		monitoring
+## OK
+HACK_VERBING		improving
+HACK_VERBING		rocking
+HACK_VERBING		aligning
+HACK_VERBING		orienting
+HACK_VERBING		optimizing
+HACK_VERBING		rotating
+HACK_VERBING		heating
+HACK_VERBING		cooling
+HACK_VERBING		pressurizing
 
-HACKED			hacked
-HACKED			patched
-HACKED			refactored
-HACKED			reprogrammed
-HACKED			exokernelized
-HACKED			microkernelized
-HACKED			distributed
-HACKED			hardened
-HACKED			autonomous
-HACKED			autogenerated
-HACKED			modified
+## OK
+HACKED			improved
+HACKED			rocked
+HACKED			aligned
+HACKED			oriented
+HACKED			optimized
+HACKED			rotated
+HACKED			heated
+HACKED			cooled
+HACKED			pressurized
 
-SOFTWARE_PROP_UNMOD	code complexity
-SOFTWARE_PROP_UNMOD	ABI
-SOFTWARE_PROP_UNMOD	API
-SOFTWARE_PROP_UNMOD	user-kernel boundary
-SOFTWARE_PROP_UNMOD	software architecture
+## OK
+SOFTWARE_PROP_UNMOD	resolution
+SOFTWARE_PROP_UNMOD     count rate
+SOFTWARE_PROP_UNMOD	angular resolution
+SOFTWARE_PROP_UNMOD	detector background
+SOFTWARE_PROP_UNMOD	sample-detector distance
 
+## OK
 SOFTWARE_PROP		SOFTWARE_PROP_UNMOD
 SOFTWARE_PROP		SOFTWARE_ADJ SOFTWARE_PROP_UNMOD
 SOFTWARE_PROP		SCI_BUZZWORD_ADJ SOFTWARE_PROP_UNMOD
 
+## OK
 SOFTWARE_PROP_OR_MEASUREMENT	SOFTWARE_PROP
 SOFTWARE_PROP_OR_MEASUREMENT	EVAL_MEASUREMENT
 
+## OK
 PROP_OR_MEASUREMENT	a SCI_SYSTEM's SOFTWARE_PROP
 PROP_OR_MEASUREMENT	HARDWARE_PROP
 PROP_OR_MEASUREMENT	EVAL_MEASUREMENT
 
+## OK
 PROP_OR_MEASUREMENT_2	SOFTWARE_PROP
 PROP_OR_MEASUREMENT_2	HARDWARE_PROP
 PROP_OR_MEASUREMENT_2	EVAL_MEASUREMENT
 
+## OK
 PROP_OR_MEASUREMENT_NO_SYSTEM	SOFTWARE_PROP
 PROP_OR_MEASUREMENT_NO_SYSTEM	HARDWARE_PROP
 PROP_OR_MEASUREMENT_NO_SYSTEM	EVAL_MEASUREMENT
 
-SOFTWARE_ADJ		legacy
-SOFTWARE_ADJ		virtual
+## OK
+SOFTWARE_ADJ		uncorrected
 SOFTWARE_ADJ		traditional
-SOFTWARE_ADJ		historical
+SOFTWARE_ADJ		normalized
 SOFTWARE_ADJ		effective
 
+## OK
 MULTIPLE_VERBING	doubling
 MULTIPLE_VERBING	increasing
 MULTIPLE_VERBING	tripling
 MULTIPLE_VERBING	reducing
 MULTIPLE_VERBING	quadrupling
 
-EVALUATION		evaluation
-EVALUATION		performance analysis
-EVALUATION		evaluation METHODOLOGY
+## OK
+EVALUATION		measurement
+EVALUATION              analysis
 
-NETWORK_TYPE_N	2
-NETWORK_TYPE_N	10
-NETWORK_TYPE_N	100
-NETWORK_TYPE_N	1000
-
-NETWORK_TYPE	Internet
-NETWORK_TYPE	Internet-2
-NETWORK_TYPE	Planetlab
-NETWORK_TYPE	sensor-net
-NETWORK_TYPE	NETWORK_TYPE_N-node
-NETWORK_TYPE	NETWORK_TYPE_N-node
-NETWORK_TYPE	NETWORK_TYPE_N-node
-NETWORK_TYPE	planetary-scale
-NETWORK_TYPE	underwater
-NETWORK_TYPE	millenium
-
+## OK
 EXP_ADJ		SCI_BUZZWORD_ADJ
 EXP_ADJ		real-time
-EXP_ADJ		packet-level
-EXP_ADJ		quantized
-EXP_ADJ		real-world
-EXP_ADJ		ad-hoc
-EXP_ADJ		software
-EXP_ADJ		hardware
+EXP_ADJ		high-resolution
+EXP_ADJ		time-of-flight
+EXP_ADJ         cold neutron
+EXP_ADJ         hot
 EXP_TYPE	EXP_ADJ EXP_TYPE_UM
 EXP_TYPE	EXP_TYPE_UM
-EXP_TYPE_UM	simulation
-EXP_TYPE_UM	emulation
-EXP_TYPE_UM	deployment
-EXP_TYPE_UM	prototype
+EXP_TYPE_UM+4	inelastic scattering
+EXP_TYPE_UM	positron scattering
+EXP_TYPE_UM	magnetic scattering
+EXP_TYPE_UM	scattering
 
-EXP_WHERE_UM	cluster
-EXP_WHERE_UM	testbed
-EXP_WHERE_UM	overlay network
+## OK
+EXP_WHERE_UM+2	spectrometer
+EXP_WHERE_UM+2  reflectometer
+EXP_WHERE_UM+2	diffractometer
+EXP_WHERE_UM	SANS machine
+EXP_WHERE_UM    neutron spin-echo machine
+EXP_WHERE_UM	tomograph
+EXP_WHERE_UM    neutrino detection facility
+EXP_WHERE_UM    nuclear power plant
+EXP_WHERE_CMN   EXP_WHERE_UM
+EXP_WHERE_CMN+4	EXP_ADJ EXP_WHERE_UM
 
-# common places to run experiments
-EXP_WHERE_CMN	desktop machines
-EXP_WHERE_CMN	mobile telephones
-EXP_WHERE_CMN	system
-EXP_WHERE_CMN	network
-EXP_WHERE_CMN+4	EXP_WHERE_ADJ EXP_WHERE_UM
+## OK
+OLD_MACHINE	spectrometer
+OLD_MACHINE     X-ray diffractometer
+OLD_MACHINE     Laue camera
 
-# rare places
-OLD_MACHINE	Macintosh SE
-OLD_MACHINE	UNIVAC
-OLD_MACHINE	Apple ][e
-OLD_MACHINE	IBM PC Junior
-OLD_MACHINE	Atari 2600
-OLD_MACHINE	Nintendo Gameboy
-OLD_MACHINE	Motorola bag telephone
-OLD_MACHINE	Apple Newton
-OLD_MACHINE	Commodore 64
-OLD_MACHINE	NeXT Workstation
-OLD_MACHINE	LISP machine
-OLD_MACHINE	PDP 11
-EXP_WHERE_RARE	decommissioned OLD_MACHINEs
-EXP_WHERE_RARE	XBox network
-EXP_WHERE_RARE	human test subjects
+## OK
+EXP_WHERE_RARE	humans
+EXP_WHERE_RARE	cold neutron diffractometers
 
+## OK
 EXP_WHERE	EXP_WHERE_RARE
 EXP_WHERE+8	EXP_WHERE_CMN
 
-
+## OK
 EXP_WHERE_ADJ	SCI_BUZZWORD_ADJ
-EXP_WHERE_ADJ	NETWORK_TYPE
-EXP_WHOSE	MIT's
-EXP_WHOSE	UC Berkeley's
-EXP_WHOSE	CERN's
-EXP_WHOSE	DARPA's
-EXP_WHOSE	the NSA's
-EXP_WHOSE	the KGB's
-EXP_WHOSE+5	our
-EXP_WHOSE	Intel's
 
+## OK
+EXP_WHOSE+5	the FRM-II
+EXP_WHOSE	J\"ulich's
+EXP_WHOSE	ILL's
+EXP_WHOSE	LLB's
+EXP_WHOSE	an American
+EXP_WHOSE+5	our
+
+## OK
 EXP	EXP_TYPE on EXP_WHOSE EXP_WHERE
 
-
+## OK
 EVAL_SEC_BODY		EVAL_SEC_BODY_P_LIST
 EVAL_SEC_BODY_P_LIST	EVAL_SEC_BODY_P
 EVAL_SEC_BODY_P_LIST+2 	EVAL_SEC_BODY_P_LIST EVAL_SEC_BODY_P
 
+## OK
 #EVAL_SEC_BODY_P EVAL_SEC_BODY_P_TOPIC EVAL_SEC_BODY_P_BODY EVAL_SEC_BODY_P_CLOSE
 EVAL_SEC_BODY_P_TOPIC	EVAL_SEC_BODY_P_TOPIC_LEADIN EVAL_SEC_BODY_P_FINDING
 
-
+## OK
 EVAL_SEC_BODY_P_FINDING	a SIMUL_ADJ SIMUL_TYPE SIMUL_VERB SIMUL_SYSTEM 
 
+## OK
 EVAL_SEC_BODY_P_TOPIC_LEADIN we were suprised to discover that
 EVAL_SEC_BODY_P_TOPIC_LEADIN as with
 
 EVAL_SEC_HARDWARE_P	{
-EVAL_HARDWARE_INTRO EVAL_ACTION EVAL_MOD_XXX LIT_FIRST EVAL_MOD EVAL_MOD_XXX LIT_MIDDLE_TWO EVAL_MOD EVAL_MOD_XXX LIT_MIDDLE_3 EVAL_MOD EVAL_MOD_XXX EVAL_SEC_BODY_P_REST 
+EVAL_HARDWARE_INTRO EVAL_ACTION EVAL_MOD_XXX LIT_FIRST EVAL_MOD EVAL_MOD_XXX LIT_MIDDLE_TWO EVAL_MOD EVAL_MOD_XXX LIT_MIDDLE_3 EVAL_MOD EVAL_MOD_XXX EVAL_SEC_BODY_P_REST EVAL_SEC_END
 }
 
-
-EVAL_HARDWARE_INTRO	many hardware modifications were REQUIRED to measure SCI_OUR_SYSTEM.
-EVAL_HARDWARE_INTRO	our detailed EVALUATION REQUIRED many hardware modifications.
-EVAL_HARDWARE_INTRO	we modified our standard hardware as follows:
-EVAL_HARDWARE_INTRO	a well-tuned network setup holds the key to a useful EVALUATION.
+## OK
+EVAL_HARDWARE_INTRO	many instrument modifications were REQUIRED to measure SCI_OUR_SYSTEM.
+EVAL_HARDWARE_INTRO	our detailed EVALUATION REQUIRED many sample environment modifications.
+EVAL_HARDWARE_INTRO	we modified our standard sample preparation as follows:
+EVAL_HARDWARE_INTRO	a well-known sample holds the key to a useful EVALUATION.
 EVAL_HARDWARE_INTRO	though many elide important experimental details, we provide them here in gory detail.
-EVAL_HARDWARE_INTRO	one must understand our network configuration to grasp the genesis of our results.
+EVAL_HARDWARE_INTRO	one must understand our instrument configuration to grasp the genesis of our results.
 
+## OK
 REQUIRED	mandated
 REQUIRED	required
 REQUIRED	necessary
 
+## OK
 EVAL_SEC_BODY_P_REST	
 EVAL_SEC_BODY_P_REST  LIT_LAST_OR_MIDDLE EVAL_MOD EVAL_MOD_XXX
 EVAL_SEC_BODY_P_REST  LIT_MIDDLE EVAL_MOD EVAL_MOD_XXX LIT_LAST EVAL_MOD EVAL_MOD_XXX
 EVAL_SEC_BODY_P_REST  LIT_MIDDLE EVAL_MOD EVAL_MOD_XXX LIT_MIDDLE EVAL_MOD EVAL_MOD_XXX LIT_LAST EVAL_MOD EVAL_MOD_XXX
 
-EVAL_SEC_FILLER	This configuration step was time-consuming but worth it in the end
-EVAL_SEC_FILLER	Configurations without this modification showed DIFFERENT EVAL_MEASUREMENT
-EVAL_SEC_FILLER	With this change, we noted DIFFERENT PERFORMANCE IMPROVEMENT
-EVAL_SEC_FILLER	This step flies in the face of conventional wisdom, but is INSTRUMENTAL to our results
-
+## OK
 EVAL_SEC_BODY_P_REST	
 EVAL_SEC_BODY_P_REST  LIT_LAST_OR_MIDDLE EVAL_MOD EVAL_MOD_XXX
 EVAL_SEC_BODY_P_REST  LIT_MIDDLE EVAL_MOD EVAL_MOD_XXX LIT_LAST EVAL_MOD EVAL_MOD_XXX
 EVAL_SEC_BODY_P_REST  LIT_MIDDLE EVAL_MOD EVAL_MOD_XXX LIT_MIDDLE EVAL_MOD EVAL_MOD_XXX LIT_LAST EVAL_MOD EVAL_MOD_XXX
 
-EVAL_SEC_FILLER	This configuration step was time-consuming but worth it in the end
+## OK
+EVAL_SEC_FILLER	This adjustment step was time-consuming but worth it in the end
 EVAL_SEC_FILLER	Configurations without this modification showed DIFFERENT EVAL_MEASUREMENT
 EVAL_SEC_FILLER	With this change, we noted DIFFERENT PERFORMANCE IMPROVEMENT
 EVAL_SEC_FILLER	This step flies in the face of conventional wisdom, but is INSTRUMENTAL to our results
-EVAL_SEC_FILLER	To find the required HARDWARE_ITEMS, we combed eBay and tag sales
+EVAL_SEC_FILLER	To find the required HARDWARE_ITEMS, we combed the old FRM's resources
 EVAL_SEC_FILLER	we struggled to amass the necessary HARDWARE_ITEMS
 EVAL_SEC_FILLER	the HARDWARE_ITEMS described here explain our UNIQUE results
 EVAL_SEC_FILLER	note that only experiments on our EXP_WHERE (and not on our EXP_WHERE) followed this pattern
 EVAL_SEC_FILLER	we only NOTED these results when EMULATING_IT
-EVAL_SEC_FILLER+3	EVAL_DONE_DIFFERENT
 
-EVAL_DONE_DIFFERENT had we EMULATED our EXP_WHERE, as opposed to EMULATING_IT, we would have seen DIFFERENT results
+## OK
+EVAL_SEC_END	we note that other researchers have tried and failed to measure in this configuration.
+EVAL_SEC_END	this concludes our discussion of the measurement setup.
+EVAL_SEC_END	all of these techniques are of interesting historical significance; SCI_SOURCE and SCI_SOURCE investigated a SIMILAR SETUP in SCI_YEAR.
 
+## OK
 EVAL_MOD_XXX+3	XXX
 EVAL_MOD_XXX	.  EVAL_SEC_FILLER.
 
+## OK, cbb
 EMULATING	emulating
 EMULATING	simulating
-EMULATING	deploying
-EMULATING	rolling out
 
+## OK, cbb
 EMULATING_IT	simulating it in WARE
 EMULATING_IT	emulating it in WARE
-EMULATING_IT	deploying it in THE_WILD
 
+## OK, cbb
 EMULATING_THEM	simulating them in WARE
 EMULATING_THEM	emulating them in WARE
-EMULATING_THEM	deploying them in THE_WILD
 
+## OK
 WARE		software
-WARE		hardware
-WARE		courseware
 WARE		bioware
 WARE		middleware
 
+## OK
 THE_WILD	the wild
 THE_WILD	a laboratory setting
 THE_WILD	a controlled environment
 THE_WILD	a chaotic spatio-temporal environment
 
+## OK
 EVAL_WHO+25 	we
 EVAL_WHO 	SCI_COUNTRY SCI_PEOPLE
 EVAL_WHO 	SCI_PEOPLE
 
+## OK
 EVAL_VERBED	instrumented
 EVAL_VERBED	performed
 EVAL_VERBED	carried out
 EVAL_VERBED	ran
 EVAL_VERBED	executed
-EVAL_VERBED	scripted
+EVAL_VERBED+4	measured
 
+## OK
 EVAL_WHY_VERB	prove
 EVAL_WHY_VERB	disprove
 EVAL_WHY_VERB	measure
 EVAL_WHY_VERB	quantify
 
+## OK
 IMPACT		impact on
 IMPACT		effect on
 IMPACT		influence on
 IMPACT		inability to effect
 IMPACT		lack of influence on
 
+## OK
 #EVAL_SYSTEM	SCI_BUZZWORD_NOUN
 EVAL_SYSTEM	SCI_BUZZWORD_ADJ SCI_BUZZWORD_NOUN
 EVAL_SYSTEM	SCI_MATH_ADV SCI_BUZZWORD_ADJ SCI_BUZZWORD_NOUN
 
+## OK
 EVAL_FACT	EVAL_SYSTEM's IMPACT SCI_A_FACT
 EVAL_FACT	the SCI_MATH_ADV SCI_BUZZWORD_ADJ nature of EVAL_SYSTEM 
 EVAL_FACT	the SCI_MATH_ADV SCI_BUZZWORD_ADJ behavior of SCI_MATH_ADJ SCI_BUZZWORD_NOUN
 EVAL_FACT	SCI_A_FACT
 
+## OK
 EVAL_WHY	EVAL_WHY_VERB EVAL_FACT
 
+## OK
 EVAL_ACTION 	EVAL_WHO EVAL_VERBED a EXP to EVAL_WHY
 EVAL_MOD	EVAL_WHO EVAL_MOD_ACTION EVAL_MOD_OBJECT
 EVAL_MOD	EVAL_WHO EVAL_MOD_ACTION EVAL_MOD_OBJECT to EVAL_MOD_WHY
 
-#
-# passive voice does not work due to was/were problems
-#
-#EVAL_MOD	EVAL_MOD_PASSIVE_ACTION EVAL_MOD_OBJECT to EVAL_MOD_WHY
-#EVAL_MOD	EVAL_MOD_PASSIVE_ACTION EVAL_MOD_OBJECT
-
+## OK
 EVAL_MOD_WHY	EVAL_WHY
 EVAL_MOD_WHY	PROBE_VERB the HARDWARE_PROP_OR_MEASUREMENT of EVAL_MOD_OBJECT
 EVAL_MOD_WHY	PROBE_VERB EVAL_MOD_OBJECT
 EVAL_MOD_WHY	PROBE_VERB SCI_BUZZWORD_NOUN
 
+## OK
 EVAL_MOD_OBJECT our EXP_WHERE
 EVAL_MOD_OBJECT EXP_WHOSE EXP_WHERE
 
 # this doesn't appear to be working well
 #EVAL_MOD_OBJECT SCI_BUZZWORD_NOUN
 
-EVAL_MOD_UNITS	MB
-EVAL_MOD_UNITS	GB
-EVAL_MOD_UNITS	kb
-EVAL_MOD_UNITS	Hz
-EVAL_MOD_UNITS	GHz
+## OK
+EVAL_MOD_UNITS	Tesla
+EVAL_MOD_UNITS	Gauss
+EVAL_MOD_UNITS	Kelvin
+EVAL_MOD_UNITS	Amperes
+EVAL_MOD_UNITS	Volts
 
+## OK
 EVAL_MOD_N	10
 EVAL_MOD_N	25
 EVAL_MOD_N	100
@@ -1376,298 +1335,94 @@ EVAL_MOD_N	300
 EVAL_MOD_N	200
 EVAL_MOD_N	150
 
+## OK
 EVAL_MOD_AMOUNT	more
 EVAL_MOD_AMOUNT	some
 
-EVAL_MOD_HARDWARE	hard drive space
-EVAL_MOD_HARDWARE	memory
-EVAL_MOD_HARDWARE	network bandwidth
+## OK
+HARDWARE_PROP		order along the $\langle ORIENTATION\rangle$ axis
+HARDWARE_PROP		intensity at the reciprocal point $[ ORIENTATION ]$
+HARDWARE_PROP           scattering along the $\langle ORIENTATION\rangle$ direction
+HARDWARE_PROP           order with a propagation vector $q = DIGIT.DIGITDIGIT\,\mathrm{\AA}^{-1}$
+HARDWARE_PROP		magnetization
+HARDWARE_PROP		magnetic order
+HARDWARE_PROP		lattice constants
+HARDWARE_PROP		lattice distortion
+HARDWARE_PROP           low defect density
 
-EVAL_MOD_PROPERTY	throughput
-EVAL_MOD_PROPERTY	SCI_MATH_ADJ throughput
-EVAL_MOD_PROPERTY	latency
+## OK
+ORIENTATION	ORDIGIT ORDIGIT ORDIGIT
 
-HARDWARE_PROP		MEMORY_TYPE space
-HARDWARE_PROP		MEMORY_TYPE speed
-HARDWARE_PROP		MEMORY_TYPE throughput
-HARDWARE_PROP		STORAGE_TYPE space
-HARDWARE_PROP		STORAGE_TYPE speed
-HARDWARE_PROP		STORAGE_TYPE throughput
+## OK
+ORDIGIT+3       ORSDIGIT
+ORDIGIT         \overline{ORSDIGIT}
 
-HARDWARE		MEMORY
-HARDWARE		PROCESSOR
-HARDWARE 		STORAGE
-HARDWARE		NETWORK_BANDWIDTH
+## OK
+ORSDIGIT+5      0
+ORSDIGIT+4      1
+ORSDIGIT+2      2
+ORSDIGIT        3
+ORSDIGIT        4
 
-HARDWARE_ITEMS		MEMORY_ITEMS
-HARDWARE_ITEMS		PROCESSOR_ITEMS
-HARDWARE_ITEMS		STORAGE_ITEMS
-HARDWARE_ITEMS		EXPANSION_ITEMS
+## OK
+HARDWARE		a cryostat
+HARDWARE		a pressure cell
+HARDWARE 		a spin-flipper coil
+HARDWARE		the monochromator
 
-MEMORY_ITEMS		MEMORY_TYPE
-MEMORY_ITEMS		EVAL_MOD_NMB of MEMORY_TYPE
-MEMORY_ITEMS		EVAL_MOD_NGB of MEMORY_TYPE
-MEMORY_ITEMS		EVAL_MOD_NkB of MEMORY_TYPE
+## OK
+HARDWARE_ITEMS		polarizers
+HARDWARE_ITEMS		polarization analysis devices
+HARDWARE_ITEMS		detectors
 
-PROCESSOR_ITEM		PROCESSOR_TYPE
-PROCESSOR_ITEMS		PROCESSOR_TYPEs
-
-STORAGE_ITEM		STORAGE_SIZE STORAGE_TYPE
-STORAGE_ITEM		STORAGE_TYPE
-
-EXPANSION_ITEMS		EXPANSION_ITEMs
-STORAGE_ITEMS		STORAGE_ITEMs
-
-EXPANSION_ITEM		joystick
-EXPANSION_ITEM		2400 baud modem
-EXPANSION_ITEM		SoundBlaster 8-bit sound card
-EXPANSION_ITEM		Knesis keyboard
-EXPANSION_ITEM		power strip
-EXPANSION_ITEM		Ethernet card
-EXPANSION_ITEM		tulip card
-EXPANSION_ITEM		laser label printer
-EXPANSION_ITEM		dot-matrix printer
-EXPANSION_ITEM		5.25" floppy drive
-
-
-BANDWIDTH_AMOUNT	EVAL_MOD_NMB/s
-BANDWIDTH_AMOUNT	EVAL_MOD_NkB/s
-BANDWIDTH_AMOUNT	EVAL_MOD_NGB/s
-BANDWIDTH_AMOUNT	EVAL_MOD_NGb/s
-
-NETWORK_BANDWIDTH	BANDWIDTH_AMOUNT of BANDWIDTH_TYPE
-BANDWIDTH_TYPE		Ethernet access
-BANDWIDTH_TYPE		Wi-Fi throughput
-BANDWIDTH_TYPE		Internet access
-
-MEMORY			EVAL_MOD_NMB of MEMORY_TYPE
-MEMORY			EVAL_MOD_AMOUNT MEMORY_TYPE
-
-STORAGE_M		EVAL_MOD_AMOUNT STORAGE_TYPE space
-STORAGE_M		STORAGE_DEVICES_N STORAGE_SIZE STORAGE_TYPEs
-STORAGE_S		a STORAGE_SIZE STORAGE_TYPE
-
-STORAGE+2		STORAGE_M
-STORAGE			STORAGE_S
-
-STORAGE_DEVICES_N	EVAL_MOD_N
-
-STORAGE_SIZE		EVAL_MOD_NMB
-STORAGE_SIZE		EVAL_MOD_NkB
-STORAGE_SIZE		EVAL_MOD_NGB
-STORAGE_SIZE		EVAL_MOD_N-petabyte
-STORAGE_SIZE		EVAL_MOD_NTB
-
-STORAGE_TYPE		hard disk
-STORAGE_TYPE		optical drive
-STORAGE_TYPE		floppy disk
-STORAGE_TYPE		tape drive
-STORAGE_TYPE		USB key
-
-MEMORY_TYPE		RAM
-MEMORY_TYPE		ROM
-MEMORY_TYPE		flash-memory
-MEMORY_TYPE		NV-RAM
-
-CHIP_SPEED		EVAL_MOD_NGHz
-CHIP_SPEED		EVAL_MOD_NMHz
-
-PROCESSOR		EVAL_MOD_AMOUNT PROCESSOR_TYPEs
-PROCESSOR		EVAL_MOD_N PROCESSOR_TYPEs
-PROCESSOR_TYPE		CPU
-PROCESSOR_TYPE		FPU
-PROCESSOR_TYPE		RISC processor
-PROCESSOR_TYPE		CISC processor
-PROCESSOR_TYPE		CHIP_SPEED Athlon ATHLON_TYPE
-PROCESSOR_TYPE		CHIP_SPEED Pentium PENTIUM_TYPE
-PROCESSOR_TYPE		CHIP_SPEED Intel 386
-PENTIUM_TYPE		IV
-PENTIUM_TYPE		III
-PENTIUM_TYPE		Centrino
-PENTIUM_TYPE		II
-ATHLON_TYPE		XP
-ATHLON_TYPE		64
-
+## OK
 HARDWARE_PROP_OR_MEASUREMENT		HARDWARE_PROP
 HARDWARE_PROP_OR_MEASUREMENT		effective HARDWARE_PROP
 HARDWARE_PROP_OR_MEASUREMENT		EVAL_MEASUREMENT
 
+## OK
 MULTIPLE_VERBED		doubled
 MULTIPLE_VERBED		halved
 MULTIPLE_VERBED		tripled
 MULTIPLE_VERBED		quadrupled
 MULTIPLE_VERBED		reduced
 
+## OK
 EVAL_MOD_ACTION		added HARDWARE to
 EVAL_MOD_ACTION		removed HARDWARE from
 EVAL_MOD_ACTION 	MULTIPLE_VERBED the HARDWARE_PROP_OR_MEASUREMENT of
-EVAL_MOD_PASSIVE_ACTION HARDWARE was added to
-EVAL_MOD_PASSIVE_ACTION HARDWARE was removed from
 
-EVAL_SEC_SOFTWARE_P 	EVAL_SEC_SOFTWARE_INTRO. EVAL_SEC_SOFTWARE_MOD XXX EVAL_SEC_SOFTWARE_MOD XXX LIT_MIDDLE_TWO EVAL_SEC_SOFTWARE_REST
-
-EVAL_SEC_SOFTWARE_REST	EVAL_SEC_SOFTWARE_END
-EVAL_SEC_SOFTWARE_REST  LIT_MIDDLE_3 EVAL_SEC_SOFTWARE_MOD XXX EVAL_SEC_SOFTWARE_END
-
-EVAL_SEC_SOFTWARE_MOD	EVAL_WHO added support for SCI_OUR_SYSTEM as a KERNEL_MODULE
-EVAL_SEC_SOFTWARE_MOD	all software components were COMPILED using TOOLCHAIN LINKER_SUFFIX
-EVAL_SEC_SOFTWARE_MOD	all software was COMPILED using TOOLCHAIN LINKER_SUFFIX
-EVAL_SEC_SOFTWARE_MOD   our experiments soon proved that HACK_VERBING our EVAL_ITEMS_P was more effective than HACK_VERBING them, as previous work suggested
-EVAL_SEC_SOFTWARE_MOD	we implemented our SCI_THING_S server in LANGUAGE, augmented with SCI_MATH_ADV SCI_MATH_ADJ extensions
-
-LINKER_SUFFIX		linked against SCI_BUZZWORD_ADJ libraries for SCI_VERBING SCI_THING_MOD
-LINKER_SUFFIX		with the help of SCI_SOURCE's libraries for SCI_MATH_ADV SCI_VERBING EVAL_ITEMS
-LINKER_SUFFIX		built on SCI_SOURCE's toolkit for SCI_MATH_ADV SCI_VERBING EVAL_ITEMS
-LINKER_SUFFIX		built on the SCI_COUNTRY toolkit for SCI_MATH_ADV SCI_VERBING EVAL_ITEMS
-
-EVAL_SEC_SOFTWARE_END	we made all of our software is available under a LICENSE_TYPE license.
-EVAL_SEC_SOFTWARE_END	we note that other researchers have tried and failed to enable this functionality.
-EVAL_SEC_SOFTWARE_END	this concludes our discussion of software modifications.
-EVAL_SEC_SOFTWARE_END	all of these techniques are of interesting historical significance; SCI_SOURCE and SCI_SOURCE investigated a SIMILAR SETUP in SCI_YEAR.
-
+## OK
 SIMILAR	related
 SIMILAR	similar
 SIMILAR entirely different
 SIMILAR orthogonal
 
+## OK
 SETUP	setup
 SETUP	configuration
 SETUP	system
-SETUP	heuristic
 
-LICENSE_TYPE		copy-once, run-nowhere
-LICENSE_TYPE		GPL Version 2
-LICENSE_TYPE		draconian
-LICENSE_TYPE		very restrictive
-LICENSE_TYPE		Microsoft-style
-LICENSE_TYPE		open source
-LICENSE_TYPE		CITE_INST
-LICENSE_TYPE		write-only
-
-LANGUAGE_UM		Perl
-LANGUAGE_UM		C
-LANGUAGE_UM		B
-LANGUAGE_UM		C++
-LANGUAGE_UM		Python
-LANGUAGE_UM		Lisp
-LANGUAGE_UM		Scheme
-LANGUAGE_UM		Smalltalk
-LANGUAGE_UM		Ruby
-LANGUAGE_UM		x86 assembly
-LANGUAGE_UM		Dylan
-LANGUAGE_UM		Java
-LANGUAGE_UM		SQL
-LANGUAGE_UM		Fortran
-LANGUAGE_UM		PHP
-LANGUAGE_UM		Prolog
-LANGUAGE_UM		ML
-LANGUAGE_UM		Simula-67
-
-LANGUAGE_MOD		enhanced
-LANGUAGE_MOD		embedded
-LANGUAGE_MOD		JIT-compiled
-LANGUAGE_MOD		ANSI
-
-LANGUAGE+2		LANGUAGE_UM
-LANGUAGE		LANGUAGE_MOD LANGUAGE_UM
-
-EVAL_ITEMS_UM_P		EXPANSION_ITEMs
+## OK
+#EVAL_ITEMS_UM_P	EXPANSION_ITEMs
 EVAL_ITEMS_UM_P		SCI_THING_P
 EVAL_ITEMS_UM_P		OLD_MACHINEs
 EVAL_ITEMS_P		EVAL_ITEMS_UM_P
 EVAL_ITEMS_P		SCI_MATH_ADJ EVAL_ITEMS_UM_P
 
+## OK
 EVAL_ITEMS_UM_S		HARDWARE_PROP
 EVAL_ITEMS_UM_S		EVAL_MEASUREMENT
 
+## OK
 EVAL_ITEMS_S		EVAL_ITEMS_UM_S
 EVAL_ITEMS_S		SCI_MATH_ADJ EVAL_ITEMS_UM_S
 EVAL_ITEMS_S		SCI_THING_S
 
+## OK
 EVAL_ITEMS		EVAL_ITEMS_P
 EVAL_ITEMS		EVAL_ITEMS_S
 
-
-KERNEL_MODULE_UM		kernel module
-KERNEL_MODULE_UM		kernel patch
-KERNEL_MODULE_UM		LINKED user-space application
-KERNEL_MODULE_UM		embedded application
-KERNEL_MODULE_UM		runtime applet
-
-KERNEL_MODULE			KERNEL_MODULE_UM
-KERNEL_MODULE			SCI_MATH_ADJ KERNEL_MODULE_UM
-
-COMPILED		compiled
-COMPILED		hand hex-editted
-COMPILED		linked
-COMPILED		hand assembled
-
-TOOLCHAIN		GCC VERSION
-TOOLCHAIN		AT\&T System V's compiler
-TOOLCHAIN		a standard toolchain
-TOOLCHAIN		Microsoft developer's studio
-
-
-LINKED			dynamically-linked
-LINKED			statically-linked
-
-EVAL_SEC_SOFTWARE_INTRO	SYSNAME does not run on a commodity operating system but instead requires a SCI_MATH_ADV HACKED version of OSFULL
-EVAL_SEC_SOFTWARE_INTRO	SYSNAME runs on HACKED standard software
-EVAL_SEC_SOFTWARE_INTRO	We ran SCI_OUR_SYSTEM on commodity operating systems, such as OSFULL and OSFULL
-EVAL_SEC_SOFTWARE_INTRO	Building a sufficient software environment took time, but was well worth it in the end
-EVAL_SEC_SOFTWARE_INTRO	When SCI_SOURCE HACKED OSFULL's SOFTWARE_PROP in SCI_YEAR, he could not have anticipated the impact; our work here FOLLOWS_SUIT
-
-
-FOLLOWS_SUIT 	attempts to follow on
-FOLLOWS_SUIT 	follows suit
-FOLLOWS_SUIT 	inherits from this previous work
-
-OSNAME		GNU/Debian Linux 
-OSNAME		FreeBSD
-OSNAME		NetBSD
-OSNAME		OpenBSD
-OSNAME		TinyOS
-OSNAME		Multics
-OSNAME		Coyotos
-OSNAME		KeyKOS
-OSNAME		ErOS
-OSNAME		LeOS
-OSNAME		EthOS
-OSNAME		MacOS X
-OSNAME		Microsoft DOS
-OSNAME		DOS
-OSNAME		Ultrix
-OSNAME		Minix
-OSNAME		Mach
-OSNAME		GNU/Hurd
-OSNAME		L4
-OSNAME		Amoeba
-OSNAME		Sprite
-OSNAME		AT\&T System V
-OSNAME+4	Microsoft Windows WINVERS
-
-WINVERS		XP
-WINVERS		3.11
-WINVERS		2000
-WINVERS		98
-WINVERS		NT
-WINVERS		for Workgroups
-WINVERS		Longhorn
-WINVERS		1969
-
-OSFULL		OSNAME Version VERSION
-OSFULL		OSNAME
-
-ABCD		a
-ABCD		b
-ABCD		c
-ABCD		d
-
-VERSION_BASE	DIGITABCD
-VERSION_BASE	DIGIT.DIGIT
-VERSION_BASE	DIGIT.DIGIT.DIGIT
-VERSION		VERSION_BASE
-VERSION		VERSION_BASE, Service Pack DIGIT
 
 EVAL_GUTS {
 
@@ -1681,51 +1436,59 @@ EVAL_GUTS_ANALYSIS_3
 
 }
 
+## OK
 EVAL_GUTS_ANALYSIS_1_A  We first ANALYZE WHICH_EXPERIMENTS EXP_FIG_REF
 EVAL_GUTS_ANALYSIS_1_A  Now for the climactic analysis of WHICH_EXPERIMENTS
 EVAL_GUTS_ANALYSIS_3_A  Lastly, we discuss WHICH_EXPERIMENTS
 
+## OK
 ANALYZE		analyze
 ANALYZE		explain
 ANALYZE		shed light on
 ANALYZE		illuminate
 
+## OK
 EXP_FIG_REF	as shown in EXP_FIG
 EXP_FIG_REF	
 
+## OK
 EVAL_GUTS_ANALYSIS_1 EVAL_GUTS_ANALYSIS_1_A XXX EVAL_GUTS_ANALYSIS
 
+## OK
 EVAL_GUTS_ANALYSIS  EVAL_ANALYZE_ONE XXX LIT_MIDDLE_TWO EVAL_ANALYZE_ONE XXX LIT_MIDDLE_3 EVAL_ANALYZE_ONE XXX
 
-EVAL_ANALYZE_ONE note the heavy tail on the CDF in EXP_FIG, exhibiting DIFFERENT EVAL_MEASUREMENT
-EVAL_ANALYZE_ONE the many discontinuities in the graphs point to DIFFERENT EVAL_MEASUREMENT introduced with our hardware upgrades
-EVAL_ANALYZE_ONE bugs in our system caused the unstable behavior throughout the experiments
+## OK
+EVAL_ANALYZE_ONE note the heavy tail on the gaussian in EXP_FIG, exhibiting DIFFERENT EVAL_MEASUREMENT
+EVAL_ANALYZE_ONE the many discontinuities in the graphs point to DIFFERENT EVAL_MEASUREMENT introduced with our instrumental upgrades
+EVAL_ANALYZE_ONE imperfections in our sample caused the unstable behavior throughout the experiments
 EVAL_ANALYZE_ONE Gaussian electromagnetic disturbances in our EXP_WHERE caused unstable experimental results
-EVAL_ANALYZE_ONE operator error alone cannot account for these results
+EVAL_ANALYZE_ONE operator errors alone cannot account for these results
 EVAL_ANALYZE_ONE these EVAL_MEASUREMENT observations contrast to those seen in earlier work CITATION, such as SCI_SOURCE's seminal treatise on SCI_THING_P and observed HARDWARE_PROP_OR_MEASUREMENT
 EVAL_ANALYZE_ONE note how EMULATING SCI_THING_P rather than EMULATING_THEM produce SMOOTHER, more reproducible results
-EVAL_ANALYZE_ONE the results come from only DIGIT trial runs, and were not reproducible
+EVAL_ANALYZE_ONE the results come from only one measurement, and were not reproducible
 EVAL_ANALYZE_ONE error bars have been elided, since most of our data points fell outside of DIGITDIGIT standard deviations from observed means
 EVAL_ANALYZE_ONE note that EXP_FIG shows the \textit{STAT_ADJ} and not \textit{STAT_ADJ} SCI_MATH_ADJ HARDWARE_PROP_OR_MEASUREMENT
 EVAL_ANALYZE_ONE the curve in EXP_FIG should look familiar; it is better known as EVAL_MATH_EXPR
 EVAL_ANALYZE_ONE we scarcely anticipated how ACCURATE our results were in this phase of the EVALUATION
-EVAL_ANALYZE_ONE of course, all sensitive data was anonymized during our EMULATION
-EVAL_ANALYZE_ONE note that SCI_THING_P have SMOOTHER HARDWARE_PROP_OR_MEASUREMENT curves than do HACKED SCI_THING_P
+EVAL_ANALYZE_ONE of course, all raw data was properly background-corrected during our EMULATION
+EVAL_ANALYZE_ONE note that SCI_THING_P have SMOOTHER HARDWARE_PROP_OR_MEASUREMENT curves than do unHACKED SCI_THING_P
 EVAL_ANALYZE_ONE the key to EXP_FIG is closing the feedback loop; EXP_FIG shows how SCI_OUR_SYSTEM's HARDWARE_PROP_OR_MEASUREMENT does not converge otherwise
 EVAL_ANALYZE_ONE the data in EXP_FIG, in particular, proves that four years of hard work were wasted on this project
 
+## OK
 ACCURATE	accurate
 ACCURATE	wildly inaccurate
 ACCURATE	precise
 ACCURATE	inaccurate
 
-
+## OK
 SMOOTHER	smoother
 SMOOTHER	less discretized
 SMOOTHER	more jagged
 SMOOTHER	less jagged
 
-EVAL_MATH_EXPR 	$FGH(n) = SCC_EXPR$
+## OK
+EVAL_MATH_EXPR 	$FGH(n) = EQ_EXPR$
 FGHL	f
 FGHL	F
 FGHL	G
@@ -1736,7 +1499,7 @@ FGH	FGHL
 FGH	FGHL^{FGH_SUP}
 FGH	FGHL_{FGH_SUB}
 FGH	FGHL^{FGH_SUP}_{FGH_SUB}
-FGH_SUB	X|Y,Z
+FGH_SUB	X
 FGH_SUB	ij
 FGH_SUB	Y
 FGH_SUB	*
@@ -1744,18 +1507,20 @@ FGH_SUP	-1
 FGH_SUP	*
 FGH_SUP	'
 
-
-
+## OK
 EVAL_GUTS_ANALYSIS_2 EVAL_GUTS_ANALYSIS_2_A XXX EVAL_GUTS_ANALYSIS 
 EVAL_GUTS_ANALYSIS_3 EVAL_GUTS_ANALYSIS_3_A XXX EVAL_GUTS_ANALYSIS
 
+## OK
 EVAL_GUTS_ANALYSIS_2_A	We have seen one type of behavior in EXP_FIGS; our other experiments (shown in Figure~\ref{LATEX_FIG_LABEL_REF}) paint a different picture
 EVAL_GUTS_ANALYSIS_2_A	We next turn to WHICH_EXPERIMENTS, shown in EXP_FIG
 EVAL_GUTS_ANALYSIS_2_A  Shown in EXP_FIG, WHICH_EXPERIMENTS call attention to SCI_OUR_SYSTEM's EVAL_MEASUREMENT
 
+## OK
 EXP_FIG		Figure~\ref{LATEX_FIG_LABEL_REF}
 EXP_FIGS	Figures~\ref{LATEX_FIG_LABEL_REF} and~\ref{LATEX_FIG_LABEL_REF}
 
+## OK
 WHICH_EXPERIMENTS	experiments (1) and (3) enumerated above
 WHICH_EXPERIMENTS	the first two experiments
 WHICH_EXPERIMENTS	the second half of our experiments
@@ -1763,70 +1528,51 @@ WHICH_EXPERIMENTS	experiments (3) and (4) enumerated above
 WHICH_EXPERIMENTS	experiments (1) and (4) enumerated above
 WHICH_EXPERIMENTS	all four experiments
 
-
-EVAL_GUTS_INTRO	our hardware and software modficiations PROVE_THAT EMULATING SCI_OUR_SYSTEM is one thing, but EMULATING_IT is a completely different story.
-EVAL_GUTS_INTRO we have taken great pains to describe out EVALUATION setup; now, the payoff, is to discuss our results.
+## OK
+EVAL_GUTS_INTRO	our unique measurement geometries PROVE_THAT EMULATING SCI_OUR_SYSTEM is one thing, but EMULATING_IT is a completely different story.
+EVAL_GUTS_INTRO we have taken great pains to describe our EVALUATION setup; now, the payoff, is to discuss our results.
 EVAL_GUTS_INTRO given these trivial configurations, we achieved non-trivial results.
 EVAL_GUTS_INTRO is it possible to justify the great pains we took in our implementation? SCI_RESPONSE.
 EVAL_GUTS_INTRO is it possible to justify having paid little attention to our implementation and experimental setup? SCI_RESPONSE.
 
+## OK
 EVAL_GUTS_EXP_SET EXP_SET_LEADIN we ran four novel experiments: (1) EVAL_EXP; (2) EVAL_EXP; (3) EVAL_EXP; and (4) EVAL_EXP XXX
 
+## OK
 EVAL_GUTS_EXP_SET_FOLLOWON
-EVAL_GUTS_EXP_SET_FOLLOWON	we discarded the results of some earlier experiments, notably when EVAL_EXP XXX
-EVAL_GUTS_EXP_SET_FOLLOWON	all of these experiments completed without RESOURCE_STARVATION or RESOURCE_STARVATION XXX
+EVAL_GUTS_EXP_SET_FOLLOWON	we discarded the results of some earlier measurements, notably when EVAL_EXP XXX
+#EVAL_GUTS_EXP_SET_FOLLOWON	all of these experiments completed without RESOURCE_STARVATION or RESOURCE_STARVATION XXX
 
-RESOURCE_STARVATION	resource starvation
-RESOURCE_STARVATION	LAN congestion
-RESOURCE_STARVATION	access-link congestion
-RESOURCE_STARVATION	WAN congestion
-RESOURCE_STARVATION	the black smoke that results from hardware failure
-RESOURCE_STARVATION	paging 
-RESOURCE_STARVATION	NETWORK_TYPE congestion
-RESOURCE_STARVATION	noticable performance bottlenecks
-RESOURCE_STARVATION	unusual heat dissipation
+## OK, cbb
+RESOURCE_STARVATION	
 
 
-
+## OK
 EXP_SET_LEADIN that being said,
 EXP_SET_LEADIN 
 EXP_SET_LEADIN with these considerations in mind,
 EXP_SET_LEADIN seizing upon this IDEAL configuration,
 
+## OK
 IDEAL	ideal
 IDEAL	approximate
 IDEAL	contrived
 
-EVAL_EXP	we ran SCI_THING_P on DIGITDIGIT nodes spread throughout the NETWORK_TYPE network, and compared them against SCI_THING_P running locally
-
-EVAL_EXP	we deployed DIGITDIGIT OLD_MACHINEs across the NETWORK_TYPE network, and tested our SCI_THING_P accordingly
-
+#EVAL_EXP	we ran SCI_THING_P on DIGITDIGIT nodes spread throughout the NETWORK_TYPE network, and compared them against SCI_THING_P running locally
+#EVAL_EXP	we deployed DIGITDIGIT OLD_MACHINEs across the NETWORK_TYPE network, and tested our SCI_THING_P accordingly
 EVAL_EXP	we asked (and answered) what would happen if SCI_MATH_ADV SCI_MATH_ADJ SCI_THING_P were used instead of SCI_THING_P
-
 EVAL_EXP	we measured HARDWARE_PROP as a function of HARDWARE_PROP on a OLD_MACHINE
-
-EVAL_EXP 	we compared EVAL_MEASUREMENT on the OSNAME, OSNAME and OSNAME operating systems
-
 EVAL_EXP	we measured MEASURABLE_SYSTEM and MEASURABLE_SYSTEM PERFORMANCE on our EXP_WHERE
+EVAL_EXP	we ran DIGITDIGIT runs with a similar MEASURABLE_SYSTEM, and compared results to our EMULATION
 
-EVAL_EXP	we dogfooded SCI_OUR_SYSTEM on our own desktop machines, paying particular attention to HARDWARE_PROP_OR_MEASUREMENT
+## OK, cbb
+MEASURABLE_SYSTEM	structure
+MEASURABLE_SYSTEM	dynamics
+MEASURABLE_SYSTEM	activity
 
-EVAL_EXP	we ran DIGITDIGIT trials with a simulated MEASURABLE_SYSTEM workload, and compared results to our EMULATION
-
-
-MEASURABLE_SYSTEM	DNS
-MEASURABLE_SYSTEM	Web server
-MEASURABLE_SYSTEM	E-mail
-MEASURABLE_SYSTEM	instant messenger
-MEASURABLE_SYSTEM	RAID array
-MEASURABLE_SYSTEM	database
-MEASURABLE_SYSTEM	WHOIS
-MEASURABLE_SYSTEM	DHCP
-
-EMULATION		WARE emulation
-EMULATION		WARE simulation
-EMULATION		WARE deployment
-EMULATION		earlier deployment
+## OK, cbb
+EMULATION		Monte-Carlo simulation
+EMULATION		theoretical calculation
 
 
 #############################################################################
@@ -1853,16 +1599,20 @@ CONCL_BODY_P_FEW {
 
 }
 
+## OK
 CONCL_P CONCL_START_MAYBE CONCL_INTRO CONCL_BODY_INSIDE CONCL_CONCL
 
+## OK
 CONCL_START_MAYBE In conclusion,
 CONCL_START_MAYBE+3 
 
+## OK
 CONCL_BODY_INSIDE 	CONCL_MID CONCL_MID CONCL_MID CONCL_MID
 CONCL_BODY_INSIDE+2 	CONCL_MID CONCL_MID CONCL_MID
 CONCL_BODY_INSIDE+3 	CONCL_MID CONCL_MID
 CONCL_BODY_INSIDE 	CONCL_MID
 
+## OK
 CONCL_INTRO SCI_IN_THIS_PAPER we SCI_PRESENT_VERBED SYSNAME, SCI_OVERALL_THESIS_THING XXX
 CONCL_INTRO SCI_IN_THIS_PAPER we SCI_PROVE_VERBED that SCI_OVERALL_THESIS_PROVE XXX
 CONCL_INTRO SCI_OUR_SYSTEM will SCI_PROBLEM_SOLVE many of the SCI_PROBLEM_PL faced by today's SCI_PEOPLE XXX
@@ -1870,6 +1620,7 @@ CONCL_INTRO we SCI_PROVE_VERBED SCI_IN_THIS_PAPER that SCI_OVERALL_THESIS_PROVE,
 CONCL_INTRO our experiences with SCI_OUR_SYSTEM and SCI_GENERIC_NOUN SCI_PROVE_VERB that SCI_OVERALL_THESIS_PROVE XXX
 CONCL_INTRO CONCL_MID_X XXX
 
+## OK
 CONCL_MID	LIT_MIDDLE_MAYBE CONCL_MID_X XXX
 CONCL_MID_X SCI_OUR_SYSTEM has set a precedent for SCI_GENERIC_NOUN, and we expect that SCI_PEOPLE will SCI_VERB SCI_OUR_SYSTEM for years to come
 CONCL_MID_X	we SCI_PROVE_VERBED that CONSTRAINT_TYPE in SCI_OUR_SYSTEM is not a SCI_PROBLEM
@@ -1882,6 +1633,7 @@ CONCL_MID_X the characteristics of SCI_OUR_SYSTEM, in relation to those of more 
 CONCL_MID_X+3 SCI_GENERIC_THESIS_PAST
 CONCL_MID_X in fact, the main contribution of our work is that SCI_GENERIC_THESIS_PAST
 
+## OK
 SCI_GENERIC_THESIS_PAST we SCI_PROVE_VERBED that SCI_OVERALL_THESIS_PROVE
 SCI_GENERIC_THESIS_PAST we used SCI_BUZZWORD_ADJ SCI_BUZZWORD_NOUN to SCI_PROVE_VERB that SCI_OVERALL_THESIS_PROVE
 SCI_GENERIC_THESIS_PAST we SCI_PRESENT_VERBED SCI_OVERALL_THESIS_THING ({SYSNAME}), SCI_PROVE_VERBING that SCI_OVERALL_THESIS_PROVE
@@ -1891,33 +1643,44 @@ SCI_GENERIC_THESIS_PAST we SCI_PROVE_VERBED that LIT_ALTHOUGH SCI_OVERALL_THESIS
 SCI_GENERIC_THESIS_PAST we concentrated our efforts on SCI_PROVE_VERBING that SCI_OVERALL_THESIS_PROVE
 SCI_GENERIC_THESIS_PAST we SCI_PRESENT_VERBED SCI_OVERALL_THESIS_THING ({SYSNAME}), which we used to SCI_PROVE_VERB that SCI_OVERALL_THESIS_PROVE
 
+## OK
 CONCL_CONCL we plan to explore more SCI_PROBLEM_PL related to these issues in future work.
 CONCL_CONCL we see no reason not to use SCI_OUR_SYSTEM for SCI_SYS_VERBING SCI_GENERIC_NOUN.
 CONCL_CONCL LIT_CONCLUSION, our vision for the future of SCI_FIELD certainly includes SCI_OUR_SYSTEM.
-CONCL_CONCL we plan to make SCI_OUR_SYSTEM available on the Web for public download.
 CONCL_CONCL the SCI_ACT is more SCI_ADJ than ever, and SCI_OUR_SYSTEM helps SCI_PEOPLE do just that.
-CONCL_CONCL we expect to see many SCI_PEOPLE move to SCI_VERBING SCI_OUR_SYSTEM in the very near future.
+CONCL_CONCL we expect to see many SCI_PEOPLE use SCI_VERBING SCI_OUR_SYSTEM in the very near future.
+CONCL_CONCL this provides SCI_GLIMPSE the SCI_VARIETY of SCI_THING_P that can be expected in SCI_OUR_SYSTEM.
 CONCL_CONCL LIT_LAST SCI_GENERIC_THESIS_PAST.
 CONCL_CONCL CONCL_MID_X.
+
+## OK
+SCI_GLIMPSE   a glimpse of
+SCI_GLIMPSE   an insight into
+SCI_GLIMPSE   an overview of
+SCI_GLIMPSE   a birds-eye view over
+
+## OK
+SCI_VARIETY   large variety
+SCI_VARIETY   interesting properties
+SCI_VARIETY   noteworthy effects
+SCI_VARIETY   substantial new physics
 
 
 #############################################################################
 ####### Nouns #######
 #############################################################################
 
-SCI_BUZZWORD_NOUN technology
-SCI_BUZZWORD_NOUN communication
-SCI_BUZZWORD_NOUN algorithms
-SCI_BUZZWORD_NOUN theory
-SCI_BUZZWORD_NOUN methodologies
-SCI_BUZZWORD_NOUN information
+## OK, cbb
+SCI_BUZZWORD_NOUN theories
 SCI_BUZZWORD_NOUN models
-SCI_BUZZWORD_NOUN archetypes
-SCI_BUZZWORD_NOUN configurations
-SCI_BUZZWORD_NOUN modalities
-SCI_BUZZWORD_NOUN symmetries
-SCI_BUZZWORD_NOUN epistemologies
+SCI_BUZZWORD_NOUN symmetry considerations
+SCI_BUZZWORD_NOUN Fourier transforms
+SCI_BUZZWORD_NOUN polarized neutron scattering experiments
+SCI_BUZZWORD_NOUN phenomenological Landau-Ginzburg theories
+SCI_BUZZWORD_NOUN dimensional renormalizations
+SCI_BUZZWORD_NOUN Monte-Carlo simulations
 
+## OK
 SCI_PROBLEM problem
 SCI_PROBLEM issue
 SCI_PROBLEM obstacle
@@ -1928,13 +1691,14 @@ SCI_PROBLEM riddle
 SCI_PROBLEM quagmire
 SCI_PROBLEM question
 
+## OK
 SCI_PROBLEM_PL problems
 SCI_PROBLEM_PL issues
 SCI_PROBLEM_PL obstacles
 SCI_PROBLEM_PL grand challenges
 SCI_PROBLEM_PL challenges
 
-
+## OK
 SCI_GOAL goal
 SCI_GOAL mission
 SCI_GOAL objective
@@ -1943,200 +1707,215 @@ SCI_GOAL ambition
 SCI_GOAL aim
 SCI_GOAL intent
 
+## OK
 SCI_GOAL_PL goals
 SCI_GOAL_PL missions
 SCI_GOAL_PL objectives
 SCI_GOAL_PL purposes
 SCI_GOAL_PL ambitions
 
+## OK
 SCI_GOAL_OR_PROBLEM SCI_PROBLEM
 SCI_GOAL_OR_PROBLEM SCI_GOAL
 
+## OK
 SCI_APPROACH approach
 SCI_APPROACH solution
 SCI_APPROACH method
+SCI_APPROACH ansatz
 SCI_APPROACH_PL approaches
 SCI_APPROACH_PL solutions
 SCI_APPROACH_PL methods
 
+## OK
 SCI_DRAWBACK drawback
 SCI_DRAWBACK disadvantage
 SCI_DRAWBACK shortcoming
 SCI_DRAWBACK flaw
 
+## OK
 WHAT_PL			these results
-WHAT_PL			these algorithms
+WHAT_PL			these measurements
 WHAT_PL			a more thorough discussion
+WHAT_PL                 these calculations
 
+## OK
 WHAT			it
 WHAT			this FINDING
 WHAT			such a claim
 WHAT			such a hypothesis
 
+## OK
 FINDING			result
 FINDING			finding
 FINDING			outcome
 FINDING			discussion
 FINDING			technique
+FINDING                 measurement
+FINDING                 analysis
+FINDING                 proof
 FINDING+3
 
-SCI_THING	SCI_THING_P
-SCI_THING	SCI_THING_S
+## OK
+SCI_THING+20	SCI_THING_P
+SCI_THING+20	SCI_THING_S
+SCI_THING       SCI_THING_P with EQ_SMALL
+SCI_THING       SCI_THING_P with EQ_SMALL
 
+## OK
 SCI_THING_HAS	SCI_THING_S has
 SCI_THING_HAS	SCI_THING_P have
 
-SCI_THING_S	courseware
-SCI_THING_S	e-commerce
 
-SCI_THING_S	IPv4
-SCI_THING_S	IPv6
-SCI_THING_S	IPv7
-SCI_THING_P	DHTs
-SCI_THING_P	robots
-SCI_THING_P	agents
-SCI_THING_P	Markov models
-SCI_THING_S	the memory bus
-SCI_THING_P	SMPs
-SCI_THING_P	kernels
-SCI_THING_P	suffix trees
-SCI_THING_P	spreadsheets
-SCI_THING_P	operating systems
-SCI_THING_P	systems
-SCI_THING_P	interrupts
-SCI_THING_P	Web services
-SCI_THING_P	massive multiplayer online role-playing games
-SCI_THING_P	Byzantine fault tolerance
-SCI_THING_S	the location-identity split
-SCI_THING_P	sensor networks
-SCI_THING_P	online algorithms
-SCI_THING_S	extreme programming
-SCI_THING_P	object-oriented languages
-SCI_THING_S	Scheme
-SCI_THING_S	DNS
-SCI_THING_S	802.11b
-SCI_THING_P	information retrieval systems
-SCI_THING_P	web browsers
-SCI_THING_S	architecture
-SCI_THING_P	thin clients
-#SCI_THING_S	the Commodore VIC-20
-SCI_THING_S	the Turing machine
-SCI_THING_P	B-trees
-SCI_THING_P	hierarchical databases
-SCI_THING_P	randomized algorithms
-SCI_THING_S	the Internet
-#SCI_THING_P	the Internets
-SCI_THING_S	consistent hashing
-SCI_THING_S	the transistor
-SCI_THING_S	the UNIVAC computer
-SCI_THING_S	Boolean logic
-SCI_THING_S	voice-over-IP
-SCI_THING_S	the World Wide Web
-SCI_THING_S	Moore's Law
-SCI_THING_P	flip-flop gates
-SCI_THING_S	e-business
-SCI_THING_P	neural networks
-SCI_THING_P	von Neumann machines
-SCI_THING_S	context-free grammar
-SCI_THING_P	digital-to-analog converters
-SCI_THING_P	journaling file systems
-SCI_THING_P	expert systems
-SCI_THING_P	active networks
-SCI_THING_S	evolutionary programming
-SCI_THING_S	simulated annealing
-SCI_THING_P	superpages
-SCI_THING_P	superblocks
-SCI_THING_S	the partition table
-SCI_THING_S	the lookaside buffer
-SCI_THING_P	POWER_OF_TWO bit architectures
-# SCI_THING_S 	distance e-learning
-SCI_THING_P	vacuum tubes
-SCI_THING_S 	Internet QoS
-SCI_THING_S 	rasterization
-SCI_THING_S	model checking
-SCI_THING_S	lambda calculus
-SCI_THING_S	scatter/gather I/O
-SCI_THING_S	XML
-SCI_THING_P	I/O automata
-SCI_THING_P	hash tables
-SCI_THING_P	red-black trees
-SCI_THING_P	linked lists
-SCI_THING_P	fiber-optic cables
-SCI_THING_S	the Ethernet
-SCI_THING_S	RAID
-SCI_THING_P	802.11 mesh networks
-SCI_THING_P	access points
-SCI_THING_P	gigabit switches
-SCI_THING_S	telephony
-SCI_THING_P	multi-processors
-SCI_THING_P	compilers
-SCI_THING_P	semaphores
-SCI_THING_P	RPCs
-SCI_THING_P	virtual machines
-SCI_THING_S	Smalltalk
-SCI_THING_S	A* search
-SCI_THING_S	reinforcement learning
-SCI_THING_P	Lamport clocks
-SCI_THING_S	the producer-consumer problem
-SCI_THING_P	checksums
-SCI_THING_P	link-level acknowledgements
-SCI_THING_P	public-private key pairs
-SCI_THING_P	symmetric encryption
-SCI_THING_S	forward-error correction
-SCI_THING_S	erasure coding
-SCI_THING_S	redundancy
-SCI_THING_S	replication
-SCI_THING_S     congestion control
-SCI_THING_P	wide-area networks
-SCI_THING_P	local-area networks
-SCI_THING_S	DHCP
-SCI_THING_P	write-back caches
-SCI_THING_P	multicast SCI_SYSTEM_PL
-SCI_THING_S	write-ahead logging
-SCI_THING_S	cache coherence
-SCI_THING_P	SCSI disks
+SCI_THING_P	neutrons
+SCI_THING_P	correlation effects
+SCI_THING_P	nanotubes
+SCI_THING_P	spins
+SCI_THING_P	excitations
+SCI_THING_P	nearest-neighbour interactions
+SCI_THING_P	electrons
+SCI_THING_P	ferromagnets
+SCI_THING_P	transition metals
+SCI_THING_P	interactions
+SCI_THING_P	broken symmetries
+SCI_THING_P	phase diagrams
+SCI_THING_P	Green's functions
+SCI_THING_P	magnetic excitations
+SCI_THING_P	magnons
+SCI_THING_P	phasons
+SCI_THING_P	spin waves
+SCI_THING_P	particle-hole excitations
+SCI_THING_P	non-Abelian groups
+SCI_THING_P	superconductors
+SCI_THING_P	frustrations
+SCI_THING_P	ferroelectrics
+SCI_THING_P	skyrmions
+SCI_THING_P	Goldstone bosons
+SCI_THING_P	overdamped modes
+SCI_THING_P	Bragg reflections
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+#SCI_THING_P	
+
+SCI_THING_S	the critical temperature
+SCI_THING_S	bosonization
+SCI_THING_S	the Higgs boson
+SCI_THING_S     the Higgs sector
+SCI_THING_S	a gauge boson
+SCI_THING_S	the phase diagram
+SCI_THING_S	correlation
+SCI_THING_S	the Coulomb interaction
+SCI_THING_S	Landau theory
+SCI_THING_S	the ground state
+SCI_THING_S	an antiferromagnet
+SCI_THING_S	the spin-orbit interaction
+SCI_THING_S	a quantum phase transition
+SCI_THING_S	the susceptibility
+SCI_THING_S	the correlation length
+SCI_THING_S	the electron
+SCI_THING_S	the positron
+SCI_THING_S	a quantum dot
+SCI_THING_S	the neutron
+SCI_THING_S	a proton
+SCI_THING_S	an antiproton
+SCI_THING_S	a fermion
+SCI_THING_S	magnetic superstructure
+SCI_THING_S	critical scattering
+SCI_THING_S	magnetic scattering
+SCI_THING_S	a magnetic field
+SCI_THING_S	electron transport
+SCI_THING_S	a Heisenberg model
+SCI_THING_S	hybridization
+SCI_THING_S	Mean-field Theory
+SCI_THING_S	spin blockade
+SCI_THING_S	small-angle scattering
+SCI_THING_S	inelastic neutron scattering
+SCI_THING_S	quasielastic scattering
+SCI_THING_S	paramagnetism
+SCI_THING_S	helimagnetic ordering
+SCI_THING_S+2	the Dzyaloshinski-Moriya interaction
+SCI_THING_S	the Fermi energy
+#SCI_THING_S	
+#SCI_THING_S	
+#SCI_THING_S	
+#SCI_THING_S	
+#SCI_THING_S	
+#SCI_THING_S	
+#SCI_THING_S	
+
+## OK
 SCI_THING_MOD	SCI_THING CITATION_SOMETIMES
-SCI_SYSTEM	algorithm
-SCI_SYSTEM	system
+SCI_SYSTEM      theory
+SCI_SYSTEM      instrument
+SCI_SYSTEM      model
+SCI_SYSTEM      ab-initio calculation
 SCI_SYSTEM	framework
-SCI_SYSTEM	heuristic
-SCI_SYSTEM	application
-SCI_SYSTEM	methodology
+SCI_SYSTEM	phenomenologic approach
 SCI_SYSTEM	SCI_APPROACH
 SCI_OUR_SYSTEM	our SCI_SYSTEM
 SCI_OUR_SYSTEM	SYSNAME
-SCI_SYSTEM_PL	algorithms
-SCI_SYSTEM_PL	systems
+SCI_SYSTEM_PL	theories
+SCI_SYSTEM_PL	models
+SCI_SYSTEM_PL	ab-initio calculations
 SCI_SYSTEM_PL	frameworks
-SCI_SYSTEM_PL	heuristics
-SCI_SYSTEM_PL	applications
-SCI_SYSTEM_PL	methodologies
+SCI_SYSTEM_PL	phenomenological approaches
 SCI_SYSTEM_PL	SCI_APPROACH_PL
 
+## OK
 METHODOLOGY	methodology
 METHODOLOGY	method
 METHODOLOGY	approach
 METHODOLOGY	strategy
 
+## OK
 SCI_FIELD	SCI_BUZZWORD_ADJ SCI_FIELD
 SCI_FIELD	SCI_MATH_ADJ SCI_FIELD
-SCI_FIELD	hardware and architecture
-SCI_FIELD	networking
-SCI_FIELD	operating systems
-SCI_FIELD	programming languages
-SCI_FIELD	theory
-SCI_FIELD	algorithms
-SCI_FIELD	complexity theory
-SCI_FIELD	artificial intelligence
-SCI_FIELD	machine learning
-SCI_FIELD	robotics
-SCI_FIELD	electrical engineering
-SCI_FIELD	e-voting technology
-SCI_FIELD	cryptography
-SCI_FIELD	cryptoanalysis
-SCI_FIELD	cyberinformatics
-SCI_FIELD	steganography
-SCI_FIELD	software engineering
+SCI_FIELD	magnetism
+SCI_FIELD	neutron scattering
+SCI_FIELD	quantum field theory
+SCI_FIELD	computational physics
+SCI_FIELD	mathematical physics
+SCI_FIELD	theoretical physics
+SCI_FIELD	cosmology
+SCI_FIELD	astronomy
+SCI_FIELD	solid state physics
+SCI_FIELD	low-temperature physics
+SCI_FIELD	neutron instrumentation
+SCI_FIELD	reactor physics
+SCI_FIELD	particle physics
+SCI_FIELD	fundamental physics
+SCI_FIELD	string theory
+SCI_FIELD       nonlinear optics
+SCI_FIELD       quantum optics 
 SCI_COUNTRY	American
 SCI_COUNTRY	British
 SCI_COUNTRY	Canadian
@@ -2152,90 +1931,53 @@ SCI_COUNTRY	Soviet
 ####### Adjectives/adverbs #######
 #############################################################################
 
+## OK
 SCI_BUZZWORD_ADJ_MULTI+5 SCI_BUZZWORD_ADJ
 SCI_BUZZWORD_ADJ_MULTI+10 SCI_BUZZWORD_ADJ, SCI_BUZZWORD_ADJ
 SCI_BUZZWORD_ADJ_MULTI SCI_BUZZWORD_ADJ, SCI_BUZZWORD_ADJ, SCI_BUZZWORD_ADJ
-SCI_BUZZWORD_ADJ peer-to-peer
-SCI_BUZZWORD_ADJ game-theoretic
-SCI_BUZZWORD_ADJ knowledge-based
-SCI_BUZZWORD_ADJ relational
 SCI_BUZZWORD_ADJ compact
-SCI_BUZZWORD_ADJ ubiquitous
-SCI_BUZZWORD_ADJ linear-time
-SCI_BUZZWORD_ADJ ``fuzzy''
-SCI_BUZZWORD_ADJ embedded
-SCI_BUZZWORD_ADJ constant-time
-SCI_BUZZWORD_ADJ client-server
-SCI_BUZZWORD_ADJ efficient
-SCI_BUZZWORD_ADJ reliable
-SCI_BUZZWORD_ADJ replicated
+SCI_BUZZWORD_ADJ mesoscopic
+SCI_BUZZWORD_ADJ microscopic
+SCI_BUZZWORD_ADJ itinerant
 SCI_BUZZWORD_ADJ low-energy
-SCI_BUZZWORD_ADJ omniscient
-SCI_BUZZWORD_ADJ wireless
-SCI_BUZZWORD_ADJ modular
-SCI_BUZZWORD_ADJ autonomous
-SCI_BUZZWORD_ADJ introspective
-SCI_BUZZWORD_ADJ distributed
-SCI_BUZZWORD_ADJ flexible
-SCI_BUZZWORD_ADJ extensible
-SCI_BUZZWORD_ADJ amphibious
-SCI_BUZZWORD_ADJ metamorphic
-SCI_BUZZWORD_ADJ ambimorphic
-SCI_BUZZWORD_ADJ permutable
 SCI_BUZZWORD_ADJ adaptive
-SCI_BUZZWORD_ADJ self-learning
-SCI_BUZZWORD_ADJ trainable
-SCI_BUZZWORD_ADJ ``smart''
-SCI_BUZZWORD_ADJ classical
 SCI_BUZZWORD_ADJ atomic
-SCI_BUZZWORD_ADJ event-driven
-SCI_BUZZWORD_ADJ read-write
-SCI_BUZZWORD_ADJ encrypted
-SCI_BUZZWORD_ADJ highly-available
-SCI_BUZZWORD_ADJ secure
-SCI_BUZZWORD_ADJ interposable
-SCI_BUZZWORD_ADJ cacheable
-SCI_BUZZWORD_ADJ perfect
 SCI_BUZZWORD_ADJ electronic
-SCI_BUZZWORD_ADJ pervasive
-SCI_BUZZWORD_ADJ large-scale
-SCI_BUZZWORD_ADJ Bayesian
-SCI_BUZZWORD_ADJ multimodal
-SCI_BUZZWORD_ADJ authenticated
-SCI_BUZZWORD_ADJ interactive
-SCI_BUZZWORD_ADJ heterogeneous
-SCI_BUZZWORD_ADJ homogeneous
-SCI_BUZZWORD_ADJ collaborative
-SCI_BUZZWORD_ADJ concurrent
+SCI_BUZZWORD_ADJ magnetic
+SCI_BUZZWORD_ADJ scaling-invariant
+SCI_BUZZWORD_ADJ quantum-mechanical
+SCI_BUZZWORD_ADJ non-local
+SCI_BUZZWORD_ADJ spatially separated
+SCI_BUZZWORD_ADJ retroreflective
+SCI_BUZZWORD_ADJ entangled
+SCI_BUZZWORD_ADJ proximity-induced
 SCI_BUZZWORD_ADJ probabilistic
-SCI_BUZZWORD_ADJ mobile
-SCI_BUZZWORD_ADJ wearable
-SCI_BUZZWORD_ADJ semantic
-SCI_BUZZWORD_ADJ real-time
-SCI_BUZZWORD_ADJ cooperative
-SCI_BUZZWORD_ADJ decentralized
-SCI_BUZZWORD_ADJ scalable
-SCI_BUZZWORD_ADJ certifiable
-SCI_BUZZWORD_ADJ robust
-SCI_BUZZWORD_ADJ signed
-SCI_BUZZWORD_ADJ virtual
-SCI_BUZZWORD_ADJ lossless
-SCI_BUZZWORD_ADJ psychoacoustic
-SCI_BUZZWORD_ADJ empathic
-SCI_BUZZWORD_ADJ optimal
 SCI_BUZZWORD_ADJ stable
 SCI_BUZZWORD_ADJ unstable
-SCI_BUZZWORD_ADJ symbiotic
-SCI_BUZZWORD_ADJ stochastic
-SCI_BUZZWORD_ADJ random
 SCI_BUZZWORD_ADJ pseudorandom
+SCI_BUZZWORD_ADJ spin-coupled
+SCI_BUZZWORD_ADJ phase-independent
+SCI_BUZZWORD_ADJ two-dimensional
+SCI_BUZZWORD_ADJ higher-dimensional
+SCI_BUZZWORD_ADJ correlated
+SCI_BUZZWORD_ADJ polarized
+SCI_BUZZWORD_ADJ inhomogeneous
+SCI_BUZZWORD_ADJ non-linear
+SCI_BUZZWORD_ADJ higher-order
+SCI_BUZZWORD_ADJ superconductive
+SCI_BUZZWORD_ADJ non-perturbative
+SCI_BUZZWORD_ADJ dynamical
+SCI_BUZZWORD_ADJ kinematical
+SCI_BUZZWORD_ADJ topological
 
+## OK
 SCI_IDEAL	ideal
 SCI_IDEAL	optimal
 SCI_IDEAL	perfect
 SCI_IDEAL	different
 SCI_IDEAL	distinct
 
+## OK
 LIT_GOOD	good
 LIT_GOOD	bad
 LIT_GOOD	excellent
@@ -2247,6 +1989,7 @@ LIT_GOOD	significant
 LIT_GOOD	encouraging
 LIT_GOOD	outdated
 
+## OK
 LIT_GREAT	great
 LIT_GREAT	profound
 LIT_GREAT	tremendous
@@ -2259,6 +2002,7 @@ LIT_GREAT_ADV	tremendously
 LIT_GREAT_ADV	minimally
 LIT_GREAT_ADV	improbably
 
+## OK
 LIT_OFTEN	often
 LIT_OFTEN	usually
 LIT_OFTEN	rarely
@@ -2271,18 +2015,20 @@ LIT_OFTEN	generally
 LIT_OFTEN	regularly
 LIT_OFTEN	continuously
 
+## OK
 LIT_BETTER+3	better
 LIT_BETTER+2	more effectively
 LIT_BETTER	less well
 LIT_BETTER	no better
 LIT_BETTER	worse
 
+## OK
 LIT_INCREASING	increasing
 LIT_INCREASING	rising
 LIT_INCREASING	decreasing
 LIT_INCREASING	dwindling
 
-
+## OK, cbb
 SCI_ADJ	important
 SCI_ADJ	significant
 SCI_ADJ	key
@@ -2299,6 +2045,7 @@ SCI_ADJ	technical
 SCI_ADJ	structured
 SCI_ADJ	natural
 SCI_ADJ	essential
+SCI_ADJ tentative
 SCI_ADJ	private
 SCI_ADJ	intuitive
 SCI_ADJ practical
@@ -2315,6 +2062,7 @@ SCI_ADJ_ADV	obviously
 SCI_ADJ_ADV	urgently
 SCI_ADJ_ADV	compellingly
 
+## OK
 SCI_ADV	ostensibly
 SCI_ADV	obviously
 SCI_ADV	evidently
@@ -2332,15 +2080,19 @@ SCI_COMPLEXNOUN	paradox
 SCI_COMPLEXNOUN	incoherence
 SCI_COMPLEXNOUN	simplicity
 
+## OK
 PERVERSE		perverse
 PERVERSE		counterintuitive
 PERVERSE		unexpected
 
+## OK
 RELATED			prior
 RELATED			related
 RELATED			previous
 RELATED			existing
+RELATED                 recently published 
 
+## OK
 DIFFERENT	degraded
 DIFFERENT	amplified
 DIFFERENT	exaggerated
@@ -2349,29 +2101,37 @@ DIFFERENT	muted
 DIFFERENT	duplicated
 DIFFERENT	improved
 
+## OK
 IMPROVEMENT	improvement
 IMPROVEMENT	degredation
 IMPROVEMENT	amplification
 
+## OK
 PERFORMANCE	performance
-PERFORMANCE	throughput
-PERFORMANCE	latency
+PERFORMANCE	amplification
+PERFORMANCE	gain
+PERFORMANCE     behavior
 
+## OK
 INSTRUMENTAL	instrumental
 INSTRUMENTAL	crucial
 INSTRUMENTAL	essential
 
+## OK
 UNIQUE		unique
 UNIQUE		conventional
 UNIQUE		expected
 
+## OK
 STAT_ADJ		effective
 STAT_ADJ		mean
 STAT_ADJ		median
 STAT_ADJ		expected
 STAT_ADJ		average
-STAT_ADJ		10th-percentile
+STAT_ADJ                integrated
+STAT_ADJ                differential
 
+## OK
 SCI_STATUS_ADJ famous
 SCI_STATUS_ADJ well-known
 SCI_STATUS_ADJ little-known
@@ -2380,6 +2140,7 @@ SCI_STATUS_ADJ much-touted
 SCI_STATUS_ADJ infamous
 SCI_STATUS_ADJ foremost
 SCI_STATUS_ADJ seminal
+SCI_STATUS_ADJ genial
 
 
 #
@@ -2388,11 +2149,11 @@ SCI_STATUS_ADJ seminal
 SCI_MATH_ADJ+3  SCI_MATH_ADV SCI_MATH_ADJ
 SCI_MATH_ADJ	SCI_MATH_ADJ, SCI_MATH_ADJ
 
+## OK
 SCI_MATH_ADJ	disjoint
 SCI_MATH_ADJ	independent
 SCI_MATH_ADJ	mutually exclusive
 SCI_MATH_ADJ	noisy
-SCI_MATH_ADJ	fuzzy
 SCI_MATH_ADJ	random
 SCI_MATH_ADJ	stochastic
 SCI_MATH_ADJ	discrete
@@ -2400,18 +2161,12 @@ SCI_MATH_ADJ	parallel
 SCI_MATH_ADJ	distributed
 SCI_MATH_ADJ	partitioned
 SCI_MATH_ADJ	exhaustive
-SCI_MATH_ADJ	Markov
-SCI_MATH_ADJ	Bayesian
 SCI_MATH_ADJ	randomized
 SCI_MATH_ADJ	pipelined
-#SCI_MATH_ADJ	hardware
-SCI_MATH_ADJ	wireless
-SCI_MATH_ADJ	wired
 SCI_MATH_ADJ	separated
 SCI_MATH_ADJ	saturated
-SCI_MATH_ADJ	DoS-ed
-SCI_MATH_ADJ	replicated
 
+## OK
 SCI_MATH_ADV	extremely
 SCI_MATH_ADV	independently
 SCI_MATH_ADV	randomly
@@ -2427,19 +2182,23 @@ SCI_MATH_ADV	provably
 ####### Flow control #######
 #############################################################################
 
+## OK
 SCI_B_LEADIN_C	Finally, 
 SCI_B_LEADIN_C	Ultimately, 
 SCI_B_LEADIN_C	As a result, 
 SCI_B_LEADIN_C	In the end, 
 
+## OK
 LIT_MIDDLE_TWO+4	
 LIT_MIDDLE_TWO		Second,
 LIT_MIDDLE_TWO+3 	LIT_MIDDLE
 
+## OK
 LIT_MIDDLE_3+4	
 LIT_MIDDLE_3		Third,
 LIT_MIDDLE_3+3 		LIT_MIDDLE
 
+## OK
 LIT_MIDDLE	Next,
 LIT_MIDDLE	Further,
 LIT_MIDDLE	Furthermore,
@@ -2447,7 +2206,9 @@ LIT_MIDDLE	Continuing with this rationale,
 LIT_MIDDLE	Along these same lines,
 LIT_MIDDLE	Similarly,
 LIT_MIDDLE	On a similar note,
+LIT_MIDDLE      Following an ab-initio approach,
 
+## OK
 LIT_LEADIN	But, 
 LIT_LEADIN	In addition, 
 LIT_LEADIN	SCI_ADJ_ADV enough, 
@@ -2460,6 +2221,7 @@ LIT_LEADIN	Certainly,
 LIT_LEADIN+7	LIT_MIDDLE
 LIT_LEADIN+40	
 
+## OK
 LIT_FIRST	First,
 LIT_FIRST	To begin with,
 LIT_FIRST	To start off with,
@@ -2467,16 +2229,19 @@ LIT_FIRST	Primarily,
 LIT_FIRST	For starters, 
 LIT_FIRST+4
 
+## OK
 LIT_LAST	Finally,
 LIT_LAST	Lastly,
 LIT_LAST	In the end,
 
+## OK
 LIT_ALTHOUGH	though
 LIT_ALTHOUGH	although
 LIT_ALTHOUGH	while
 LIT_ALTHOUGH	even though
 LIT_ALTHOUGH	despite the fact that
 
+## OK
 LIT_CONCLUSION	thus
 LIT_CONCLUSION	thusly
 LIT_CONCLUSION	therefore
@@ -2484,12 +2249,14 @@ LIT_CONCLUSION	clearly
 LIT_CONCLUSION	obviously
 LIT_CONCLUSION  as a result
 
+## OK
 LIT_REVERSAL	however
 LIT_REVERSAL	on the other hand
 LIT_REVERSAL	nevertheless
 LIT_REVERSAL	contrarily
 LIT_REVERSAL	unfortunately
 
+## OK
 LIT_REVERSAL_MAYBE	LIT_REVERSAL,
 LIT_REVERSAL_MAYBE	
 LIT_MIDDLE_MAYBE	LIT_MIDDLE
@@ -2503,14 +2270,17 @@ LIT_LAST_OR_MIDDLE	LIT_MIDDLE
 ####### Verbs #######
 #############################################################################
 
+## OK
 LIT_OMIT	omit
 LIT_OMIT	withhold
 LIT_OMIT	skip
 LIT_OMIT	leave out
 
+## OK
 SUPPORTED		supported
 SUPPORTED		buffetted
 
+## OK
 SCI_PROVE_VERB demonstrate
 SCI_PROVE_VERB argue
 SCI_PROVE_VERB prove
@@ -2521,6 +2291,7 @@ SCI_PROVE_VERB verify
 SCI_PROVE_VERB confirm
 SCI_PROVE_VERB disconfirm
 
+## OK
 SCI_PROVE_VERBED demonstrated
 SCI_PROVE_VERBED argued
 SCI_PROVE_VERBED proved
@@ -2531,6 +2302,7 @@ SCI_PROVE_VERBED verified
 SCI_PROVE_VERBED confirmed
 SCI_PROVE_VERBED disconfirmed
 
+## OK
 SCI_PROVE_VERBING demonstrating
 SCI_PROVE_VERBING arguing
 SCI_PROVE_VERBING proving
@@ -2541,6 +2313,7 @@ SCI_PROVE_VERBING verifying
 SCI_PROVE_VERBING confirming
 SCI_PROVE_VERBING disconfirming
 
+## OK
 SCI_PRESENT_VERB present
 SCI_PRESENT_VERB introduce
 SCI_PRESENT_VERB propose
@@ -2563,11 +2336,11 @@ SCI_PRESENT_VERBED constructed
 SCI_PRESENT_VERBED described
 SCI_PRESENT_VERBED explored
 
+## OK
 SCI_PROBLEM_SOLVE solve
 SCI_PROBLEM_SOLVE overcome
 SCI_PROBLEM_SOLVE surmount
 SCI_PROBLEM_SOLVE answer
-SCI_PROBLEM_SOLVE fix
 SCI_PROBLEM_SOLVE address
 SCI_PROBLEM_SOLVED solved
 SCI_PROBLEM_SOLVED overcame
@@ -2576,6 +2349,7 @@ SCI_PROBLEM_SOLVED answered
 SCI_PROBLEM_SOLVED fixed
 SCI_PROBLEM_SOLVED addressed
 
+## OK
 SCI_GOAL_ACHIEVE achieve
 SCI_GOAL_ACHIEVE realize
 SCI_GOAL_ACHIEVE fulfill
@@ -2589,6 +2363,7 @@ SCI_VERB_PL	agree
 SCI_VERB_PL	collude
 SCI_VERB_PL	cooperate
 SCI_VERB_PL	synchronize
+
 SCI_VERBING_PL	interacting
 SCI_VERBING_PL	collaborating
 SCI_VERBING_PL	interfering
@@ -2597,142 +2372,108 @@ SCI_VERBING_PL	agreeing
 SCI_VERBING_PL	colluding
 SCI_VERBING_PL	cooperating
 SCI_VERBING_PL	synchronizing
+
+SCI_VERB        estimate
 SCI_VERB	explore
 SCI_VERB	enable
 SCI_VERB	harness
-SCI_VERB	develop
 SCI_VERB	refine
 SCI_VERB	investigate
 SCI_VERB	analyze
 SCI_VERB	measure
 SCI_VERB	improve
-SCI_VERB	emulate
 SCI_VERB	simulate
-SCI_VERB	construct
-SCI_VERB	evaluate
-SCI_VERB	deploy
-SCI_VERB	synthesize
-SCI_VERB	visualize
 SCI_VERB	study
+SCI_VERB        approximate
 
+SCI_VERBS       estimates
 SCI_VERBS	explores
 SCI_VERBS	enables
 SCI_VERBS	harnesses
 SCI_VERBS	develops
-SCI_VERBS	refines
 SCI_VERBS	investigates
 SCI_VERBS	analyzes
 SCI_VERBS	improves
-SCI_VERBS	emulates
 SCI_VERBS	simulates
 SCI_VERBS	constructs
-SCI_VERBS	evaluates
-SCI_VERBS	deploys
-SCI_VERBS	synthesizes
-SCI_VERBS	visualizes
 SCI_VERBS	studies
+
+SCI_VERBED      estimated
 SCI_VERBED	explored
 SCI_VERBED	enabled
 SCI_VERBED	harnessed
 SCI_VERBED	developed
-SCI_VERBED	refined
 SCI_VERBED	investigated
 SCI_VERBED	analyzed
 SCI_VERBED	improved
-SCI_VERBED	emulated
 SCI_VERBED	simulated
-SCI_VERBED	constructed
-SCI_VERBED	evaluated
-SCI_VERBED	deployed
-SCI_VERBED	synthesized
-SCI_VERBED	visualized
 SCI_VERBED	studied
+SCI_VERBED      approximated
+
+SCI_VERBING     estimating
 SCI_VERBING	harnessing
 SCI_VERBING	enabling
 SCI_VERBING	exploring
 SCI_VERBING	controlling
 SCI_VERBING	developing
 SCI_VERBING	refining
-SCI_VERBING	architecting
 SCI_VERBING	investigating
 SCI_VERBING	improving
 SCI_VERBING	analyzing
-SCI_VERBING	constructing
 SCI_VERBING	simulating
-SCI_VERBING	evaluating
-SCI_VERBING	emulating
-SCI_VERBING	deploying
-SCI_VERBING	synthesizing
-SCI_VERBING	visualizing
 SCI_VERBING	studying
+
+SCI_VERBION     estimation
 SCI_VERBION	exploration
 SCI_VERBION	development
-SCI_VERBION	refinement
+SCI_VERBION     theoretical treatment
 SCI_VERBION	investigation
 SCI_VERBION	analysis
 SCI_VERBION	improvement
-SCI_VERBION	emulation
 SCI_VERBION	simulation
 SCI_VERBION	construction
-SCI_VERBION	evaluation
-SCI_VERBION	deployment
-SCI_VERBION	synthesis
-SCI_VERBION	visualization
 SCI_VERBION	study
-SCI_SYS_VERB	locate
-SCI_SYS_VERB	store
+SCI_VERBION     formation
+SCI_VERBION     observation
+SCI_VERBION     approximation
+
 SCI_SYS_VERB	prevent
 SCI_SYS_VERB	allow
 SCI_SYS_VERB	provide
 SCI_SYS_VERB	control
 SCI_SYS_VERB	request
-SCI_SYS_VERB	cache
 SCI_SYS_VERB	create
 SCI_SYS_VERB	learn
 SCI_SYS_VERB	observe
 SCI_SYS_VERB	manage
 SCI_SYS_VERB+10	SCI_VERB
-SCI_SYS_VERBS	locates
-SCI_SYS_VERBS	stores
 SCI_SYS_VERBS	prevents
 SCI_SYS_VERBS	allows
 SCI_SYS_VERBS	provides
 SCI_SYS_VERBS	controls
-SCI_SYS_VERBS	requests
-SCI_SYS_VERBS	caches
 SCI_SYS_VERBS	creates
 SCI_SYS_VERBS	learns
 SCI_SYS_VERBS	observes
 SCI_SYS_VERBS	manages
 SCI_SYS_VERBS+10	SCI_VERBS
-SCI_SYS_VERBING	locating
-SCI_SYS_VERBING	storing
 SCI_SYS_VERBING	preventing
 SCI_SYS_VERBING	allowing
 SCI_SYS_VERBING	providing
 SCI_SYS_VERBING	controlling
-SCI_SYS_VERBING	requesting
-SCI_SYS_VERBING	caching
 SCI_SYS_VERBING	creating
 SCI_SYS_VERBING	learning
 SCI_SYS_VERBING	observing
 SCI_SYS_VERBING	managing
 SCI_SYS_VERBING+10	SCI_VERBING
-SCI_SYS_VERBED	located
-SCI_SYS_VERBED	stored
 SCI_SYS_VERBED	prevented
 SCI_SYS_VERBED	allowed
 SCI_SYS_VERBED	provided
 SCI_SYS_VERBED	controlled
-SCI_SYS_VERBED	requested
-SCI_SYS_VERBED	cached
 SCI_SYS_VERBED	created
 SCI_SYS_VERBED	learned
 SCI_SYS_VERBED	observed
 SCI_SYS_VERBED	managed
 SCI_SYS_VERBED+10	SCI_VERBED
-SCI_SYS_VERBION	location
-SCI_SYS_VERBION	storage
 SCI_SYS_VERBION	prevention
 SCI_SYS_VERBION	allowance
 SCI_SYS_VERBION	provision
@@ -2741,28 +2482,32 @@ SCI_SYS_VERBION	observation
 SCI_SYS_VERBION	management
 SCI_SYS_VERBION+10	SCI_VERBION
 
+## OK
 SCI_MATH_VERBING	separating
 SCI_MATH_VERBING	decoupling
 SCI_MATH_VERBING	saturating
 SCI_MATH_VERBING	composing
 SCI_MATH_VERBING	replicating
-SCI_MATH_VERBING	pipelining
 
+## OK
 NOTED		noted
 NOTED		observed
 NOTED		measured
 NOTED		characterized
 
+## OK
 EMULATED	emulated
 EMULATED	simulated
-EMULATED	prototyped
-EMULATED	deployed
+EMULATED        canceled
 
+## OK
 IMPROVE_VERB	improve
 IMPROVE_VERB	degrade
 IMPROVE_VERB	amplify
 
+## OK
 PROBE_VERB	probe
+PROBE_VERB      measure
 PROBE_VERB	examine
 PROBE_VERB	investigate
 PROBE_VERB	discover
@@ -2770,6 +2515,7 @@ PROBE_VERB	consider
 PROBE_VERB	better understand
 PROBE_VERB	understand
 PROBE_VERBED	probed
+PROBE_VERBED    measured
 PROBE_VERBED	examined
 PROBE_VERBED	investigated
 PROBE_VERBED	discovered
@@ -2781,11 +2527,13 @@ PROBE_VERBED	understood
 ####### Phrases and fillers #######
 #############################################################################
 
+## OK
 XXX+60		.
 XXX+4		CITATION.
 XXX		CITATION_MULTI.
 XXX+4		. FILLER_SENTENCE.
 
+## OK
 SCI_CAN+5	can
 SCI_CAN+5	cannot
 SCI_CAN		should not
@@ -2797,25 +2545,30 @@ SCI_CAN		is not able to
 SCI_CAN		will not able to
 SCI_CAN		will be able to
 
+## OK
 SCI_SOLVE_CLAUSE SCI_PROBLEM_SOLVE this SCI_PROBLEM
 SCI_SOLVE_CLAUSE SCI_GOAL_ACHIEVE this SCI_GOAL
 
+## OK
 SCI_IN_THIS_PAPER in this paper
 SCI_IN_THIS_PAPER in this position paper
 SCI_IN_THIS_PAPER in this work
 SCI_IN_THIS_PAPER in our research
 SCI_IN_THIS_PAPER here
 
+## OK
 SCI_REACTION well-received
 SCI_REACTION adamantly opposed
 SCI_REACTION considered SCI_ADJ
 SCI_REACTION LIT_GOOD
 
+## OK
 LIT_BASED_ON	based on
 LIT_BASED_ON	derived from
 LIT_BASED_ON	copied from
 LIT_BASED_ON	built on
 
+## OK
 FILLER_SENTENCE+10	FILLER_SURPRISE
 FILLER_SENTENCE		our SCI_GOAL here is to set the record straight
 FILLER_SENTENCE		this is an important point to understand
@@ -2824,6 +2577,7 @@ FILLER_SENTENCE		we LIT_OMIT WHAT_PL OMIT_WHY
 FILLER_SENTENCE		of course, this is not always the case
 FILLER_SENTENCE		this follows from the SCI_ACT CITATION_SOMETIMES
 
+## OK
 FILLER_SURPRISE		LIT_ALTHOUGH WHAT FILLER_SURPRISE_1, it FILLER_SURPRISE_2
 FILLER_SURPRISE		WHAT FILLER_SURPRISE_1 but FILLER_SURPRISE_2
 FILLER_SURPRISE_1	might seem PERVERSE
@@ -2835,12 +2589,14 @@ FILLER_SURPRISE_2	has ample historical precedence
 FILLER_SURPRISE_2	is derived from known results
 FILLER_SURPRISE_2	LIT_OFTEN conflicts with the need to provide SCI_THING to SCI_PEOPLE
 
+## OK
 OMIT_WHY due to space constraints
 OMIT_WHY due to resource constraints
 OMIT_WHY for anonymity
 OMIT_WHY for now
 OMIT_WHY until future work
 
+## OK
 SCI_A_FACT	SCI_SOURCE's SCI_ACT in SCI_YEAR
 SCI_A_FACT	the SCI_COMPLEXNOUN of SCI_FIELD
 SCI_A_FACT	the work of SCI_COUNTRY SCI_PERSON SCI_SOURCE
@@ -2854,6 +2610,7 @@ SCI_ACH	SCI_VERBED SCI_THING_MOD (which SCI_EFFECT )
 SCI_ACH_PRES	SCI_VERBING SCI_THING_MOD
 SCI_ACH_PRES	SCI_VERBING SCI_THING_MOD (which SCI_EFFECT )
 
+## OK
 SCI_RESPONSE	yes
 SCI_RESPONSE	absolutely
 SCI_RESPONSE	no
@@ -2864,194 +2621,479 @@ SCI_RESPONSE	it is not
 SCI_RESPONSE	the answer is yes
 SCI_RESPONSE	yes, but only in theory
 SCI_RESPONSE	yes, but with low probability
+
+## OK
 SCI_EFFECT	made SCI_VERBING and possibly SCI_VERBING SCI_THING a reality
 SCI_EFFECT	would allow for further study into SCI_THING
 SCI_EFFECT	paved the way for the SCI_ACT_A SCI_THING
 SCI_EFFECT	would make SCI_VERBING SCI_THING a real possibility
 
-SCI_COMPLEXITY_FUNC O
-SCI_COMPLEXITY_FUNC $\Omega$
-SCI_COMPLEXITY_FUNC $\Theta$
-SCI_COMPLEXITY_SIMPLE $n$
-SCI_COMPLEXITY_SIMPLE $n^2$
-SCI_COMPLEXITY_SIMPLE $\log n$
-SCI_COMPLEXITY_SIMPLE $2^n$
-SCI_COMPLEXITY_SIMPLE $n!$
+## OK
+SCI_PROOF_PROP is achievable
+SCI_PROOF_PROP is trivially understandable
+SCI_PROOF_PROP is observable
+SCI_PROOF_PROP is barely observable
+SCI_PROOF_PROP is mathematically sound
+SCI_PROOF_PROP is only phenomenological
+SCI_PROOF_PROP is very elegant
 
-SCI_COMPLEXITY+2 SCI_COMPLEXITY_SIMPLE
-SCI_COMPLEXITY 	 SCI_COMPLEXITY_COMPLEX
+#############################################################################
+####### Math #######
+#############################################################################
 
-SCI_COMPLEXITY_COMPLEX $ SCC_EXPR $
-SCC_EXPR+15	n
-SCC_EXPR+11	\log SCC_EXPR
-SCC_EXPR	( SCC_EXPR + SCC_EXPR )
-SCC_EXPR	SCC_EXPR + SCC_EXPR 
-SCC_EXPR	{SCC_EXPR_BASE} ^ { SCC_EXPR }
-SCC_EXPR	\frac{SCC_EXPR}{SCC_EXPR}
-SCC_EXPR	\sqrt{SCC_EXPR}
-SCC_EXPR	SCC_EXPR  !
-SCC_EXPR_BASE	SCC_EXPR
-SCC_EXPR_BASE	2
-SCC_EXPR_BASE	1.32
-SCC_EXPR_BASE	\pi
-SCC_EXPR_BASE	e
-SCC_EXPR_BASE	n
-SCC_EXPR_EXP	2
-SCC_EXPR_EXP	3
-SCC_EXPR_EXP	\pi
-SCC_EXPR_EXP	e
-SCC_EXPR_EXP	SCC_EXPR
-SCC_EXPR_EXP	n
+EQUATION        model
+EQUATION        relation
+EQUATION        Hamiltonian
+EQUATION        law
 
+EQ_DISPLAY+5    \[ EQ_EQ \]
+EQ_DISPLAY      \[ EQ_EQ \], where $EQ_QUANTITY$ is the EVAL_MEASUREMENT
 
+EQ_INLINE       $ EQ_EQ $
 
-SCI_PROOF_PROP+5 runs in SCI_COMPLEXITY_FUNC(SCI_COMPLEXITY) time
-SCI_PROOF_PROP is NP-complete
-SCI_PROOF_PROP is impossible
-SCI_PROOF_PROP is recursively enumerable
-SCI_PROOF_PROP is in Co-NP
-SCI_PROOF_PROP is optimal
-SCI_PROOF_PROP is Turing complete
-SCI_PROOF_PROP is maximally efficient
-SCI_PROOF_PROP follows a Zipf-like distribution
+EQ_SMALL        $ EQ_NVQUANTITY EQ_RELOP DIGIT.DIGITDIGIT$ EVAL_UNIT_UM
+EQ_SMALL        $ EQ_NVQUANTITY EQ_RELOP DIGIT$
+EQ_SMALL        $ EQ_QUANTITY EQ_RELOP \frac{DIGIT}{EXPDIGIT}$
+EQ_SMALL        $ EQ_QUANTITY EQ_RELOP EQ_QUANTITY/EQ_NVQUANTITY $
+EQ_SMALL        $ EQ_QUANTITY EQ_RELOP EXPDIGIT EQ_NVQUANTITY $
+
+EQ_RELOP+8      =
+EQ_RELOP        <
+EQ_RELOP        >
+EQ_RELOP        \le
+EQ_RELOP        \ge
+EQ_RELOP        \gg
+EQ_RELOP        \ll
+
+EQ_EQ           EQ_QUANTITY(\vec r) = EQ_INTS d^3r\, EQ_EXPR_FUNC EQ_DOTS
+EQ_EQ           EQ_QUANTITY = EQ_INTS d^EXPDIGIT LCASE\, EQ_EXPR_FUNC EQ_DOTS
+EQ_EQ           EQ_QUANTITY = \sum_{i=EQ_LOLIMIT}^{EQ_ULIMIT} EQ_EXPR_FUNC EQ_DOTS
+EQ_EQ           EQ_QUANTITY[EQ_QUANTITY] = EQ_EXPR_FUNC
+
+EQ_ULIMIT       n
+EQ_ULIMIT       m
+EQ_ULIMIT       \infty
+
+EQ_LOLIMIT      0
+EQ_LOLIMIT      1
+EQ_LOLIMIT      -\infty
+
+EQ_INTS         \iint
+EQ_INTS         \iiint
+EQ_INTS         \idotsint
+EQ_INTS+8       \int
+
+EQ_DOTS         + \dots
+EQ_DOTS+5
+
+EQ_EXPR_FUNC+2  \log \left[ EQ_EXPR \right]
+EQ_EXPR_FUNC+2  \sin \left( EQ_EXPR \right)
+EQ_EXPR_FUNC+2  \cos \left( EQ_EXPR \right)
+EQ_EXPR_FUNC+10 \exp \left( EQ_EXPR \right)
+EQ_EXPR_FUNC+50 EQ_EXPR
+
+EQ_EXPR+10      \frac{EQ_EXPR_MULEXP}{EQ_EXPR_MULEXP}
+EQ_EXPR+10      \frac{\partial\,EQ_QUANTITY}{\partial\,EQ_QUANTITY}
+EQ_EXPR+10      EQ_EXPR EQ_OPERATOR EQ_EXPR_FUNC
+EQ_EXPR+5       EQ_EXPR EQ_OPERATOR EQ_EXPR EQ_OPERATOR EQ_EXPR_FUNC
+EQ_EXPR	        \left( EQ_EXPR EQ_OPERATOR EQ_EXPR \right)
+EQ_EXPR	        {EQ_EXPR_EXP} ^ { EQ_EXPR }
+EQ_EXPR	        \sqrt{EQ_EXPR}
+EQ_EXPR+5       \left| EQ_EXPR_EXP \right|
+EQ_EXPR+5       EQ_EXPR_POWEXP
+
+EQ_OPERATOR+3   +
+EQ_OPERATOR+3   -
+EQ_OPERATOR     \times
+EQ_OPERATOR     \cdot
+
+EQ_EXPR_MULEXP    EQ_EXPR_POWEXP
+EQ_EXPR_MULEXP    EQ_EXPR_POWEXP EQ_EXPR_MULEXP
+
+EQ_EXPR_POWEXP+2 EQ_EXPR_EXP
+EQ_EXPR_POWEXP   {EQ_EXPR_EXP} ^ EXPDIGIT
+
+EQ_EXPR_EXP     \nabla EQ_EXPR_EXP
+EQ_EXPR_EXP     DIGIT
+EQ_EXPR_EXP+3   \pi
+EQ_EXPR_EXP+2   \hbar
+EQ_EXPR_EXP+5   EQ_QUANTITY(EQ_QUANTITY)
+EQ_EXPR_EXP+30  EQ_QUANTITY
+
+EQ_NVQUANTITY   INITIAL
+EQ_NVQUANTITY   LCASE
+EQ_NVQUANTITY   GREEK
+
+EQ_QUANTITY     EQ_DECO INITIAL
+EQ_QUANTITY     EQ_DECO LCASE
+EQ_QUANTITY+2   EQ_DECO GREEK
+EQ_QUANTITY     {EQ_NVQUANTITY} _ {EQ_NVQUANTITY}
+
+EQ_DECO+15       
+EQ_DECO+10      \vec
+EQ_DECO         \dot
+EQ_DECO         \mathbf
+
+GREEK           \alpha
+GREEK           \beta
+GREEK		\gamma
+GREEK		\delta
+GREEK		\epsilon
+GREEK		\zeta
+GREEK		\eta
+GREEK		\theta
+GREEK		\iota
+GREEK		\kappa
+GREEK		\lambda
+GREEK		\mu
+GREEK		\nu
+GREEK		\xi
+GREEK		\rho
+GREEK		\sigma
+GREEK		\tau
+GREEK+5		\psi
+GREEK		\varphi
+GREEK           \chi
+GREEK           \omega
+GREEK		\Gamma
+GREEK		\Delta
+GREEK		\Theta
+GREEK		\Lambda
+GREEK		\Xi
+GREEK		\Pi
+GREEK		\Sigma
+GREEK		\Phi
+GREEK		\Psi
+GREEK		\Omega
+
+EXPDIGIT+5      2
+EXPDIGIT+3      3
+EXPDIGIT        4
+EXPDIGIT        5
+EXPDIGIT        6
 
 #############################################################################
 ####### People #######
 #############################################################################
 
+## OK
 SCI_PERSON	chemist
-SCI_PERSON	physicist
-SCI_PERSON	information theorist
-SCI_PERSON	computational biologist
-SCI_PERSON	system administrator
-SCI_PERSON	gifted hacker
-SCI_PERSON	convicted hacker
+SCI_PERSON+3	physicist
+SCI_PERSON+3    theoretical physicist
 SCI_PERSON	mad scientist
-SCI_PERSON	hardware designer
-SCI_PERSON	complexity theorist
-SCI_PERSON	algorithmist
 SCI_PERSON	analyst
+SCI_PERSON      cristallographer
+SCI_PERSON      researcher
+SCI_PERSON      engineer
 
-SCI_PEOPLE	leading analysts
+## OK
+SCI_PEOPLE	leading experts
 SCI_PEOPLE	experts
 SCI_PEOPLE	analysts
 SCI_PEOPLE	scholars
-SCI_PEOPLE	information theorists
-SCI_PEOPLE	statisticians
-SCI_PEOPLE	computational biologists
-SCI_PEOPLE	system administrators
-SCI_PEOPLE	electrical engineers
-SCI_PEOPLE	cryptographers
-SCI_PEOPLE	security experts
-SCI_PEOPLE	systems engineers
-SCI_PEOPLE	hackers worldwide
-SCI_PEOPLE	biologists
+SCI_PEOPLE+4    physicists
+SCI_PEOPLE      chemists
 SCI_PEOPLE	mathematicians
 SCI_PEOPLE	physicists
 SCI_PEOPLE	theorists
 SCI_PEOPLE	researchers
-SCI_PEOPLE	steganographers
-SCI_PEOPLE	cyberinformaticians
-SCI_PEOPLE	end-users
-SCI_PEOPLE      futurists
-SCI_PEOPLE      cyberneticists
 
-SCI_SOURCE	Rodney Brooks
-SCI_SOURCE	Alan Turing
-SCI_SOURCE	Albert Einstein
-SCI_SOURCE	Charles Darwin
-SCI_SOURCE	Erwin Schroedinger
-SCI_SOURCE	Isaac Newton
-SCI_SOURCE	Noam Chomsky
-SCI_SOURCE	Robert T. Morrison
-SCI_SOURCE	Stephen Hawking
-SCI_SOURCE	Timothy Leary
-SCI_SOURCE	Butler Lampson
-SCI_SOURCE	Henry Levy
-SCI_SOURCE	Roger Needham
-SCI_SOURCE	Matt Welsh
-SCI_SOURCE	M. Frans Kaashoek
-SCI_SOURCE	Ken Thompson
-SCI_SOURCE	Richard Stallman
-SCI_SOURCE	Ron Rivest
-SCI_SOURCE	A.J. Perlis
-SCI_SOURCE	Maurice V. Wilkes
-SCI_SOURCE	Richard Hamming
-SCI_SOURCE	Marvin Minsky
-SCI_SOURCE	J.H. Wilkinson
-SCI_SOURCE	John McCarthy
-SCI_SOURCE	E.W. Dijkstra
-SCI_SOURCE	Paul Erd\H{o}s
-SCI_SOURCE	Charles Bachman
-SCI_SOURCE	Donald Knuth
-SCI_SOURCE	Allen Newell
-SCI_SOURCE	Herbert Simon
-SCI_SOURCE	Michael O. Rabin
-SCI_SOURCE	Dana S. Scott
-SCI_SOURCE	John Backus
-SCI_SOURCE	Robert Floyd
-SCI_SOURCE	Kenneth Iverson
-SCI_SOURCE	C. Antony R. Hoare
-SCI_SOURCE	Edgar Codd
-SCI_SOURCE	Stephen Cook
-SCI_SOURCE	Dennis Ritchie
-SCI_SOURCE	Niklaus Wirth
-SCI_SOURCE	Andy Tanenbaum
-SCI_SOURCE	Richard Karp
-SCI_SOURCE	John Hopcroft
-SCI_SOURCE	Robert Tarjan
-SCI_SOURCE	John Cocke
-SCI_SOURCE	Ivan Sutherland
-SCI_SOURCE	William Kahan
-SCI_SOURCE	Fernando Corbato
-SCI_SOURCE	Robin Milner
-SCI_SOURCE	Juris Hartmanis
-SCI_SOURCE	Richard Stearns
-SCI_SOURCE	Edward Feigenbaum
-SCI_SOURCE	Raj Reddy
-SCI_SOURCE	Manuel Blum
-SCI_SOURCE	Amir Pnueli
-SCI_SOURCE	Douglas Engelbart
-SCI_SOURCE	James Gray
-SCI_SOURCE	Fredrick P. Brooks, Jr.
-SCI_SOURCE	Andrew Yao
-SCI_SOURCE	Ole-Johan Dahl
-SCI_SOURCE	Kristen Nygaard
-SCI_SOURCE	Adi Shamir
-SCI_SOURCE	Leonard Adleman
-SCI_SOURCE	David Johnson
-SCI_SOURCE	J. Ullman
-SCI_SOURCE	A. Gupta
-SCI_SOURCE	R. Milner
-SCI_SOURCE	Scott Shenker
-SCI_SOURCE	Venugopalan Ramasubramanian
-SCI_SOURCE	Karthik Lakshminarayanan 
-SCI_SOURCE	Lakshminarayanan Subramanian
-SCI_SOURCE	Van Jacobson
-SCI_SOURCE	M. Garey
-SCI_SOURCE	R. Tarjan
-SCI_SOURCE	Sally Floyd
-SCI_SOURCE	J. Dongarra
-SCI_SOURCE	Leslie Lamport
-SCI_SOURCE	J. Smith
-SCI_SOURCE	E. Clarke
-SCI_SOURCE	R. Agarwal
-SCI_SOURCE	Christos Papadimitriou
-SCI_SOURCE	John Hennessy
-SCI_SOURCE	Hector Garcia-Molina
-SCI_SOURCE	Mark Gayson
-SCI_SOURCE	J. Quinlan
-SCI_SOURCE	David Clark
-SCI_SOURCE	Charles Leiserson
-SCI_SOURCE	David Patterson
-SCI_SOURCE	John Kubiatowicz
-SCI_SOURCE	C. Hoare
-SCI_SOURCE	S. Abiteboul
-SCI_SOURCE	I. Daubechies
-SCI_SOURCE	Deborah Estrin
-SCI_SOURCE	David Culler
-SCI_SOURCE+75	INITIALS GENERIC_LASTNAME
-SCI_SOURCE+5	INITIALS TAMIL_LASTNAME
+## OK
+SCI_SOURCE William Gilbert
+SCI_SOURCE Galileo Galilei
+SCI_SOURCE Willebrod Snell
+SCI_SOURCE Blaise Pascal
+SCI_SOURCE Christiaan Huygens
+SCI_SOURCE Robert Hooke
+SCI_SOURCE Sir Isaac Newton
+SCI_SOURCE Daniel Bernoulli
+SCI_SOURCE Benjamin Franklin
+SCI_SOURCE Leonard Euler
+SCI_SOURCE Henry Cavendish
+SCI_SOURCE Charles Augustin de Coulomb
+SCI_SOURCE Joseph-Louis Lagrange
+SCI_SOURCE James Watt
+SCI_SOURCE Count Alessandro Volta
+SCI_SOURCE Joseph Fourier
+SCI_SOURCE Thomas Young
+SCI_SOURCE Jean-Babtiste Biot
+SCI_SOURCE Andr\'e Marie Amp\`ere
+SCI_SOURCE Amadeo Avogadro
+SCI_SOURCE Johann Carl Friedrich Gauss
+SCI_SOURCE Hans Christian Oersted
+SCI_SOURCE Sir David Brewster
+SCI_SOURCE Augustin-Jean Fresnel
+SCI_SOURCE Georg Ohm
+SCI_SOURCE Michael Faraday
+SCI_SOURCE Felix Savart
+SCI_SOURCE Sadi Carnot
+SCI_SOURCE Joseph Henry
+SCI_SOURCE Christian Doppler
+SCI_SOURCE Wilhelm E. Weber
+SCI_SOURCE Sir William Hamilton
+SCI_SOURCE James Prescott Joule
+SCI_SOURCE Armand-Hippolyte-Louis Fizeau
+SCI_SOURCE Jean-Bernard-L\'eon Foucault
+SCI_SOURCE Sir George Gabriel Stokes
+SCI_SOURCE Hermann von Helmholtz
+SCI_SOURCE Rudolf Clausius
+SCI_SOURCE Lord Kelvin
+SCI_SOURCE Gustav Kirchhoff
+SCI_SOURCE Johann Balmer
+SCI_SOURCE Sir Joseph Wilson Swan
+SCI_SOURCE James Clerk Maxwell
+SCI_SOURCE Josef Stefan
+SCI_SOURCE Ernst Mach
+SCI_SOURCE Josiah Gibbs
+SCI_SOURCE James Dewar
+SCI_SOURCE Osborne Reynolds
+SCI_SOURCE Ludwig Boltzmann
+SCI_SOURCE Roland E\"otv\"os
+SCI_SOURCE Oliver Heaviside
+SCI_SOURCE George Francis FitzGerald
+SCI_SOURCE John Henry Poynting
+SCI_SOURCE Henri Poincaré
+SCI_SOURCE Janne Rydberg
+SCI_SOURCE Edwin H. Hall
+SCI_SOURCE Heinrich Hertz
+SCI_SOURCE Nikola Tesla
+SCI_SOURCE Johannes van der Waals
+SCI_SOURCE Lord Rayleigh
+SCI_SOURCE Wilhelm Conrad R\"ontgen
+SCI_SOURCE Antoine Henri Becquerel
+SCI_SOURCE Albert A. Michelson
+SCI_SOURCE Hendrik Antoon Lorentz
+SCI_SOURCE Heike Kamerlingh-Onnes
+SCI_SOURCE Sir Joseph John Thomson
+SCI_SOURCE Max Planck
+SCI_SOURCE Pierre Curie
+SCI_SOURCE Sir William Henry Bragg
+SCI_SOURCE Philipp von Lenard
+SCI_SOURCE Wilhelm Wien
+SCI_SOURCE Pieter Zeeman
+SCI_SOURCE Marie Curie
+SCI_SOURCE Robert Millikan
+SCI_SOURCE Charles Wilson
+SCI_SOURCE Jean Baptiste Perrin
+SCI_SOURCE Lord Ernest Rutherford
+SCI_SOURCE Guglielmo Marconi
+SCI_SOURCE Johannes Stark
+SCI_SOURCE Charles Glover Barkla
+SCI_SOURCE Albert Einstein
+SCI_SOURCE Otto Hahn
+SCI_SOURCE Max von Laue
+SCI_SOURCE Sir Owen Richardson
+SCI_SOURCE Clinton Joseph Davisson
+SCI_SOURCE Max Born
+SCI_SOURCE Percy Williams Bridgman
+SCI_SOURCE James Franck
+SCI_SOURCE Victor Franz Hess
+SCI_SOURCE Peter Debye
+SCI_SOURCE Neils Bohr
+SCI_SOURCE Karl Manne Georg Siegbahn
+SCI_SOURCE Gustav Hertz
+SCI_SOURCE Erwin Schr\"odinger
+SCI_SOURCE Sir Chandrasekhara Raman
+SCI_SOURCE Otto Stern
+SCI_SOURCE Frits Zernike
+SCI_SOURCE Sir William Lawrence Bragg
+SCI_SOURCE Walther Bothe
+SCI_SOURCE Sir James Chadwick
+SCI_SOURCE Sir Edward Appleton
+SCI_SOURCE Prince Louis-Victor de Broglie
+SCI_SOURCE Arthur Compton
+SCI_SOURCE Sir George Paget Thomson
+SCI_SOURCE Harold Clayton Urey
+SCI_SOURCE Pjotr Leonidovich Kapitsa
+SCI_SOURCE Robert S. Mulliken
+SCI_SOURCE Lord Patrick Maynard Stuart Blackett
+SCI_SOURCE Sir John Cockcroft
+SCI_SOURCE Ir\`ene Joliot-Curie
+SCI_SOURCE Isador Isaac Rabi
+SCI_SOURCE Fr\'ed\'eric Joliot-Curie
+SCI_SOURCE Dennis Gabor
+SCI_SOURCE Wolfgang Pauli
+SCI_SOURCE Enrico Fermi
+SCI_SOURCE Werner Heisenberg
+SCI_SOURCE Ernest Orlando Lawrence
+SCI_SOURCE Paul Adrien Maurice Dirac
+SCI_SOURCE Alfred Kastler
+SCI_SOURCE Eugene Wigner
+SCI_SOURCE Cecil F. Powell
+SCI_SOURCE Ernest Walton
+SCI_SOURCE Pavel Cerenkov
+SCI_SOURCE Carl David Anderson
+SCI_SOURCE Felix Bloch
+SCI_SOURCE Sir Nevill F. Mott
+SCI_SOURCE Emilio Segr\`e
+SCI_SOURCE Hans Bethe
+SCI_SOURCE Maria Goeppert-Mayer
+SCI_SOURCE Ernst Ruska
+SCI_SOURCE Shin-Ichiro Tomonaga
+SCI_SOURCE J. Hans D. Jensen
+SCI_SOURCE Edwin M. McMillan
+SCI_SOURCE Hideki Yukawa
+SCI_SOURCE John Bardeen
+SCI_SOURCE Lev Landau
+SCI_SOURCE Subramanyan Chandrasekhar
+SCI_SOURCE William Shockley
+SCI_SOURCE Luis Walter Alvarez
+SCI_SOURCE William Fowler
+SCI_SOURCE Polykarp Kusch
+SCI_SOURCE Edward Mills Purcell
+SCI_SOURCE Glenn T. Seaborg
+SCI_SOURCE Willis E. Lamb, Jr.
+SCI_SOURCE Robert Hofstadter
+SCI_SOURCE Norman F. Ramsey
+SCI_SOURCE Clifford G. Shull
+SCI_SOURCE Charles H. Townes
+SCI_SOURCE Francis Crick
+SCI_SOURCE Maurice Wilkins
+SCI_SOURCE Bertram N. Brockhouse
+SCI_SOURCE Richard P. Feynman
+SCI_SOURCE Frederick Reines
+SCI_SOURCE Julian Schwinger
+SCI_SOURCE Kai M. Siegbahn
+SCI_SOURCE Nicolaas Bloembergen
+SCI_SOURCE Owen Chamberlain
+SCI_SOURCE Andrei Sakharov
+SCI_SOURCE Arthur L. Schawlow
+SCI_SOURCE Jack Steinberger
+SCI_SOURCE Nikolai Basov
+SCI_SOURCE Aage Bohr
+SCI_SOURCE Leon Lederman
+SCI_SOURCE Chen Ning Yang
+SCI_SOURCE Val Logsdon Fitch
+SCI_SOURCE Georges Charpak
+SCI_SOURCE Roy J. Glauber
+SCI_SOURCE Simon van der Meer
+SCI_SOURCE Donald A. Glaser
+SCI_SOURCE Henry W. Kendall
+SCI_SOURCE Ben Mottelson
+SCI_SOURCE Tsung-Dao Lee
+SCI_SOURCE Abdus Salam
+SCI_SOURCE K. Alexander M\"uller
+SCI_SOURCE Martin L. Perl
+SCI_SOURCE Murray Gell-Mann
+SCI_SOURCE Rudolf Ludwig M\"ossbauer
+SCI_SOURCE Richard E. Taylor
+SCI_SOURCE Leon Cooper
+SCI_SOURCE Jerome I. Friedman
+SCI_SOURCE James W. Cronin
+SCI_SOURCE David M. Lee
+SCI_SOURCE Burton Richter
+SCI_SOURCE J. Robert Schrieffer
+SCI_SOURCE Pierre-Gilles de Gennes
+SCI_SOURCE Sheldon Glashow
+SCI_SOURCE Melvin Schwartz
+SCI_SOURCE Claude Cohen-Tannoudji
+SCI_SOURCE Arno A. Penzias
+SCI_SOURCE Heinrich Rohrer
+SCI_SOURCE Steven Weinberg
+SCI_SOURCE Carlo Rubbia
+SCI_SOURCE Robert W. Wilson
+SCI_SOURCE Samuel C. C. Ting
+SCI_SOURCE Kenneth Wilson
+SCI_SOURCE Robert C. Richardson
+SCI_SOURCE Brian Josephson
+SCI_SOURCE David J. Gross
+SCI_SOURCE Klaus von Klitzing
+SCI_SOURCE Douglas D. Osheroff
+SCI_SOURCE Gerard t' Hooft
+SCI_SOURCE Gerd Binnig
+SCI_SOURCE Steven Chu
+SCI_SOURCE William D. Phillips
+SCI_SOURCE H. David Politzer
+SCI_SOURCE J. Georg Bednorz
+SCI_SOURCE Robert Laughlin
+SCI_SOURCE Frank Wilczek
+SCI_SOURCE Wallace Clement Sabine
+SCI_SOURCE Arnold Sommerfeld
+SCI_SOURCE Lise Meitner
+SCI_SOURCE Paul Ehrenfest
+SCI_SOURCE Theodor von Kármán
+SCI_SOURCE Walther Meissner
+SCI_SOURCE Hans Geiger
+SCI_SOURCE Hermann Weyl
+SCI_SOURCE Arthur Jeffrey Dempster
+SCI_SOURCE Henry Moseley
+SCI_SOURCE Sir Robert Watson-Watt
+SCI_SOURCE Satyendra Bose
+SCI_SOURCE Oskar Klein
+SCI_SOURCE Vladimir A. Fock
+SCI_SOURCE Leo Szilard
+SCI_SOURCE Pierre Auger
+SCI_SOURCE Ernst Ising
+SCI_SOURCE Fritz London
+SCI_SOURCE Charles Francis Richter
+SCI_SOURCE George E. Uhlenbeck
+SCI_SOURCE Robert J. Van de Graaf
+SCI_SOURCE Samuel Abraham Goudsmit
+SCI_SOURCE Igor Vasilievich Kurchatov
+SCI_SOURCE John von Neumann
+SCI_SOURCE George Gamow
+SCI_SOURCE J. Robert Oppenheimer
+SCI_SOURCE Sir Rudolf Peierls
+SCI_SOURCE Edward Teller
+SCI_SOURCE Victor F. Weisskopf
+SCI_SOURCE Homi Jehangir Bhabha
+SCI_SOURCE Nikolai N. Bogolubov
+SCI_SOURCE Maurice Goldhaber
+SCI_SOURCE Chien-Shiung Wu
+SCI_SOURCE Henry Primakoff
+SCI_SOURCE Robert Rathbun Wilson
+SCI_SOURCE Vitaly L. Ginzburg
+SCI_SOURCE Robert E. Marshak
+SCI_SOURCE Wolfgang K. H. Panofsky
+SCI_SOURCE Robert V. Pound
+SCI_SOURCE Vernon W. Hughes
+SCI_SOURCE Yoichiro Nambu
+SCI_SOURCE Freeman J. Dyson
+SCI_SOURCE Calvin F. Quate
+SCI_SOURCE Lincoln Wolfenstein
+SCI_SOURCE James E. Zimmerman
+SCI_SOURCE Felix Hans Boehm
+SCI_SOURCE Ernest M. Henley
+SCI_SOURCE Benoit Mandelbrot
+SCI_SOURCE D. Allan Bromley
+SCI_SOURCE Sidney D. Drell
+SCI_SOURCE Albert V. Crewe
+SCI_SOURCE John Stewart Bell
+SCI_SOURCE Stanley Mandelstam
+SCI_SOURCE Peter Higgs
+SCI_SOURCE Mildred S. Dresselhaus
+SCI_SOURCE Joel Lebowitz
+SCI_SOURCE John P. Schiffer
+SCI_SOURCE Akito Arima
+SCI_SOURCE T. Kenneth Fowler
+SCI_SOURCE Tullio Regge
+SCI_SOURCE Oscar Wallace Greenberg
+SCI_SOURCE John Dirk Walecka
+SCI_SOURCE Daniel Kleppner
+SCI_SOURCE Jeffrey Goldstone
+SCI_SOURCE John N. Bahcall
+SCI_SOURCE James D. Bjorken
+SCI_SOURCE Ludvig Faddeev
+SCI_SOURCE David J. Thouless
+SCI_SOURCE Peter A. Carruthers
+SCI_SOURCE Gordon A. Baym
+SCI_SOURCE Stanley J. Brodsky
+SCI_SOURCE Haim Harari
+SCI_SOURCE Kip S. Thorne
+SCI_SOURCE Francesco Iachello
+SCI_SOURCE Gabriele Veneziano
+SCI_SOURCE Chris Quigg
+SCI_SOURCE Thomas A. Witten
+SCI_SOURCE Howard Georgi
+SCI_SOURCE Nathan Isgur
+SCI_SOURCE Edward Witten
+SCI_SOURCE Ralph Charles Merkle
+SCI_SOURCE K. Eric Drexler
+SCI_SOURCE Nathan Seiberg
+SCI_SOURCE Stephen Wolfram
+SCI_SOURCE+175	INITIALS GENERIC_LASTNAME
+SCI_SOURCE+40	INITIALS TAMIL_LASTNAME
+SCI_SOURCE+40   INITIALS JAPAN_LASTNAME
 INITIALS+7 INITIAL.
 INITIALS INITIAL. INITIAL.
 INITIAL A
@@ -3080,6 +3122,32 @@ INITIAL W
 INITIAL X
 INITIAL Y
 INITIAL Z
+LCASE a
+LCASE b
+LCASE c
+LCASE d
+LCASE e
+LCASE f
+LCASE g
+LCASE h
+LCASE i
+LCASE j
+LCASE k
+LCASE l
+LCASE m
+LCASE n
+LCASE o
+LCASE p
+LCASE q
+LCASE r
+LCASE s
+LCASE t
+LCASE u
+LCASE v
+LCASE w
+LCASE x
+LCASE y
+LCASE z
 GENERIC_LASTNAME Smith
 GENERIC_LASTNAME Johnson
 GENERIC_LASTNAME Williams
@@ -3284,6 +3352,368 @@ TAMIL_LASTNAME Vikram
 TAMIL_LASTNAME Vishwanathan
 TAMIL_LASTNAME Vivek
 
+# Japanese last names
+JAPAN_LASTNAME Abe
+JAPAN_LASTNAME Abo
+JAPAN_LASTNAME Adachi
+JAPAN_LASTNAME Agawa
+JAPAN_LASTNAME Aichi
+JAPAN_LASTNAME Aida
+JAPAN_LASTNAME Aihara
+JAPAN_LASTNAME Aikawa
+JAPAN_LASTNAME Aizawa
+JAPAN_LASTNAME Akaba
+JAPAN_LASTNAME Akagi
+JAPAN_LASTNAME Akama
+JAPAN_LASTNAME Akamatsu
+JAPAN_LASTNAME Akasaka
+JAPAN_LASTNAME Akashi
+JAPAN_LASTNAME Akatsuka
+JAPAN_LASTNAME Aki
+JAPAN_LASTNAME Akiba
+JAPAN_LASTNAME Akira
+JAPAN_LASTNAME Akita
+JAPAN_LASTNAME Akiyama
+JAPAN_LASTNAME Akutagawa
+JAPAN_LASTNAME Amachi
+JAPAN_LASTNAME Amano
+JAPAN_LASTNAME Anan
+JAPAN_LASTNAME Ando
+JAPAN_LASTNAME Anno
+JAPAN_LASTNAME Anzai
+JAPAN_LASTNAME Aoi
+JAPAN_LASTNAME Aoki
+JAPAN_LASTNAME Aomori
+JAPAN_LASTNAME Aoshima
+JAPAN_LASTNAME Aoyama
+JAPAN_LASTNAME Arai
+JAPAN_LASTNAME Araki
+JAPAN_LASTNAME Aramaki
+JAPAN_LASTNAME Arata
+JAPAN_LASTNAME Arima
+JAPAN_LASTNAME Arisaka
+JAPAN_LASTNAME Arita
+JAPAN_LASTNAME Asada
+JAPAN_LASTNAME Asahi
+JAPAN_LASTNAME Asahina
+JAPAN_LASTNAME Asai
+JAPAN_LASTNAME Asaka
+JAPAN_LASTNAME Asakura
+JAPAN_LASTNAME Asami
+JAPAN_LASTNAME Asano
+JAPAN_LASTNAME Asari
+JAPAN_LASTNAME Ashida
+JAPAN_LASTNAME Ashina
+JAPAN_LASTNAME Aso
+JAPAN_LASTNAME Asuka
+JAPAN_LASTNAME Ataka
+JAPAN_LASTNAME Ayukawa
+JAPAN_LASTNAME Azuma
+JAPAN_LASTNAME Azumi
+JAPAN_LASTNAME Bando
+JAPAN_LASTNAME Banno
+JAPAN_LASTNAME Beppu
+JAPAN_LASTNAME Chiba
+JAPAN_LASTNAME Chinen
+JAPAN_LASTNAME Daigo
+JAPAN_LASTNAME Dainichi
+JAPAN_LASTNAME Daitokuji
+JAPAN_LASTNAME Date
+JAPAN_LASTNAME Doi
+JAPAN_LASTNAME Eda
+JAPAN_LASTNAME Egawa
+JAPAN_LASTNAME Endo
+JAPAN_LASTNAME Fuji
+JAPAN_LASTNAME Fujibayashi
+JAPAN_LASTNAME Fujii
+JAPAN_LASTNAME Fujikawa
+JAPAN_LASTNAME Fujimori
+JAPAN_LASTNAME Fujimoto
+JAPAN_LASTNAME Fujishima
+JAPAN_LASTNAME Fujiwara
+JAPAN_LASTNAME Fukuda
+JAPAN_LASTNAME Fukuhara
+JAPAN_LASTNAME Fukui
+JAPAN_LASTNAME Fukumitsu
+JAPAN_LASTNAME Fukuoka
+JAPAN_LASTNAME Fukushima
+JAPAN_LASTNAME Funakoshi
+JAPAN_LASTNAME Furukawa
+JAPAN_LASTNAME Fushimi
+JAPAN_LASTNAME Goto
+JAPAN_LASTNAME Gushiken
+JAPAN_LASTNAME Haku
+JAPAN_LASTNAME Hamaguchi
+JAPAN_LASTNAME Hamasaki
+JAPAN_LASTNAME Hanai
+JAPAN_LASTNAME Handa
+JAPAN_LASTNAME Hasegawa
+JAPAN_LASTNAME Hashimoto
+JAPAN_LASTNAME Hata
+JAPAN_LASTNAME Hatoyama
+JAPAN_LASTNAME Hayashi
+JAPAN_LASTNAME Himura
+JAPAN_LASTNAME Hirabayashi
+JAPAN_LASTNAME Hirano
+JAPAN_LASTNAME Hiranuma
+JAPAN_LASTNAME Hirayama
+JAPAN_LASTNAME Hirota
+JAPAN_LASTNAME Honjo
+JAPAN_LASTNAME Hoshi
+JAPAN_LASTNAME Hoshino
+JAPAN_LASTNAME Hosokawa
+JAPAN_LASTNAME Ichikawa
+JAPAN_LASTNAME Iga
+JAPAN_LASTNAME Igarashi
+JAPAN_LASTNAME Iguchi
+JAPAN_LASTNAME Ii
+JAPAN_LASTNAME Iida
+JAPAN_LASTNAME Ikeda
+JAPAN_LASTNAME Ikegami
+JAPAN_LASTNAME Imai
+JAPAN_LASTNAME Imamura
+JAPAN_LASTNAME Inoue
+JAPAN_LASTNAME Inukai
+JAPAN_LASTNAME Ishibashi
+JAPAN_LASTNAME Ishida
+JAPAN_LASTNAME Ishiguro
+JAPAN_LASTNAME Ishihara
+JAPAN_LASTNAME Ishii
+JAPAN_LASTNAME Ishikawa
+JAPAN_LASTNAME Ishimoto
+JAPAN_LASTNAME Ishino
+JAPAN_LASTNAME Ishiyama
+JAPAN_LASTNAME Itagaki
+JAPAN_LASTNAME Ito
+JAPAN_LASTNAME Itokawa
+JAPAN_LASTNAME Iwaki
+JAPAN_LASTNAME Iwasaki
+JAPAN_LASTNAME Iwata
+JAPAN_LASTNAME Jonouchi
+JAPAN_LASTNAME Ju-monji
+JAPAN_LASTNAME Kabayama
+JAPAN_LASTNAME Kadono
+JAPAN_LASTNAME Kagawa
+JAPAN_LASTNAME Kaifu
+JAPAN_LASTNAME Kaizuka
+JAPAN_LASTNAME Kakutani
+JAPAN_LASTNAME Kanai
+JAPAN_LASTNAME Kaneda
+JAPAN_LASTNAME Kaneko
+JAPAN_LASTNAME Kasai
+JAPAN_LASTNAME Katayama
+JAPAN_LASTNAME Kato
+JAPAN_LASTNAME Katsumata
+JAPAN_LASTNAME Katsumoto
+JAPAN_LASTNAME Katsura
+JAPAN_LASTNAME Kawada
+JAPAN_LASTNAME Kawai
+JAPAN_LASTNAME Kawamoto
+JAPAN_LASTNAME Kawamura
+JAPAN_LASTNAME Kawasaki
+JAPAN_LASTNAME Kawashima
+JAPAN_LASTNAME Kazama
+JAPAN_LASTNAME Kido
+JAPAN_LASTNAME Kimura
+JAPAN_LASTNAME Kishimoto
+JAPAN_LASTNAME Kitano
+JAPAN_LASTNAME Kobayashi
+JAPAN_LASTNAME Koga
+JAPAN_LASTNAME Koizumi
+JAPAN_LASTNAME Komatsu
+JAPAN_LASTNAME Kondo
+JAPAN_LASTNAME Ko-no
+JAPAN_LASTNAME Konoe
+JAPAN_LASTNAME Kosaka
+JAPAN_LASTNAME Koshino
+JAPAN_LASTNAME Kubo
+JAPAN_LASTNAME Kubota
+JAPAN_LASTNAME Kudo
+JAPAN_LASTNAME Kuniyoshi
+JAPAN_LASTNAME Kurata
+JAPAN_LASTNAME Kurechi
+JAPAN_LASTNAME Kuribayashi
+JAPAN_LASTNAME Kurisu
+JAPAN_LASTNAME Kuroda
+JAPAN_LASTNAME Kuroiwa
+JAPAN_LASTNAME Kurosawa
+JAPAN_LASTNAME Kuwabara
+JAPAN_LASTNAME Kuwata
+JAPAN_LASTNAME Maeda
+JAPAN_LASTNAME Maekawa
+JAPAN_LASTNAME Maki
+JAPAN_LASTNAME Matoba
+JAPAN_LASTNAME Matsuda
+JAPAN_LASTNAME Matsui
+JAPAN_LASTNAME Matsukata
+JAPAN_LASTNAME Matsumoto
+JAPAN_LASTNAME Matsuoka
+JAPAN_LASTNAME Matsushita
+JAPAN_LASTNAME Mifune
+JAPAN_LASTNAME Miki
+JAPAN_LASTNAME Minami
+JAPAN_LASTNAME Misaki
+JAPAN_LASTNAME Miuchi
+JAPAN_LASTNAME Miwa
+JAPAN_LASTNAME Miyagi
+JAPAN_LASTNAME Miyagishima
+JAPAN_LASTNAME Miyamoto
+JAPAN_LASTNAME Miyazaki
+JAPAN_LASTNAME Miyazawa
+JAPAN_LASTNAME Mizoguchi
+JAPAN_LASTNAME Mizuki
+JAPAN_LASTNAME Mizuno
+JAPAN_LASTNAME Mori
+JAPAN_LASTNAME Morikawa
+JAPAN_LASTNAME Morita
+JAPAN_LASTNAME Motohashi
+JAPAN_LASTNAME Murakami
+JAPAN_LASTNAME Muranaka
+JAPAN_LASTNAME Murata
+JAPAN_LASTNAME Murayama
+JAPAN_LASTNAME Muto
+JAPAN_LASTNAME Nagaoka
+JAPAN_LASTNAME Nagasawa
+JAPAN_LASTNAME Nagata
+JAPAN_LASTNAME Naito
+JAPAN_LASTNAME Nakada
+JAPAN_LASTNAME Nakagawa
+JAPAN_LASTNAME Nakai
+JAPAN_LASTNAME Nakama
+JAPAN_LASTNAME Nakamura
+JAPAN_LASTNAME Nakashima
+JAPAN_LASTNAME Nakasone
+JAPAN_LASTNAME Nakata
+JAPAN_LASTNAME Nakayama
+JAPAN_LASTNAME Nakazawa
+JAPAN_LASTNAME Nanami
+JAPAN_LASTNAME Nanase
+JAPAN_LASTNAME Natsukawa
+JAPAN_LASTNAME Nemoto
+JAPAN_LASTNAME Niijima
+JAPAN_LASTNAME Nikaido
+JAPAN_LASTNAME Nishino
+JAPAN_LASTNAME Nobuo
+JAPAN_LASTNAME Nobusada
+JAPAN_LASTNAME Noguchi
+JAPAN_LASTNAME Nomura
+JAPAN_LASTNAME O
+JAPAN_LASTNAME Obuchi
+JAPAN_LASTNAME Oda
+JAPAN_LASTNAME Oe
+JAPAN_LASTNAME Ogata
+JAPAN_LASTNAME Ogawa
+JAPAN_LASTNAME Ogi
+JAPAN_LASTNAME Ogura
+JAPAN_LASTNAME Oh
+JAPAN_LASTNAME Ohara
+JAPAN_LASTNAME Ohira
+JAPAN_LASTNAME Ohno
+JAPAN_LASTNAME Ohtori
+JAPAN_LASTNAME Oka
+JAPAN_LASTNAME Okada
+JAPAN_LASTNAME Okazaki
+JAPAN_LASTNAME Okimoto
+JAPAN_LASTNAME Ono
+JAPAN_LASTNAME Ota
+JAPAN_LASTNAME Otsuka
+JAPAN_LASTNAME Ozawa
+JAPAN_LASTNAME Sagara
+JAPAN_LASTNAME Saionji
+JAPAN_LASTNAME Saito
+JAPAN_LASTNAME Sakai
+JAPAN_LASTNAME Sakakibara
+JAPAN_LASTNAME Sakamoto
+JAPAN_LASTNAME Sakata
+JAPAN_LASTNAME Sakuma
+JAPAN_LASTNAME Sakurai
+JAPAN_LASTNAME Saotome
+JAPAN_LASTNAME Sasaki
+JAPAN_LASTNAME Sato
+JAPAN_LASTNAME Satomi
+JAPAN_LASTNAME Seto
+JAPAN_LASTNAME Shimamura
+JAPAN_LASTNAME Shimazu
+JAPAN_LASTNAME Shimizu
+JAPAN_LASTNAME Shimomura
+JAPAN_LASTNAME Shimotsuki
+JAPAN_LASTNAME Shindo
+JAPAN_LASTNAME Shinjo
+JAPAN_LASTNAME Shirakawa
+JAPAN_LASTNAME Sho
+JAPAN_LASTNAME Soga
+JAPAN_LASTNAME Suga
+JAPAN_LASTNAME Sugawara
+JAPAN_LASTNAME Sugiyama
+JAPAN_LASTNAME Sumeragi
+JAPAN_LASTNAME Suzuki
+JAPAN_LASTNAME Takada
+JAPAN_LASTNAME Takahashi
+JAPAN_LASTNAME Takaishi
+JAPAN_LASTNAME Takamine
+JAPAN_LASTNAME Takamura
+JAPAN_LASTNAME Takano
+JAPAN_LASTNAME Takeda
+JAPAN_LASTNAME Takemoto
+JAPAN_LASTNAME Takeshita
+JAPAN_LASTNAME Takeuchi
+JAPAN_LASTNAME Tamura
+JAPAN_LASTNAME Tanaka
+JAPAN_LASTNAME Tanioka
+JAPAN_LASTNAME Taniyama
+JAPAN_LASTNAME Tashiro
+JAPAN_LASTNAME Tendo
+JAPAN_LASTNAME Terauchi
+JAPAN_LASTNAME Tokugawa
+JAPAN_LASTNAME Tonegawa
+JAPAN_LASTNAME Toriyama
+JAPAN_LASTNAME Tsubaki
+JAPAN_LASTNAME Tsuboi
+JAPAN_LASTNAME Tsuji
+JAPAN_LASTNAME Tsurumi
+JAPAN_LASTNAME Tsuruta
+JAPAN_LASTNAME Tsushima
+JAPAN_LASTNAME Tsuzuki
+JAPAN_LASTNAME Uda
+JAPAN_LASTNAME Ueda
+JAPAN_LASTNAME Uematsu
+JAPAN_LASTNAME Uemura
+JAPAN_LASTNAME Uesugi
+JAPAN_LASTNAME Usui
+JAPAN_LASTNAME Utada
+JAPAN_LASTNAME Utsumi
+JAPAN_LASTNAME Wakabayashi
+JAPAN_LASTNAME Wakatsuki
+JAPAN_LASTNAME Washio
+JAPAN_LASTNAME Watanabe
+JAPAN_LASTNAME Yabuki
+JAPAN_LASTNAME Yagami
+JAPAN_LASTNAME Yagi
+JAPAN_LASTNAME Yamada
+JAPAN_LASTNAME Yamagata
+JAPAN_LASTNAME Yamaguchi
+JAPAN_LASTNAME Yamakawa
+JAPAN_LASTNAME Yamamoto
+JAPAN_LASTNAME Yamamura
+JAPAN_LASTNAME Yamanaka
+JAPAN_LASTNAME Yamasaki
+JAPAN_LASTNAME Yamashita
+JAPAN_LASTNAME Yamauchi
+JAPAN_LASTNAME Yamazaki
+JAPAN_LASTNAME Yanagimachi
+JAPAN_LASTNAME Yanagisawa
+JAPAN_LASTNAME Yasuda
+JAPAN_LASTNAME Yazawa
+JAPAN_LASTNAME Yonai
+JAPAN_LASTNAME Yoneda
+JAPAN_LASTNAME Yonemura
+JAPAN_LASTNAME Yoshida
+JAPAN_LASTNAME Yoshii
+JAPAN_LASTNAME Yoshiyuki
+JAPAN_LASTNAME Yuda
+JAPAN_LASTNAME Yukinobu
+JAPAN_LASTNAME Yukishiro
+
 #############################################################################
 ######### Units/Graphs ##########
 #############################################################################
@@ -3301,9 +3731,7 @@ SCI_DIAGRAM_CAPTION SCI_OUR_SYSTEM SCI_SYS_VERBS SCI_GENERIC_NOUN in the manner 
 
 SCI_DIAGRAM_TYPE	diagram
 SCI_DIAGRAM_TYPE	schematic
-SCI_DIAGRAM_TYPE	architectural layout
-SCI_DIAGRAM_TYPE	flowchart
-SCI_DIAGRAM_TYPE	decision tree
+SCI_DIAGRAM_TYPE        graph
 SCI_DIAGRAM_TYPE	SCI_MODEL_TYPE
 
 SCI_DIAGRAM_VERBING	detailing
@@ -3317,57 +3745,49 @@ SCI_DIAGRAM_VERBS	plots
 SCI_DIAGRAM_VERBS	shows
 SCI_DIAGRAM_VERBS	depicts
 
-EVAL_UNIT_UM	 MB/s
 EVAL_UNIT_UM	 ms
 EVAL_UNIT_UM	 sec
-EVAL_UNIT_NUM	 # nodes
-EVAL_UNIT_NUM	 # CPUs
+EVAL_UNIT_UM     Angstrom
+EVAL_UNIT_UM     T
+EVAL_UNIT_UM     Gs
+EVAL_UNIT_UM     MeV
+EVAL_UNIT_UM     meV
+EVAL_UNIT_UM     K
 EVAL_UNIT_UM	 Joules
 EVAL_UNIT_UM	 dB
-EVAL_UNIT_UM	 percentile
-EVAL_UNIT_UM	 man-hours
-EVAL_UNIT_UM	 bytes
-EVAL_UNIT_UM	 cylinders
-EVAL_UNIT_UM	 celcius
-EVAL_UNIT_UM	 pages
 EVAL_UNIT_UM	 nm
-EVAL_UNIT_UM	 teraflops
-EVAL_UNIT_UM	 GHz
-EVAL_UNIT_UM	 connections/sec
+EVAL_UNIT_UM	 THz
+EVAL_UNIT_UM     V
+EVAL_UNIT_UM     Wb
+EVAL_UNIT_UM     counts
+EVAL_UNIT_UM     furlongs/fortnight
+EVAL_UNIT_UM     $\Omega$
+EVAL_UNIT_UM     mSv
 EVAL_UNIT+7	EVAL_UNIT_UM
-EVAL_UNIT	EVAL_UNIT_NUM
 
-EVAL_MEASUREMENT_UM throughput
-EVAL_MEASUREMENT_UM clock speed
-EVAL_MEASUREMENT_UM latency
-EVAL_MEASUREMENT_UM time since SCI_YEAR
-EVAL_MEASUREMENT_UM hit ratio
-EVAL_MEASUREMENT_UM work factor
-EVAL_MEASUREMENT_UM power
-EVAL_MEASUREMENT_UM seek time
-EVAL_MEASUREMENT_UM complexity
-EVAL_MEASUREMENT_UM block size
-EVAL_MEASUREMENT_UM popularity of SCI_THING_MOD
-EVAL_MEASUREMENT_UM sampling rate
-EVAL_MEASUREMENT_UM instruction rate
-EVAL_MEASUREMENT_UM energy
-EVAL_MEASUREMENT_UM response time
-EVAL_MEASUREMENT_UM bandwidth
-EVAL_MEASUREMENT_UM signal-to-noise ratio
-EVAL_MEASUREMENT_UM distance
-EVAL_MEASUREMENT_UM interrupt rate
+EVAL_MEASUREMENT_UM magnetic field
+EVAL_MEASUREMENT_UM temperature
+EVAL_MEASUREMENT_UM magnetization
+EVAL_MEASUREMENT_UM rotation angle
+EVAL_MEASUREMENT_UM scattering vector
+EVAL_MEASUREMENT_UM energy transfer
+EVAL_MEASUREMENT_UM intensity
+EVAL_MEASUREMENT_UM counts
+EVAL_MEASUREMENT_UM scattering angle
+EVAL_MEASUREMENT_UM pressure
+EVAL_MEASUREMENT_UM volume
+EVAL_MEASUREMENT_UM electric field
+EVAL_MEASUREMENT_UM frequency
+EVAL_MEASUREMENT_UM free energy
+EVAL_MEASUREMENT_UM resistance
+EVAL_MEASUREMENT_UM angular momentum
 
 EVAL_MEASUREMENT EVAL_MEASUREMENT_UM
 EVAL_MEASUREMENT STAT_ADJ EVAL_MEASUREMENT_UM
 
 GRAPH_AXIS EVAL_MEASUREMENT_UM (EVAL_UNIT)
+GRAPH_AXIS EVAL_MEASUREMENT_UM
 
-GRAPH_Y_AXIS PDF
-GRAPH_Y_AXIS GRAPH_AXIS
-GRAPH_Y_AXIS GRAPH_AXIS
-GRAPH_Y_AXIS GRAPH_AXIS
-GRAPH_Y_AXIS GRAPH_AXIS
-GRAPH_Y_AXIS GRAPH_AXIS
 GRAPH_Y_AXIS GRAPH_AXIS
 
 GRAPH_X_AXIS GRAPH_AXIS
@@ -3465,11 +3885,11 @@ GRAPH_LOG set log xy 2
 GRAPH_LOG+14
 
 GRAPH_ERRORS errorbars
-GRAPH_ERRORS+4
+GRAPH_ERRORS
 
-GRAPH_CURVE_LABEL title 'NETWORK_TYPE'
-GRAPH_CURVE_LABEL title 'SCI_THING'
-GRAPH_CURVE_LABEL title 'EVAL_SYSTEM'
+#GRAPH_CURVE_LABEL title 'NETWORK_TYPE'
+GRAPH_CURVE_LABEL title sprintf('%.27s', 'SCI_THING')
+GRAPH_CURVE_LABEL title sprintf('%.27s', 'EVAL_SYSTEM')
 
 GNUPLOT {
 
@@ -3491,7 +3911,9 @@ LATEX_DOCCLASS
 LATEX_FONTCLASS
 LATEX_CITEPACK
 \usepackage{epsfig}
-\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage[utf8x]{inputenc}
+\usepackage{breqn}
 \begin{document}
 
 LATEX_TITLE
@@ -3506,7 +3928,7 @@ LATEX_AUTHORS
 LATEX_CITEPACK \usepackage{cite}
 LATEX_CITEPACK+3 
 
-LATEX_FONTCLASS+2 \usepackage{times}
+#LATEX_FONTCLASS+2 \usepackage{times}
 LATEX_FONTCLASS \usepackage{helvet}
 LATEX_FONTCLASS \usepackage{palatino}
 LATEX_FONTCLASS 
@@ -3524,6 +3946,7 @@ LATEX_FONTSIZE   10pt
 LATEX_FOOTER {
 
 \begin{footnotesize}
+\bibliographystyle{phjcp}
 \bibliography{scigenbibfile} 
 LATEX_BIBSTYLE
 \end{footnotesize}
@@ -3559,7 +3982,7 @@ NEWFIGLABEL\#
 LATEX_DIAGRAM {
 
 \begin{figure}[t]
-\centerline{\epsfig{figure=LATEX_DIA_FILENAME}}
+\centerline{\epsfig{figure=LATEX_DIA_FILENAME,width=3in}}
 \caption{\small{
 SCI_DIAGRAM_CAPTION
 }}
@@ -3600,49 +4023,23 @@ CITE_AUTHOR_LIST+10 SCI_SOURCE and CITE_AUTHOR_LIST
 CITE_AUTHOR_LIST+7 SCI_SOURCE
 CITE_AUTHOR_LIST!
 
-CITE_CONF POT CITE_CONF_NAME
-CITE_CONF_NAME WMSCI
-CITE_CONF_NAME OSDI
-CITE_CONF_NAME SIGCOMM
-CITE_CONF_NAME INFOCOM
-CITE_CONF_NAME ASPLOS
-CITE_CONF_NAME the USENIX Technical Conference
-CITE_CONF_NAME SIGGRAPH
-CITE_CONF_NAME PLDI
-CITE_CONF_NAME NSDI
-CITE_CONF_NAME PODC
-CITE_CONF_NAME SOSP
-CITE_CONF_NAME MICRO
-CITE_CONF_NAME JAIR
-CITE_CONF_NAME MOBICOM
-CITE_CONF_NAME POPL
-CITE_CONF_NAME the WWW Conference
-CITE_CONF_NAME FPCA
-CITE_CONF_NAME the Workshop on Data Mining and Knowledge Discovery
-CITE_CONF_NAME OOPSLA
-CITE_CONF_NAME VLDB
-CITE_CONF_NAME NDSS
-CITE_CONF_NAME NOSSDAV 
-CITE_CONF_NAME ECOOP
-CITE_CONF_NAME IPTPS
-CITE_CONF_NAME the USENIX Security Conference
-CITE_CONF_NAME PODS
-CITE_CONF_NAME HPCA
-CITE_CONF_NAME SIGMETRICS
-CITE_CONF_NAME FOCS
-CITE_CONF_NAME+15 the CITE_CONF_TYPE on SCI_BUZZWORD_ADJ_MULTI SCI_BUZZWORD_NOUN
-
+## OK
 CITE_JOURNAL+15 Journal of SCI_BUZZWORD_ADJ_MULTI SCI_BUZZWORD_NOUN
 CITE_JOURNAL TOCS
-CITE_JOURNAL Journal of Automated Reasoning
-CITE_JOURNAL IEEE JSAC
-CITE_JOURNAL OSR
-CITE_JOURNAL NTT Technical Review
+CITE_JOURNAL Phys. Rev. Lett.
+CITE_JOURNAL Physica B
+CITE_JOURNAL Phys. Rev. B
+CITE_JOURNAL Phys. Rev. A
+CITE_JOURNAL Nature
+CITE_JOURNAL J. Magn. Magn. Mater.
+CITE_JOURNAL Nucl. Instrum. Methods
+CITE_JOURNAL Sov. Phys. Usp.
+CITE_JOURNAL Science
+CITE_JOURNAL Rev. Mod. Phys. 
+CITE_JOURNAL J. Phys. Soc. Jpn.
+CITE_JOURNAL Z. Phys.
 
-CITE_CONF_TYPE Workshop
-CITE_CONF_TYPE Conference
-CITE_CONF_TYPE Symposium
-
+## OK
 CITE_MONTH jan
 CITE_MONTH feb
 CITE_MONTH mar
@@ -3656,6 +4053,7 @@ CITE_MONTH oct
 CITE_MONTH nov
 CITE_MONTH dec
 
+## OK
 SCI_YEAR	1935
 SCI_YEAR	1953
 SCI_YEAR	1967
@@ -3691,17 +4089,10 @@ CITE_PAGES 15DIGIT--19DIGIT
 
 CITE_INST MIT CSAIL
 CITE_INST UC Berkeley
-CITE_INST Devry Technical Institute
-CITE_INST IIT
 CITE_INST UIUC
 CITE_INST University of Washington
 CITE_INST UCSD
 CITE_INST Harvard University
-CITE_INST Intel Research
-CITE_INST Microsoft Research
-CITE_INST IBM Research
-CITE_INST UT Austin
-CITE_INST CMU
 CITE_INST Stanford University
 
 NONZ 1
@@ -3738,16 +4129,16 @@ CITE_TRNUM MED_NUM/MED_NUM
 CITE_TRNUM MED_NUM
 CITE_TRNUM MED_NUM-MED_NUM
 
-BIBTEX_ENTRY+10 {
-
- @InProceedings{CITE_LABEL_GIVEN, 
-  author = {CITE_AUTHOR_LIST},
-  title = {SCI_TITLE},
-  booktitle = {CITE_CONF},
-  month = CITE_MONTH,
-  year = CITE_YEAR}
-
-}
+#BIBTEX_ENTRY+10 {
+#
+# @InProceedings{CITE_LABEL_GIVEN, 
+#  author = {CITE_AUTHOR_LIST},
+#  title = {SCI_TITLE},
+#  booktitle = {CITE_CONF},
+#  month = CITE_MONTH,
+#  year = CITE_YEAR}
+#
+#}
 
 BIBTEX_ENTRY+6 {
 
@@ -3762,14 +4153,14 @@ BIBTEX_ENTRY+6 {
 
 }
 
-BIBTEX_ENTRY {
-
- @techreport{CITE_LABEL_GIVEN, 
-  author = {CITE_AUTHOR_LIST},
-  title = {SCI_TITLE},
-  institution = {CITE_INST},
-  number = {CITE_TRNUM},	
-  month = CITE_MONTH,
-  year = CITE_YEAR}
-
-}
+#BIBTEX_ENTRY {
+# 
+# @techreport{CITE_LABEL_GIVEN, 
+#  author = {CITE_AUTHOR_LIST},
+#  title = {SCI_TITLE},
+#  institution = {CITE_INST},
+#  number = {CITE_TRNUM},	
+#  month = CITE_MONTH,
+#  year = CITE_YEAR}
+# 
+#}
