@@ -2719,8 +2719,9 @@ EQ_EXPR+10      EQ_EXPR EQ_OPERATOR EQ_EXPR_FUNC
 EQ_EXPR+5       EQ_EXPR EQ_OPERATOR EQ_EXPR EQ_OPERATOR EQ_EXPR_FUNC
 EQ_EXPR	        \left( EQ_EXPR EQ_OPERATOR EQ_EXPR \right)
 EQ_EXPR	        {EQ_EXPR_EXP} ^ { EQ_EXPR }
-EQ_EXPR	        \sqrt{EQ_EXPR}
-EQ_EXPR+5       \left| EQ_EXPR_EXP \right|
+EQ_EXPR+5       \sqrt{EQ_EXPR}
+EQ_EXPR         \left\langle EQ_QUANTITY  \middle| \hat INITIAL \middle| EQ_QUANTITY \right\rangle
+EQ_EXPR+2       \left| EQ_EXPR_EXP \right|
 EQ_EXPR+5       EQ_EXPR_POWEXP
 
 EQ_OPERATOR+10   +
