@@ -1816,7 +1816,7 @@ SCI_THING_P	overdamped modes
 SCI_THING_P	Bragg reflections
 SCI_THING_P	PARTON dispersion relations
 SCI_THING_P	Einstein's field equations
-#SCI_THING_P	
+SCI_THING_P	heavy-fermion systems
 #SCI_THING_P	
 #SCI_THING_P	
 #SCI_THING_P	
